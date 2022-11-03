@@ -33,7 +33,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
-import javax.security.auth.login.CredentialException;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -272,7 +271,7 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
    */
   public <T> T createSOAPRequest(Object soapRequestElem, Class<T> soapResponseClass, String soapUri, String xAddr,
       boolean throwError)
-      throws IOException, SOAPException, JAXBException, ParserConfigurationException, CredentialException {
+      throws IOException, SOAPException, JAXBException, ParserConfigurationException {
     HttpSOAPConnection soapConnection;
     SOAPMessage soapResponse = null;
 
@@ -306,7 +305,7 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
         if (iterator.hasNext()) {
           String error = ((QName) iterator.next()).getLocalPart();
           if ("NotAuthorized".equals(error)) {
-            throw new CredentialException("Wrong credential to authorize access to soap URI: " + soapUri);
+            throw new BadCredentialException("Wrong credential to authorize access to soap URI: " + soapUri);
           }
           throw new RuntimeException("Unknown fault <" + error + "> during access to soap URI: " + soapUri);
         }
@@ -339,7 +338,7 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
           "Unexpected response. Response should be from class " + soapResponseClass + ", but response is: " +
               soapResponse);
       throw e;
-    } catch (ParserConfigurationException | JAXBException | IOException | CredentialException e) {
+    } catch (ParserConfigurationException | JAXBException | IOException e) {
       onvifDeviceState.getLogger().error("Unhandled exception: " + e.getMessage());
       throw e;
     }
