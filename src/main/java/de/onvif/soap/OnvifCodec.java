@@ -15,6 +15,7 @@ import lombok.extern.log4j.Log4j2;
 public class OnvifCodec extends ChannelDuplexHandler {
 
   private final OnvifEventHandler onvifEventHandler;
+  private final String entityID;
   private String incomingMessage = "";
   private int code;
 
@@ -45,7 +46,7 @@ public class OnvifCodec extends ChannelDuplexHandler {
     if (ctx == null || cause == null) {
       return;
     }
-    log.debug("Exception on ONVIF connection: {}", cause.getMessage());
+    log.debug("[{}]: Exception on ONVIF connection: {}", entityID, cause.getMessage());
     ctx.close();
   }
 

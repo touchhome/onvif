@@ -27,8 +27,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.onvif.ver10.device.wsdl.GetDeviceInformationResponse;
 import org.onvif.ver10.schema.Capabilities;
@@ -36,38 +36,31 @@ import org.onvif.ver10.schema.Profile;
 import org.onvif.ver10.schema.VideoResolution;
 
 @Getter
+@Log4j2
 public class OnvifDeviceState {
 
+  private final SOAP soap;
+  private final InitialDevices initialDevices;
+  private final PtzDevices ptzDevices;
+  private final MediaDevices mediaDevices;
+  private final ImagingDevices imagingDevices;
+  private final EventDevices eventDevices;
   private String HOST_IP;
   private String originalIp;
-
   private boolean isProxy;
-
   private String username, password, nonce, utcTime;
-
   private String serverDeviceUri;
   private String serverPtzUri;
   private String serverMediaUri;
   private String serverImagingUri;
   private String serverEventsUri;
   private String analyticsUri;
-
   private String serverDeviceIpLessUri;
   private String serverPtzIpLessUri;
   private String serverMediaIpLessUri;
   private String serverImagingIpLessUri;
   private String serverEventsIpLessUri;
   private String subscriptionIpLessUri;
-
-  private final SOAP soap;
-
-  private final InitialDevices initialDevices;
-  private final PtzDevices ptzDevices;
-  private final MediaDevices mediaDevices;
-  private final ImagingDevices imagingDevices;
-  private final EventDevices eventDevices;
-  private final Logger log;
-
   private List<Profile> profiles;
   private TreeMap<VideoEncodeResolution, Profile> resolutionProfiles;
   private String ip;
@@ -78,16 +71,17 @@ public class OnvifDeviceState {
   private Consumer<String> unreachableHandler;
   private Capabilities capabilities;
   private String subscriptionError;
+  private final String entityID;
 
   @SneakyThrows
-  public OnvifDeviceState(Logger log) {
-    this.log = log;
+  public OnvifDeviceState(String entityID) {
+    this.entityID = entityID;
     this.soap = new SOAP(this);
     this.initialDevices = new InitialDevices(this, soap);
     this.ptzDevices = new PtzDevices(this, soap);
     this.mediaDevices = new MediaDevices(this, soap);
     this.imagingDevices = new ImagingDevices(this, soap);
-    this.eventDevices = new EventDevices(this, soap);
+    this.eventDevices = new EventDevices(entityID, this, soap);
   }
 
   private static byte[] sha1(String s) throws NoSuchAlgorithmException {
@@ -159,7 +153,7 @@ public class OnvifDeviceState {
         originalIp = localDeviceUri.replace("http://", "");
         originalIp = originalIp.substring(0, originalIp.indexOf('/'));
       } else {
-        log.error("Unknown/Not implemented local protocol!");
+        log.error("[{}]: Unknown/Not implemented local protocol!", entityID);
       }
 
       if (!originalIp.equals(HOST_IP)) {
@@ -294,10 +288,6 @@ public class OnvifDeviceState {
     return utcTime;
   }
 
-  public Logger getLogger() {
-    return log;
-  }
-
     /*public Date getDate() {
         init();
         return initialDevices.getDate();
@@ -328,7 +318,7 @@ public class OnvifDeviceState {
   }
 
   public void cameraUnreachable(String errorMessage) {
-    log.error("Camera unreachable: <{}>", errorMessage);
+    log.error("[{}]: Camera unreachable: <{}>", entityID, errorMessage);
     if (unreachableHandler != null) {
       unreachableHandler.accept(errorMessage);
     }

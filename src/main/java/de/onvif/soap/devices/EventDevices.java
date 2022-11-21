@@ -4,7 +4,7 @@ import de.onvif.soap.OnvifDeviceState;
 import de.onvif.soap.SOAP;
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.log4j.Log4j2;
 import org.oasis_open.docs.wsn.b_2.NotificationMessageHolderType;
 import org.oasis_open.docs.wsn.b_2.Renew;
 import org.oasis_open.docs.wsn.b_2.RenewResponse;
@@ -24,27 +24,28 @@ import org.w3._2005._08.addressing.EndpointReferenceType;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+@Log4j2
 public class EventDevices {
 
   private final Map<String, EventHandler> eventHandlers = new HashMap<>();
 
   private final OnvifDeviceState onvifDeviceState;
   private final SOAP soap;
-  private final Logger log;
+  private final String entityID;
 
   private GetEventPropertiesResponse eventProperties;
   private long lastTimeRenewResponse;
 
-  public EventDevices(OnvifDeviceState onvifDeviceState, SOAP soap) {
+  public EventDevices(String entityID, OnvifDeviceState onvifDeviceState, SOAP soap) {
     this.onvifDeviceState = onvifDeviceState;
     this.soap = soap;
-    this.log = onvifDeviceState.getLogger();
+    this.entityID = entityID;
   }
 
   public void runOncePerMinute() {
     // send renew to onvif camera if no response more than one min
     if (lastTimeRenewResponse != 0 && System.currentTimeMillis() - lastTimeRenewResponse > 60000) {
-      log.warn("Resend 'Renew' message to onvif device");
+      log.warn("[{}]: Resend 'Renew' message to onvif device", entityID);
       soap.sendSOAPSubscribeRequestAsync(new Renew());
     }
     // try reinitialize if Subscription not initialized
@@ -64,7 +65,7 @@ public class EventDevices {
     // first listen for events
     soap.addAsyncListener(PullMessagesResponse.class, "listen-PullMessagesResponse", this::handleEventReceived);
     soap.addAsyncListener(RenewResponse.class, "listen-RenewResponse", response -> {
-      log.debug("Pulling messages from onvif");
+      log.debug("[{}]: Pulling messages from onvif", entityID);
       this.lastTimeRenewResponse = System.currentTimeMillis();
       soap.sendSOAPSubscribeRequestAsync(new PullMessages());
     });
@@ -79,30 +80,30 @@ public class EventDevices {
           .setAddress(new AttributedURIType().setValue(onvifDeviceState.getIp() + ":" + onvifDeviceState.getServerPort())));
       SubscribeResponse subscribeResponse = soap.createSOAPDeviceRequestType(subscribe, SubscribeResponse.class);
       if (subscribeResponse != null) {
-        log.info("Onvif Subscribe appears to be working for Alarms/Events.");
+        log.info("[{}]: Onvif Subscribe appears to be working for Alarms/Events.", entityID);
       }
     }
   }
 
   private void fetchSubscriptionUrlAndSendPullMessages() {
-    log.info("Trying fetch onvif message subscription for ip address <{}>...", this.onvifDeviceState.getIp());
+    log.info("[{}]: Trying fetch onvif message subscription for ip address <{}>...", entityID, this.onvifDeviceState.getIp());
     try {
       CreatePullPointSubscriptionResponse pullPointResponse = soap.createSOAPDeviceRequestTypeThrowError(
           new CreatePullPointSubscription(),
           CreatePullPointSubscriptionResponse.class);
       onvifDeviceState.setSubscriptionUri(pullPointResponse.getSubscriptionReference().getAddress().getValue());
       soap.sendSOAPSubscribeRequestAsync(new PullMessages());
-      log.info("Successfully fetched onvif message subscription: <{}>",
+      log.info("[{}]: Successfully fetched onvif message subscription: <{}>", entityID,
           onvifDeviceState.getSubscriptionIpLessUri());
       onvifDeviceState.setSubscriptionError(null);
     } catch (Exception ex) {
       onvifDeviceState.setSubscriptionError(ex.getMessage());
-      log.error("Unable to fetch onvif message subscription");
+      log.error("[{}]: Unable to fetch onvif message subscription", entityID);
     }
   }
 
   public void fireEvent(String message) {
-    handleEventReceived(SOAP.parseMessage(PullMessagesResponse.class, message, log));
+    handleEventReceived(SOAP.parseMessage(PullMessagesResponse.class, message, entityID));
   }
 
   public void subscribe(String event, EventHandler eventHandler) {
@@ -128,14 +129,14 @@ public class EventDevices {
               handled = true;
               String name = data.getAttributes().getNamedItem("Name").getTextContent();
               String value = data.getAttributes().getNamedItem("Value").getTextContent();
-              log.info("Received onvif event <{}>. Name: <{}>. Value: <{}>", topic, name, value);
+              log.info("[{}]: Received onvif event <{}>. Name: <{}>. Value: <{}>", entityID, topic, name, value);
               eventHandlers.get(topic).handle(name, value);
             }
           }
         }
       }
       if (!handled) {
-        log.warn("No handler found for Onvif message <{}>", pullMessagesResponse);
+        log.warn("[{}]: No handler found for Onvif message <{}>", entityID, pullMessagesResponse);
       }
     }
     soap.sendSOAPSubscribeRequestAsync(new Renew());

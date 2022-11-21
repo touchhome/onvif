@@ -62,7 +62,6 @@ import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.Logger;
 import org.oasis_open.docs.wsn.b_2.Renew;
 import org.oasis_open.docs.wsn.b_2.Unsubscribe;
 import org.onvif.ver10.events.wsdl.CreatePullPointSubscription;
@@ -84,23 +83,25 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
 
   private final OnvifDeviceState onvifDeviceState;
   private final Map<String, AsyncClassListener> asyncSoapMessageToType = new HashMap<>();
+  private final String entityID;
   @Setter
   private boolean logging = Boolean.parseBoolean(System.getProperty("soap.debug", "false"));
   private Bootstrap bootstrap;
   private EventLoopGroup mainEventLoopGroup = new NioEventLoopGroup();
 
   public SOAP(OnvifDeviceState onvifDeviceState) {
+    this.entityID = onvifDeviceState.getEntityID();
     this.onvifDeviceState = onvifDeviceState;
   }
 
-  public static <T> T parseMessage(Class<T> responseClass, String message, Logger log) {
+  public static <T> T parseMessage(Class<T> responseClass, String message, String entityID) {
     try {
       SOAPMessage soapResponse = MessageFactory.newInstance(SOAPConstants.SOAP_1_2_PROTOCOL)
           .createMessage(null, new ByteArrayInputStream(message.getBytes()));
       Unmarshaller unmarshaller = JAXBContext.newInstance(responseClass).createUnmarshaller();
       return (T) unmarshaller.unmarshal(soapResponse.getSOAPBody().extractContentAsDocument());
     } catch (Exception e) {
-      log.warn("Could not unmarshal for <{}>, ended in SOAP fault. Msg: <{}>", responseClass.getSimpleName(), message);
+      log.warn("[{}]: Could not unmarshal for <{}>, ended in SOAP fault. Msg: <{}>", entityID, responseClass.getSimpleName(), message);
     }
     return null;
   }
@@ -114,6 +115,21 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
       return "";
     }
     return url.substring(index);
+  }
+
+  @SneakyThrows
+  private static String toString(Document document) {
+    TransformerFactory tf = TransformerFactory.newInstance();
+    Transformer transformer = tf.newTransformer();
+    transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+    transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+    transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+    transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+    transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    transformer.transform(new DOMSource(document), new StreamResult(new OutputStreamWriter(out, StandardCharsets.UTF_8)));
+    return out.toString();
   }
 
   @SneakyThrows
@@ -173,12 +189,12 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
   @Override
   @SneakyThrows
   public void handle(String message, int code) {
-    onvifDeviceState.getLogger().debug("Onvif {} reply is:{}", code, message);
+    log.debug("[{}]: Onvif {} reply is:{}", entityID, code, message);
     boolean handled = false;
     for (Map.Entry<String, AsyncClassListener> entry : asyncSoapMessageToType.entrySet()) {
       if (message.contains(entry.getKey())) {
         handled = true;
-        Object soapResponseElem = parseMessage(entry.getValue().responseClass, message, onvifDeviceState.getLogger());
+        Object soapResponseElem = parseMessage(entry.getValue().responseClass, message, entityID);
         if (soapResponseElem != null) {
           for (Consumer<Object> consumer : entry.getValue().handlers.values()) {
             consumer.accept(soapResponseElem);
@@ -188,11 +204,9 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
     }
     if (!handled) {
       if (code != 200) {
-        onvifDeviceState.getLogger()
-            .error("Accepted not expected onvif soap message with code: <{}>. Msg: <{}>", code, message);
+        log.error("[{}]: Accepted not expected onvif soap message with code: <{}>. Msg: <{}>", entityID, code, message);
       } else {
-        onvifDeviceState.getLogger()
-            .warn("Accepted not expected onvif soap message with code: <{}>. Msg: <{}>", code, message);
+        log.warn("[{}]: Accepted not expected onvif soap message with code: <{}>. Msg: <{}>", entityID, code, message);
       }
     }
   }
@@ -214,7 +228,7 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
         public void initChannel(SocketChannel socketChannel) {
           socketChannel.pipeline().addLast("idleStateHandler", new IdleStateHandler(0, 0, 70));
           socketChannel.pipeline().addLast("HttpClientCodec", new HttpClientCodec());
-          socketChannel.pipeline().addLast("OnvifCodec", new OnvifCodec(SOAP.this));
+          socketChannel.pipeline().addLast("OnvifCodec", new OnvifCodec(SOAP.this, entityID));
         }
       });
     }
@@ -254,9 +268,8 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
     soapMessage.writeTo(outputStream);
     String fullXml = outputStream.toString();
     if (logging) {
-      onvifDeviceState.getLogger()
-          .info("Request async SOAP Message (" + soapRequestElem.getClass().getSimpleName() + "): ");
-      onvifDeviceState.getLogger().info("{}", fullXml);
+      log.info("[{}]: Request async SOAP Message ({}): ", entityID, soapRequestElem.getClass().getSimpleName());
+      log.info("[{}]: {}", entityID, fullXml);
     }
 
     request.headers().add("SOAPAction", "\"" + actionString + "/" + deviceRequestType + "\"");
@@ -277,27 +290,26 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
 
     try {
       // Create SOAP Connection
-      soapConnection = new HttpSOAPConnection();
+      soapConnection = new HttpSOAPConnection(entityID);
 
       SOAPMessage soapMessage = createSoapMessage(soapRequestElem, xAddr);
 
       // Print the request message
       if (logging) {
-        onvifDeviceState.getLogger()
-            .info("Request sync SOAP Message (" + soapRequestElem.getClass().getSimpleName() + "): ");
+        log.info("[{}]: Request sync SOAP Message ({}): ", entityID, soapRequestElem.getClass().getSimpleName());
         ByteArrayOutputStream bout = new ByteArrayOutputStream();
         soapMessage.writeTo(bout);
-        onvifDeviceState.getLogger().info("{}", bout.toString());
+        log.info("[{}]: {}", entityID, bout.toString());
       }
 
       soapResponse = soapConnection.call(soapMessage, soapUri);
 
       // print SOAP Response
       if (logging) {
-        onvifDeviceState.getLogger().info("Response sync SOAP Message (" + soapResponseClass.getSimpleName() + "): ");
+        log.info("[{}]: Response sync SOAP Message ({}): ", entityID, soapResponseClass.getSimpleName());
         ByteArrayOutputStream bout = new ByteArrayOutputStream();
         soapResponse.writeTo(bout);
-        onvifDeviceState.getLogger().info("{}", bout.toString());
+        log.info("[{}]: {}", entityID, bout.toString());
       }
 
       if (soapResponse.getSOAPBody().getFault() != null) {
@@ -322,7 +334,7 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
       try {
         soapResponseElem = unmarshaller.unmarshal(document);
       } catch (UnmarshalException e) {
-        onvifDeviceState.getLogger().warn("Could not unmarshal for <{}>, ended in SOAP fault. Source: '{}'",
+        log.warn("[{}]: Could not unmarshal for <{}>, ended in SOAP fault. Source: '{}'", entityID,
             soapResponseClass.getSimpleName(), toString(document));
         if (throwError) {
           throw new IllegalStateException("Error unmarshal for " + soapResponseClass.getSimpleName() +
@@ -334,12 +346,10 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
     } catch (SocketException e) {
       throw new ConnectException(e.getMessage());
     } catch (SOAPException e) {
-      onvifDeviceState.getLogger().error(
-          "Unexpected response. Response should be from class " + soapResponseClass + ", but response is: " +
-              soapResponse);
+      log.error("[{}]: Unexpected response. Response should be from class {}, but response is: {}", entityID, soapResponseClass, soapResponse);
       throw e;
     } catch (ParserConfigurationException | JAXBException | IOException e) {
-      onvifDeviceState.getLogger().error("Unhandled exception: " + e.getMessage());
+      log.error("[{}]: Unhandled exception: {}", entityID, e.getMessage());
       throw e;
     }
   }
@@ -420,20 +430,13 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
         try {
           mainEventLoopGroup.awaitTermination(3, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
-          onvifDeviceState.getLogger().info("Onvif was not shutdown correctly due to being interrupted");
+          log.info("[{}]: Onvif was not shutdown correctly due to being interrupted", entityID);
         } finally {
           mainEventLoopGroup = new NioEventLoopGroup();
           bootstrap = null;
         }
       }
     }
-  }
-
-  @RequiredArgsConstructor
-  private final class AsyncClassListener {
-
-    private final Class<?> responseClass;
-    private Map<String, Consumer<Object>> handlers = new HashMap<>();
   }
 
   private String getErrorMessage(Throwable ex) {
@@ -446,25 +449,17 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
     }
 
     if (cause instanceof NullPointerException) {
-      log.error("Unexpected NPE: <{}>", ex.getMessage(), ex);
+      log.error("[{}]: Unexpected NPE: <{}>", entityID, ex.getMessage(), ex);
       return "Unexpected NullPointerException at line: " + ex.getStackTrace()[0].toString();
     }
 
     return StringUtils.defaultString(cause.getMessage(), cause.toString());
   }
 
-  @SneakyThrows
-  private static String toString(Document document) {
-    TransformerFactory tf = TransformerFactory.newInstance();
-    Transformer transformer = tf.newTransformer();
-    transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
-    transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-    transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-    transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-    transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+  @RequiredArgsConstructor
+  private final class AsyncClassListener {
 
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
-    transformer.transform(new DOMSource(document), new StreamResult(new OutputStreamWriter(out, StandardCharsets.UTF_8)));
-    return out.toString();
+    private final Class<?> responseClass;
+    private final Map<String, Consumer<Object>> handlers = new HashMap<>();
   }
 }

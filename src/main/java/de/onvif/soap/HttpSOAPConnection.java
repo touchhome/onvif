@@ -23,15 +23,18 @@ import org.apache.commons.lang3.NotImplementedException;
 @Log4j2
 public class HttpSOAPConnection {
 
+  private final String entityID;
   private MessageFactory messageFactory;
 
-  public HttpSOAPConnection() throws SOAPException {
+  public HttpSOAPConnection(String entityID) throws SOAPException {
+    this.entityID = entityID;
+
     try {
       this.messageFactory = MessageFactory.newInstance("Dynamic Protocol");
     } catch (NoSuchMethodError ex) {
       this.messageFactory = MessageFactory.newInstance();
     } catch (Exception ex) {
-      log.error("SAAJ0001.p2p.cannot.create.msg.factory", ex);
+      log.error("[{}]: SAAJ0001.p2p.cannot.create.msg.factory", entityID, ex);
       throw new RuntimeException("Unable to create message factory", ex);
     }
 
@@ -101,14 +104,14 @@ public class HttpSOAPConnection {
         Method m = urlEndpointClass.getMethod("getURL", (Class<?>[]) null);
         url = (String) m.invoke(endPoint, (Object[]) null);
       } catch (Exception ex) {
-        log.error("SAAJ0004.p2p.internal.err", ex);
+        log.error("[{}]: SAAJ0004.p2p.internal.err", entityID, ex);
         throw new RuntimeException("Internal error: " + ex.getMessage());
       }
 
       try {
         endPoint = new URL(url);
       } catch (MalformedURLException ex) {
-        log.error("SAAJ0005.p2p.", ex);
+        log.error("[{}]: SAAJ0005.p2p.", entityID, ex);
         throw new RuntimeException("Bad URL: " + ex.getMessage());
       }
     }
@@ -117,7 +120,7 @@ public class HttpSOAPConnection {
       try {
         endPoint = new URL((String) endPoint);
       } catch (MalformedURLException ex) {
-        log.error("SAAJ0006.p2p.bad.URL", ex);
+        log.error("[{}]: SAAJ0006.p2p.bad.URL", entityID, ex);
         throw new RuntimeException("Bad URL: " + ex.getMessage());
       }
     }
@@ -139,7 +142,7 @@ public class HttpSOAPConnection {
       URI uri = new URI(endPoint.toString());
       String userInfo = uri.getRawUserInfo();
       if (!endPoint.getProtocol().equalsIgnoreCase("http") && !endPoint.getProtocol().equalsIgnoreCase("https")) {
-        log.error("SAAJ0052.p2p.protocol.mustbe.http.or.https");
+        log.error("[{}]: SAAJ0052.p2p.protocol.mustbe.http.or.https", entityID);
         throw new IllegalArgumentException("Protocol " + endPoint.getProtocol() + " not supported in URL " + endPoint);
       }
 
@@ -206,7 +209,7 @@ public class HttpSOAPConnection {
         isFailure = true;
       }
     } catch (Exception ex) {
-      log.error("SAAJ0009.p2p.msg.send.failed");
+      log.error("[{}]: SAAJ0009.p2p.msg.send.failed", entityID);
       throw new RuntimeException("Message send failed", ex);
     }
 
@@ -224,7 +227,7 @@ public class HttpSOAPConnection {
           InputStream stream = IOUtils.toBufferedInputStream(httpIn);
           int length = httpConnection.getContentLength() == -1 ? stream.available() : httpConnection.getContentLength();
           if (length == 0) {
-            log.warn("SAAJ0014.p2p.content.zero");
+            log.warn("[{}]: SAAJ0014.p2p.content.zero", entityID);
           } else {
             response = this.messageFactory.createMessage(headers, stream);
           }
@@ -244,7 +247,7 @@ public class HttpSOAPConnection {
     } catch (SOAPException ex) {
       throw ex;
     } catch (Exception ex) {
-      log.error("SAAJ0010.p2p.cannot.read.resp", ex);
+      log.error("[{}]: SAAJ0010.p2p.cannot.read.resp", entityID, ex);
       throw new RuntimeException("Unable to read response: " + ex.getMessage());
     } finally {
       if (httpIn != null) {
