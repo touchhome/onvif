@@ -6,24 +6,23 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbsoluteFocus", propOrder = {"position", "speed"})
+@XmlType(
+    name = "AbsoluteFocus",
+    propOrder = {"position", "speed"})
 public class AbsoluteFocus {
 
   @XmlElement(name = "Position")
   protected float position;
+
   @XmlElement(name = "Speed")
   protected Float speed;
 
-  /**
-   * Ruft den Wert der position-Eigenschaft ab.
-   */
+  /** Ruft den Wert der position-Eigenschaft ab. */
   public float getPosition() {
     return position;
   }
 
-  /**
-   * Legt den Wert der position-Eigenschaft fest.
-   */
+  /** Legt den Wert der position-Eigenschaft fest. */
   public void setPosition(float value) {
     this.position = value;
   }
@@ -45,5 +44,4 @@ public class AbsoluteFocus {
   public void setSpeed(Float value) {
     this.speed = value;
   }
-
 }

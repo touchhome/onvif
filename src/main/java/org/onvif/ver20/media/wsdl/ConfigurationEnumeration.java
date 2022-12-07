@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ConfigurationEnumeration")
 @XmlEnum
 public enum ConfigurationEnumeration {
-
   @XmlEnumValue("All")
   ALL("All"),
   @XmlEnumValue("VideoSource")
@@ -45,5 +44,4 @@ public enum ConfigurationEnumeration {
   public String value() {
     return value;
   }
-
 }

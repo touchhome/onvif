@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DefoggingMode")
 @XmlEnum
 public enum DefoggingMode {
-
   OFF,
   ON,
   AUTO;
@@ -18,5 +17,4 @@ public enum DefoggingMode {
   public String value() {
     return name();
   }
-
 }

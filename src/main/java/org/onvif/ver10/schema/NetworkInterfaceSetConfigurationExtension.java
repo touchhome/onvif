@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkInterfaceSetConfigurationExtension complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkInterfaceSetConfigurationExtension">
@@ -32,35 +31,38 @@ import org.w3c.dom.Element;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkInterfaceSetConfigurationExtension", propOrder = {"any", "dot3", "dot11", "extension"})
+@XmlType(
+    name = "NetworkInterfaceSetConfigurationExtension",
+    propOrder = {"any", "dot3", "dot11", "extension"})
 public class NetworkInterfaceSetConfigurationExtension {
 
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
+
   @XmlElement(name = "Dot3")
   protected List<Dot3Configuration> dot3;
+
   @XmlElement(name = "Dot11")
   protected List<Dot11Configuration> dot11;
+
   @XmlElement(name = "Extension")
   protected NetworkInterfaceSetConfigurationExtension2 extension;
 
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element } {@link
+   * java.lang.Object }
    */
   public List<java.lang.Object> getAny() {
     if (any == null) {
@@ -72,20 +74,17 @@ public class NetworkInterfaceSetConfigurationExtension {
   /**
    * Gets the value of the dot3 property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the dot3 property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the dot3 property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getDot3().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Dot3Configuration }
+   * <p>Objects of the following type(s) are allowed in the list {@link Dot3Configuration }
    */
   public List<Dot3Configuration> getDot3() {
     if (dot3 == null) {
@@ -97,20 +96,17 @@ public class NetworkInterfaceSetConfigurationExtension {
   /**
    * Gets the value of the dot11 property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the dot11 property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the dot11 property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getDot11().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Dot11Configuration }
+   * <p>Objects of the following type(s) are allowed in the list {@link Dot11Configuration }
    */
   public List<Dot11Configuration> getDot11() {
     if (dot11 == null) {
@@ -136,5 +132,4 @@ public class NetworkInterfaceSetConfigurationExtension {
   public void setExtension(NetworkInterfaceSetConfigurationExtension2 value) {
     this.extension = value;
   }
-
 }

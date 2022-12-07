@@ -14,11 +14,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkZeroConfiguration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkZeroConfiguration">
@@ -37,20 +36,25 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkZeroConfiguration", propOrder = {"interfaceToken", "enabled", "addresses", "extension"})
+@XmlType(
+    name = "NetworkZeroConfiguration",
+    propOrder = {"interfaceToken", "enabled", "addresses", "extension"})
 public class NetworkZeroConfiguration {
 
   @XmlElement(name = "InterfaceToken", required = true)
   protected String interfaceToken;
+
   @XmlElement(name = "Enabled")
   protected boolean enabled;
+
   @XmlElement(name = "Addresses")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected List<String> addresses;
+
   @XmlElement(name = "Extension")
   protected NetworkZeroConfigurationExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der interfaceToken-Eigenschaft ab.
@@ -70,16 +74,12 @@ public class NetworkZeroConfiguration {
     this.interfaceToken = value;
   }
 
-  /**
-   * Ruft den Wert der enabled-Eigenschaft ab.
-   */
+  /** Ruft den Wert der enabled-Eigenschaft ab. */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /**
-   * Legt den Wert der enabled-Eigenschaft fest.
-   */
+  /** Legt den Wert der enabled-Eigenschaft fest. */
   public void setEnabled(boolean value) {
     this.enabled = value;
   }
@@ -87,20 +87,17 @@ public class NetworkZeroConfiguration {
   /**
    * Gets the value of the addresses property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the addresses property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the addresses property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAddresses().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getAddresses() {
     if (addresses == null) {
@@ -130,15 +127,15 @@ public class NetworkZeroConfiguration {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -14,11 +14,10 @@ import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
 /**
- * <p>
  * Java-Klasse f�r ImagingOptions complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ImagingOptions">
@@ -44,34 +43,57 @@ import org.w3c.dom.Element;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ImagingOptions", propOrder = {"backlightCompensation", "brightness", "colorSaturation", "contrast", "exposure", "focus", "irCutFilterModes",
-    "sharpness", "wideDynamicRange", "whiteBalance", "any"})
+@XmlType(
+    name = "ImagingOptions",
+    propOrder = {
+      "backlightCompensation",
+      "brightness",
+      "colorSaturation",
+      "contrast",
+      "exposure",
+      "focus",
+      "irCutFilterModes",
+      "sharpness",
+      "wideDynamicRange",
+      "whiteBalance",
+      "any"
+    })
 public class ImagingOptions {
 
   @XmlElement(name = "BacklightCompensation", required = true)
   protected BacklightCompensationOptions backlightCompensation;
+
   @XmlElement(name = "Brightness", required = true)
   protected FloatRange brightness;
+
   @XmlElement(name = "ColorSaturation", required = true)
   protected FloatRange colorSaturation;
+
   @XmlElement(name = "Contrast", required = true)
   protected FloatRange contrast;
+
   @XmlElement(name = "Exposure", required = true)
   protected ExposureOptions exposure;
+
   @XmlElement(name = "Focus", required = true)
   protected FocusOptions focus;
+
   @XmlElement(name = "IrCutFilterModes", required = true)
   protected List<IrCutFilterMode> irCutFilterModes;
+
   @XmlElement(name = "Sharpness", required = true)
   protected FloatRange sharpness;
+
   @XmlElement(name = "WideDynamicRange", required = true)
   protected WideDynamicRangeOptions wideDynamicRange;
+
   @XmlElement(name = "WhiteBalance", required = true)
   protected WhiteBalanceOptions whiteBalance;
+
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der backlightCompensation-Eigenschaft ab.
@@ -184,20 +206,17 @@ public class ImagingOptions {
   /**
    * Gets the value of the irCutFilterModes property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the irCutFilterModes property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the irCutFilterModes property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIrCutFilterModes().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link IrCutFilterMode }
+   * <p>Objects of the following type(s) are allowed in the list {@link IrCutFilterMode }
    */
   public List<IrCutFilterMode> getIrCutFilterModes() {
     if (irCutFilterModes == null) {
@@ -263,20 +282,18 @@ public class ImagingOptions {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element } {@link
+   * java.lang.Object }
    */
   public List<java.lang.Object> getAny() {
     if (any == null) {
@@ -288,15 +305,15 @@ public class ImagingOptions {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

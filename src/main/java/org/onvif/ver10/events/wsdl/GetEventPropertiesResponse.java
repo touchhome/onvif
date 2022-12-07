@@ -18,38 +18,53 @@ import org.oasis_open.docs.wsn.t_1.TopicSetType;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "topicNamespaceLocation",
-    "fixedTopicSet",
-    "topicSet",
-    "topicExpressionDialect",
-    "messageContentFilterDialect",
-    "producerPropertiesFilterDialect",
-    "messageContentSchemaLocation",
-    "any"
-})
+@XmlType(
+    name = "",
+    propOrder = {
+      "topicNamespaceLocation",
+      "fixedTopicSet",
+      "topicSet",
+      "topicExpressionDialect",
+      "messageContentFilterDialect",
+      "producerPropertiesFilterDialect",
+      "messageContentSchemaLocation",
+      "any"
+    })
 @XmlRootElement(name = "GetEventPropertiesResponse")
 public class GetEventPropertiesResponse {
 
   @XmlElement(name = "TopicNamespaceLocation", required = true)
   @XmlSchemaType(name = "anyURI")
   protected List<String> topicNamespaceLocation;
-  @XmlElement(name = "FixedTopicSet", namespace = "http://docs.oasis-open.org/wsn/b-2", defaultValue = "true")
+
+  @XmlElement(
+      name = "FixedTopicSet",
+      namespace = "http://docs.oasis-open.org/wsn/b-2",
+      defaultValue = "true")
   protected boolean fixedTopicSet;
+
   @XmlElement(name = "TopicSet", namespace = "http://docs.oasis-open.org/wsn/t-1", required = true)
   protected TopicSetType topicSet;
-  @XmlElement(name = "TopicExpressionDialect", namespace = "http://docs.oasis-open.org/wsn/b-2", required = true)
+
+  @XmlElement(
+      name = "TopicExpressionDialect",
+      namespace = "http://docs.oasis-open.org/wsn/b-2",
+      required = true)
   @XmlSchemaType(name = "anyURI")
   protected List<String> topicExpressionDialect;
+
   @XmlElement(name = "MessageContentFilterDialect", required = true)
   @XmlSchemaType(name = "anyURI")
   protected List<String> messageContentFilterDialect;
+
   @XmlElement(name = "ProducerPropertiesFilterDialect")
   @XmlSchemaType(name = "anyURI")
   protected List<String> producerPropertiesFilterDialect;
+
   @XmlElement(name = "MessageContentSchemaLocation", required = true)
   @XmlSchemaType(name = "anyURI")
   protected List<String> messageContentSchemaLocation;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 
@@ -94,5 +109,4 @@ public class GetEventPropertiesResponse {
     }
     return this.any;
   }
-
 }

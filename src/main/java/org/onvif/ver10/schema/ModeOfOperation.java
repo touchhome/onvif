@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ModeOfOperation.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,14 +25,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ModeOfOperation")
 @XmlEnum
 public enum ModeOfOperation {
-
   @XmlEnumValue("Idle")
-  IDLE("Idle"), @XmlEnumValue("Active")
+  IDLE("Idle"),
+  @XmlEnumValue("Active")
   ACTIVE("Active"),
 
-  /**
-   * This case should never happen.
-   */
+  /** This case should never happen. */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;
@@ -53,5 +51,4 @@ public enum ModeOfOperation {
   public String value() {
     return value;
   }
-
 }

@@ -11,7 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"configurationToken"})
+@XmlType(
+    name = "",
+    propOrder = {"configurationToken"})
 @XmlRootElement(name = "GetAudioEncoderConfiguration")
 public class GetAudioEncoderConfiguration {
 

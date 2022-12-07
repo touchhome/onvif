@@ -14,11 +14,10 @@ import javax.xml.namespace.QName;
 /**
  * A structure for defining a limited scope when searching in recorded data.
  *
- * <p>
- * Java-Klasse f�r SearchScope complex type.
+ * <p>Java-Klasse f�r SearchScope complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="SearchScope">
@@ -37,37 +36,44 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SearchScope", propOrder = {"includedSources", "includedRecordings", "recordingInformationFilter", "extension"})
+@XmlType(
+    name = "SearchScope",
+    propOrder = {
+      "includedSources",
+      "includedRecordings",
+      "recordingInformationFilter",
+      "extension"
+    })
 public class SearchScope {
 
   @XmlElement(name = "IncludedSources")
   protected List<SourceReference> includedSources;
+
   @XmlElement(name = "IncludedRecordings")
   protected List<String> includedRecordings;
+
   @XmlElement(name = "RecordingInformationFilter")
   protected String recordingInformationFilter;
+
   @XmlElement(name = "Extension")
   protected SearchScopeExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Gets the value of the includedSources property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the includedSources property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the includedSources property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIncludedSources().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link SourceReference }
+   * <p>Objects of the following type(s) are allowed in the list {@link SourceReference }
    */
   public List<SourceReference> getIncludedSources() {
     if (includedSources == null) {
@@ -79,20 +85,17 @@ public class SearchScope {
   /**
    * Gets the value of the includedRecordings property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the includedRecordings property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the includedRecordings property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIncludedRecordings().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getIncludedRecordings() {
     if (includedRecordings == null) {
@@ -140,15 +143,15 @@ public class SearchScope {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Vector complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Vector">
@@ -29,6 +28,7 @@ public class Vector {
 
   @XmlAttribute(name = "x")
   protected Float x;
+
   @XmlAttribute(name = "y")
   protected Float y;
 
@@ -67,5 +67,4 @@ public class Vector {
   public void setY(Float value) {
     this.y = value;
   }
-
 }

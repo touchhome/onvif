@@ -17,11 +17,10 @@ import org.oasis_open.docs.wsn.b_2.NotificationMessageHolderType;
 import org.w3c.dom.Element;
 
 /**
- * <p>
  * Java-Klasse f�r FindEventResult complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FindEventResult">
@@ -42,24 +41,31 @@ import org.w3c.dom.Element;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FindEventResult", propOrder = {"recordingToken", "trackToken", "time", "event", "startStateEvent", "any"})
+@XmlType(
+    name = "FindEventResult",
+    propOrder = {"recordingToken", "trackToken", "time", "event", "startStateEvent", "any"})
 public class FindEventResult {
 
   @XmlElement(name = "RecordingToken", required = true)
   protected String recordingToken;
+
   @XmlElement(name = "TrackToken", required = true)
   protected String trackToken;
+
   @XmlElement(name = "Time", required = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar time;
+
   @XmlElement(name = "Event", required = true)
   protected NotificationMessageHolderType event;
+
   @XmlElement(name = "StartStateEvent")
   protected boolean startStateEvent;
+
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der recordingToken-Eigenschaft ab.
@@ -133,16 +139,12 @@ public class FindEventResult {
     this.event = value;
   }
 
-  /**
-   * Ruft den Wert der startStateEvent-Eigenschaft ab.
-   */
+  /** Ruft den Wert der startStateEvent-Eigenschaft ab. */
   public boolean isStartStateEvent() {
     return startStateEvent;
   }
 
-  /**
-   * Legt den Wert der startStateEvent-Eigenschaft fest.
-   */
+  /** Legt den Wert der startStateEvent-Eigenschaft fest. */
   public void setStartStateEvent(boolean value) {
     this.startStateEvent = value;
   }
@@ -150,20 +152,18 @@ public class FindEventResult {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element } {@link
+   * java.lang.Object }
    */
   public List<java.lang.Object> getAny() {
     if (any == null) {
@@ -175,15 +175,15 @@ public class FindEventResult {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

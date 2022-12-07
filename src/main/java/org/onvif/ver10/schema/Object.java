@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r Object complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Object">
@@ -32,17 +31,21 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Object", propOrder = {"appearance", "behaviour", "extension"})
+@XmlType(
+    name = "Object",
+    propOrder = {"appearance", "behaviour", "extension"})
 public class Object extends ObjectId {
 
   @XmlElement(name = "Appearance")
   protected Appearance appearance;
+
   @XmlElement(name = "Behaviour")
   protected Behaviour behaviour;
+
   @XmlElement(name = "Extension")
   protected ObjectExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der appearance-Eigenschaft ab.
@@ -101,15 +104,15 @@ public class Object extends ObjectId {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

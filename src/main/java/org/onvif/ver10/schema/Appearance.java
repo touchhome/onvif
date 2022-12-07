@@ -10,21 +10,27 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Appearance", propOrder = {"transformation", "shape", "color", "clazz", "extension"})
+@XmlType(
+    name = "Appearance",
+    propOrder = {"transformation", "shape", "color", "clazz", "extension"})
 public class Appearance {
 
   @XmlElement(name = "Transformation")
   protected Transformation transformation;
+
   @XmlElement(name = "Shape")
   protected ShapeDescriptor shape;
+
   @XmlElement(name = "Color")
   protected ColorDescriptor color;
+
   @XmlElement(name = "Class")
   protected ClassDescriptor clazz;
+
   @XmlElement(name = "Extension")
   protected AppearanceExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der transformation-Eigenschaft ab.
@@ -119,15 +125,15 @@ public class Appearance {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.19 um 02:35:56 PM CET
@@ -22,11 +23,10 @@ import javax.xml.namespace.QName;
 import org.onvif.ver10.schema.VideoResolution;
 
 /**
- * <p>
  * Java-Klasse f�r VideoSourceMode complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoSourceMode">
@@ -49,39 +49,51 @@ import org.onvif.ver10.schema.VideoResolution;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoSourceMode", propOrder = {"maxFramerate", "maxResolution", "encodings", "reboot", "description", "extension"})
+@XmlType(
+    name = "VideoSourceMode",
+    propOrder = {
+      "maxFramerate",
+      "maxResolution",
+      "encodings",
+      "reboot",
+      "description",
+      "extension"
+    })
 public class VideoSourceMode {
 
   @XmlElement(name = "MaxFramerate")
   protected float maxFramerate;
+
   @XmlElement(name = "MaxResolution", required = true)
   protected VideoResolution maxResolution;
+
   @XmlList
   @XmlElement(name = "Encodings", required = true)
   protected List<String> encodings;
+
   @XmlElement(name = "Reboot")
   protected boolean reboot;
+
   @XmlElement(name = "Description")
   protected String description;
+
   @XmlElement(name = "Extension")
   protected VideoSourceModeExtension extension;
+
   @XmlAttribute(name = "token", required = true)
   protected String token;
+
   @XmlAttribute(name = "Enabled")
   protected Boolean enabled;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der maxFramerate-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der maxFramerate-Eigenschaft ab. */
   public float getMaxFramerate() {
     return maxFramerate;
   }
 
-  /**
-   * Legt den Wert der maxFramerate-Eigenschaft fest.
-   */
+  /** Legt den Wert der maxFramerate-Eigenschaft fest. */
   public void setMaxFramerate(float value) {
     this.maxFramerate = value;
   }
@@ -107,20 +119,17 @@ public class VideoSourceMode {
   /**
    * Gets the value of the encodings property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the encodings property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the encodings property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getEncodings().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getEncodings() {
     if (encodings == null) {
@@ -129,16 +138,12 @@ public class VideoSourceMode {
     return this.encodings;
   }
 
-  /**
-   * Ruft den Wert der reboot-Eigenschaft ab.
-   */
+  /** Ruft den Wert der reboot-Eigenschaft ab. */
   public boolean isReboot() {
     return reboot;
   }
 
-  /**
-   * Legt den Wert der reboot-Eigenschaft fest.
-   */
+  /** Legt den Wert der reboot-Eigenschaft fest. */
   public void setReboot(boolean value) {
     this.reboot = value;
   }
@@ -218,15 +223,15 @@ public class VideoSourceMode {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -7,10 +7,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AudioEncoding")
 @XmlEnum
 public enum AudioEncoding {
-
   @XmlEnumValue("G711")
-  G_711("G711"), @XmlEnumValue("G726")
-  G_726("G726"), AAC("AAC");
+  G_711("G711"),
+  @XmlEnumValue("G726")
+  G_726("G726"),
+  AAC("AAC");
   private final String value;
 
   AudioEncoding(String v) {
@@ -29,5 +30,4 @@ public enum AudioEncoding {
   public String value() {
     return value;
   }
-
 }

@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r RelayIdleState.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RelayIdleState")
 @XmlEnum
 public enum RelayIdleState {
-
   @XmlEnumValue("closed")
-  CLOSED("closed"), @XmlEnumValue("open")
+  CLOSED("closed"),
+  @XmlEnumValue("open")
   OPEN("open");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum RelayIdleState {
   public String value() {
     return value;
   }
-
 }

@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Dot11Cipher.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -26,9 +26,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Dot11Cipher")
 @XmlEnum
 public enum Dot11Cipher {
-
-  CCMP("CCMP"), TKIP("TKIP"), @XmlEnumValue("Any")
-  ANY("Any"), @XmlEnumValue("Extended")
+  CCMP("CCMP"),
+  TKIP("TKIP"),
+  @XmlEnumValue("Any")
+  ANY("Any"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -48,5 +50,4 @@ public enum Dot11Cipher {
   public String value() {
     return value;
   }
-
 }

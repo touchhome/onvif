@@ -6,11 +6,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DateTime", propOrder = {"time", "date"})
+@XmlType(
+    name = "DateTime",
+    propOrder = {"time", "date"})
 public class DateTime {
 
   @XmlElement(name = "Time", required = true)
   protected Time time;
+
   @XmlElement(name = "Date", required = true)
   protected Date date;
 
@@ -49,5 +52,4 @@ public class DateTime {
   public void setDate(Date value) {
     this.date = value;
   }
-
 }

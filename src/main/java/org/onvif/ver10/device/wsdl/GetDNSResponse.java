@@ -12,7 +12,9 @@ import org.onvif.ver10.schema.DNSInformation;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"dnsInformation"})
+@XmlType(
+    name = "",
+    propOrder = {"dnsInformation"})
 @XmlRootElement(name = "GetDNSResponse")
 public class GetDNSResponse {
 

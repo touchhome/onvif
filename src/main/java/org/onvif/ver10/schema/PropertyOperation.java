@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r PropertyOperation.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,10 +25,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PropertyOperation")
 @XmlEnum
 public enum PropertyOperation {
-
   @XmlEnumValue("Initialized")
-  INITIALIZED("Initialized"), @XmlEnumValue("Deleted")
-  DELETED("Deleted"), @XmlEnumValue("Changed")
+  INITIALIZED("Initialized"),
+  @XmlEnumValue("Deleted")
+  DELETED("Deleted"),
+  @XmlEnumValue("Changed")
   CHANGED("Changed");
   private final String value;
 
@@ -48,5 +49,4 @@ public enum PropertyOperation {
   public String value() {
     return value;
   }
-
 }

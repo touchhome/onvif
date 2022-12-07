@@ -62,7 +62,8 @@ public class ImagingDevices {
     GetImagingSettings request = new GetImagingSettings();
     request.setVideoSourceToken(videoSourceToken);
 
-    GetImagingSettingsResponse response = soap.createSOAPImagingRequest(request, GetImagingSettingsResponse.class);
+    GetImagingSettingsResponse response =
+        soap.createSOAPImagingRequest(request, GetImagingSettingsResponse.class);
     return response == null ? null : response.getImagingSettings();
   }
 
@@ -75,11 +76,10 @@ public class ImagingDevices {
     request.setVideoSourceToken(videoSourceToken);
     request.setImagingSettings(imagingSettings);
 
-    SetImagingSettingsResponse response = soap.createSOAPImagingRequest(request, SetImagingSettingsResponse.class);
+    SetImagingSettingsResponse response =
+        soap.createSOAPImagingRequest(request, SetImagingSettingsResponse.class);
     return response != null;
   }
 
-  public void dispose() {
-
-  }
+  public void dispose() {}
 }

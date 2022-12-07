@@ -18,19 +18,19 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "utcTime",
-    "reverse",
-    "any"
-})
+@XmlType(
+    name = "",
+    propOrder = {"utcTime", "reverse", "any"})
 @XmlRootElement(name = "Seek")
 public class Seek {
 
   @XmlElement(name = "UtcTime", required = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar utcTime;
+
   @XmlElement(name = "Reverse")
   protected Boolean reverse;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

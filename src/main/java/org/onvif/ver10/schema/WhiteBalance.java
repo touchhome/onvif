@@ -14,11 +14,10 @@ import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
 /**
- * <p>
  * Java-Klasse f�r WhiteBalance complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="WhiteBalance">
@@ -37,19 +36,24 @@ import org.w3c.dom.Element;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WhiteBalance", propOrder = {"mode", "crGain", "cbGain", "any"})
+@XmlType(
+    name = "WhiteBalance",
+    propOrder = {"mode", "crGain", "cbGain", "any"})
 public class WhiteBalance {
 
   @XmlElement(name = "Mode", required = true)
   protected WhiteBalanceMode mode;
+
   @XmlElement(name = "CrGain")
   protected float crGain;
+
   @XmlElement(name = "CbGain")
   protected float cbGain;
+
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der mode-Eigenschaft ab.
@@ -69,30 +73,22 @@ public class WhiteBalance {
     this.mode = value;
   }
 
-  /**
-   * Ruft den Wert der crGain-Eigenschaft ab.
-   */
+  /** Ruft den Wert der crGain-Eigenschaft ab. */
   public float getCrGain() {
     return crGain;
   }
 
-  /**
-   * Legt den Wert der crGain-Eigenschaft fest.
-   */
+  /** Legt den Wert der crGain-Eigenschaft fest. */
   public void setCrGain(float value) {
     this.crGain = value;
   }
 
-  /**
-   * Ruft den Wert der cbGain-Eigenschaft ab.
-   */
+  /** Ruft den Wert der cbGain-Eigenschaft ab. */
   public float getCbGain() {
     return cbGain;
   }
 
-  /**
-   * Legt den Wert der cbGain-Eigenschaft fest.
-   */
+  /** Legt den Wert der cbGain-Eigenschaft fest. */
   public void setCbGain(float value) {
     this.cbGain = value;
   }
@@ -100,20 +96,18 @@ public class WhiteBalance {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element } {@link
+   * java.lang.Object }
    */
   public List<java.lang.Object> getAny() {
     if (any == null) {
@@ -125,15 +119,15 @@ public class WhiteBalance {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -11,11 +11,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r PTZPreset complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PTZPreset">
@@ -33,17 +32,21 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZPreset", propOrder = {"name", "ptzPosition"})
+@XmlType(
+    name = "PTZPreset",
+    propOrder = {"name", "ptzPosition"})
 public class PTZPreset {
 
   @XmlElement(name = "Name")
   protected String name;
+
   @XmlElement(name = "PTZPosition")
   protected PTZVector ptzPosition;
+
   @XmlAttribute(name = "token")
   protected String token;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der name-Eigenschaft ab.
@@ -102,15 +105,15 @@ public class PTZPreset {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

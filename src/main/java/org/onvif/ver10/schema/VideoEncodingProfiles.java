@@ -4,12 +4,14 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r VideoEncodingProfiles.
+ * Java-Klasse f�r VideoEncodingProfiles.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
+ *
  * <pre>
  * &lt;simpleType name="VideoEncodingProfiles">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -27,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "VideoEncodingProfiles")
 @XmlEnum
 public enum VideoEncodingProfiles {
-
   @XmlEnumValue("Simple")
   SIMPLE("Simple"),
   @XmlEnumValue("AdvancedSimple")
@@ -60,5 +61,4 @@ public enum VideoEncodingProfiles {
   public String value() {
     return value;
   }
-
 }

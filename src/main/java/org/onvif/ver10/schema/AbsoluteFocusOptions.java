@@ -6,11 +6,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbsoluteFocusOptions", propOrder = {"position", "speed"})
+@XmlType(
+    name = "AbsoluteFocusOptions",
+    propOrder = {"position", "speed"})
 public class AbsoluteFocusOptions {
 
   @XmlElement(name = "Position", required = true)
   protected FloatRange position;
+
   @XmlElement(name = "Speed")
   protected FloatRange speed;
 
@@ -49,5 +52,4 @@ public class AbsoluteFocusOptions {
   public void setSpeed(FloatRange value) {
     this.speed = value;
   }
-
 }

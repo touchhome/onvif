@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r RecordingStatus.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -28,17 +28,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RecordingStatus")
 @XmlEnum
 public enum RecordingStatus {
-
   @XmlEnumValue("Initiated")
-  INITIATED("Initiated"), @XmlEnumValue("Recording")
-  RECORDING("Recording"), @XmlEnumValue("Stopped")
-  STOPPED("Stopped"), @XmlEnumValue("Removing")
-  REMOVING("Removing"), @XmlEnumValue("Removed")
+  INITIATED("Initiated"),
+  @XmlEnumValue("Recording")
+  RECORDING("Recording"),
+  @XmlEnumValue("Stopped")
+  STOPPED("Stopped"),
+  @XmlEnumValue("Removing")
+  REMOVING("Removing"),
+  @XmlEnumValue("Removed")
   REMOVED("Removed"),
 
-  /**
-   * This case should never happen.
-   */
+  /** This case should never happen. */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;
@@ -59,5 +60,4 @@ public enum RecordingStatus {
   public String value() {
     return value;
   }
-
 }

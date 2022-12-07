@@ -9,11 +9,10 @@ import javax.xml.datatype.Duration;
 /**
  * Range of duration greater equal Min duration and less equal Max duration.
  *
- * <p>
- * Java-Klasse f�r DurationRange complex type.
+ * <p>Java-Klasse f�r DurationRange complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="DurationRange">
@@ -29,11 +28,14 @@ import javax.xml.datatype.Duration;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DurationRange", propOrder = {"min", "max"})
+@XmlType(
+    name = "DurationRange",
+    propOrder = {"min", "max"})
 public class DurationRange {
 
   @XmlElement(name = "Min", required = true)
   protected Duration min;
+
   @XmlElement(name = "Max", required = true)
   protected Duration max;
 
@@ -72,5 +74,4 @@ public class DurationRange {
   public void setMax(Duration value) {
     this.max = value;
   }
-
 }

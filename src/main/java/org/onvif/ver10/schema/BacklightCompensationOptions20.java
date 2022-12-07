@@ -8,31 +8,31 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BacklightCompensationOptions20", propOrder = {"mode", "level"})
+@XmlType(
+    name = "BacklightCompensationOptions20",
+    propOrder = {"mode", "level"})
 public class BacklightCompensationOptions20 {
 
   @XmlElement(name = "Mode", required = true)
   protected List<BacklightCompensationMode> mode;
+
   @XmlElement(name = "Level")
   protected FloatRange level;
 
   /**
    * Gets the value of the mode property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the mode property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the mode property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getMode().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link BacklightCompensationMode }
+   * <p>Objects of the following type(s) are allowed in the list {@link BacklightCompensationMode }
    */
   public List<BacklightCompensationMode> getMode() {
     if (mode == null) {
@@ -58,5 +58,4 @@ public class BacklightCompensationOptions20 {
   public void setLevel(FloatRange value) {
     this.level = value;
   }
-
 }

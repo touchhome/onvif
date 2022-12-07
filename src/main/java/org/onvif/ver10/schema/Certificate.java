@@ -9,13 +9,16 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Certificate", propOrder = {"certificateID", "certificate"})
+@XmlType(
+    name = "Certificate",
+    propOrder = {"certificateID", "certificate"})
 public class Certificate {
 
   @XmlElement(name = "CertificateID", required = true)
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   @XmlSchemaType(name = "token")
   protected String certificateID;
+
   @XmlElement(name = "Certificate", required = true)
   protected BinaryData certificate;
 
@@ -54,5 +57,4 @@ public class Certificate {
   public void setCertificate(BinaryData value) {
     this.certificate = value;
   }
-
 }

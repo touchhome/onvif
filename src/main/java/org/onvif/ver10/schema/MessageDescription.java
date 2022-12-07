@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r MessageDescription complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="MessageDescription">
@@ -36,22 +35,28 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MessageDescription", propOrder = {"source", "key", "data", "extension"})
+@XmlType(
+    name = "MessageDescription",
+    propOrder = {"source", "key", "data", "extension"})
 @XmlSeeAlso({org.onvif.ver10.schema.ConfigDescription.Messages.class})
 public class MessageDescription {
 
   @XmlElement(name = "Source")
   protected ItemListDescription source;
+
   @XmlElement(name = "Key")
   protected ItemListDescription key;
+
   @XmlElement(name = "Data")
   protected ItemListDescription data;
+
   @XmlElement(name = "Extension")
   protected MessageDescriptionExtension extension;
+
   @XmlAttribute(name = "IsProperty")
   protected Boolean isProperty;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der source-Eigenschaft ab.
@@ -146,15 +151,15 @@ public class MessageDescription {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

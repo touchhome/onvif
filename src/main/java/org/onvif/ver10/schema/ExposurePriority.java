@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ExposurePriority.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ExposurePriority")
 @XmlEnum
 public enum ExposurePriority {
-
   @XmlEnumValue("LowNoise")
-  LOW_NOISE("LowNoise"), @XmlEnumValue("FrameRate")
+  LOW_NOISE("LowNoise"),
+  @XmlEnumValue("FrameRate")
   FRAME_RATE("FrameRate");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum ExposurePriority {
   public String value() {
     return value;
   }
-
 }

@@ -14,11 +14,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExtensibleDocumented", propOrder = {"documentation"})
+@XmlType(
+    name = "ExtensibleDocumented",
+    propOrder = {"documentation"})
 @XmlSeeAlso({TopicSetType.class, TopicNamespaceType.class, TopicType.class})
 public abstract class ExtensibleDocumented {
 
   protected Documentation documentation;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 }

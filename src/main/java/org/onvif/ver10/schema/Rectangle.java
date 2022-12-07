@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Rectangle complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Rectangle">
@@ -31,10 +30,13 @@ public class Rectangle {
 
   @XmlAttribute(name = "bottom")
   protected Float bottom;
+
   @XmlAttribute(name = "top")
   protected Float top;
+
   @XmlAttribute(name = "right")
   protected Float right;
+
   @XmlAttribute(name = "left")
   protected Float left;
 
@@ -109,5 +111,4 @@ public class Rectangle {
   public void setLeft(Float value) {
     this.left = value;
   }
-
 }

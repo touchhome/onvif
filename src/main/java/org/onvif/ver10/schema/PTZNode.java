@@ -13,11 +13,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r PTZNode complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PTZNode">
@@ -39,25 +38,40 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZNode", propOrder = {"name", "supportedPTZSpaces", "maximumNumberOfPresets", "homeSupported", "auxiliaryCommands", "extension"})
+@XmlType(
+    name = "PTZNode",
+    propOrder = {
+      "name",
+      "supportedPTZSpaces",
+      "maximumNumberOfPresets",
+      "homeSupported",
+      "auxiliaryCommands",
+      "extension"
+    })
 public class PTZNode extends DeviceEntity {
 
   @XmlElement(name = "Name")
   protected String name;
+
   @XmlElement(name = "SupportedPTZSpaces", required = true)
   protected PTZSpaces supportedPTZSpaces;
+
   @XmlElement(name = "MaximumNumberOfPresets")
   protected int maximumNumberOfPresets;
+
   @XmlElement(name = "HomeSupported")
   protected boolean homeSupported;
+
   @XmlElement(name = "AuxiliaryCommands")
   protected List<String> auxiliaryCommands;
+
   @XmlElement(name = "Extension")
   protected PTZNodeExtension extension;
+
   @XmlAttribute(name = "FixedHomePosition")
   protected Boolean fixedHomePosition;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der name-Eigenschaft ab.
@@ -95,30 +109,22 @@ public class PTZNode extends DeviceEntity {
     this.supportedPTZSpaces = value;
   }
 
-  /**
-   * Ruft den Wert der maximumNumberOfPresets-Eigenschaft ab.
-   */
+  /** Ruft den Wert der maximumNumberOfPresets-Eigenschaft ab. */
   public int getMaximumNumberOfPresets() {
     return maximumNumberOfPresets;
   }
 
-  /**
-   * Legt den Wert der maximumNumberOfPresets-Eigenschaft fest.
-   */
+  /** Legt den Wert der maximumNumberOfPresets-Eigenschaft fest. */
   public void setMaximumNumberOfPresets(int value) {
     this.maximumNumberOfPresets = value;
   }
 
-  /**
-   * Ruft den Wert der homeSupported-Eigenschaft ab.
-   */
+  /** Ruft den Wert der homeSupported-Eigenschaft ab. */
   public boolean isHomeSupported() {
     return homeSupported;
   }
 
-  /**
-   * Legt den Wert der homeSupported-Eigenschaft fest.
-   */
+  /** Legt den Wert der homeSupported-Eigenschaft fest. */
   public void setHomeSupported(boolean value) {
     this.homeSupported = value;
   }
@@ -126,20 +132,17 @@ public class PTZNode extends DeviceEntity {
   /**
    * Gets the value of the auxiliaryCommands property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the auxiliaryCommands property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the auxiliaryCommands property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAuxiliaryCommands().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getAuxiliaryCommands() {
     if (auxiliaryCommands == null) {
@@ -187,15 +190,15 @@ public class PTZNode extends DeviceEntity {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

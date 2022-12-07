@@ -4,11 +4,11 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r TransportProtocol.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,8 +25,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "TransportProtocol")
 @XmlEnum
 public enum TransportProtocol {
-
-  UDP, TCP, RTSP, HTTP;
+  UDP,
+  TCP,
+  RTSP,
+  HTTP;
 
   public static TransportProtocol fromValue(String v) {
     return valueOf(v);
@@ -35,5 +37,4 @@ public enum TransportProtocol {
   public String value() {
     return name();
   }
-
 }

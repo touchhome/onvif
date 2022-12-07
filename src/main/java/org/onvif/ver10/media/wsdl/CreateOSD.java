@@ -15,12 +15,15 @@ import org.onvif.ver10.schema.OSDConfiguration;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"osd", "any"})
+@XmlType(
+    name = "",
+    propOrder = {"osd", "any"})
 @XmlRootElement(name = "CreateOSD")
 public class CreateOSD {
 
   @XmlElement(name = "OSD", required = true)
   protected OSDConfiguration osd;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

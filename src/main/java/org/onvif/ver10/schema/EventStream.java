@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.oasis_open.docs.wsn.b_2.NotificationMessageHolderType;
 
 /**
- * <p>
  * Java-Klasse f�r EventStream complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="EventStream">
@@ -30,30 +29,35 @@ import org.oasis_open.docs.wsn.b_2.NotificationMessageHolderType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EventStream", propOrder = {"notificationMessageOrExtension"})
+@XmlType(
+    name = "EventStream",
+    propOrder = {"notificationMessageOrExtension"})
 public class EventStream {
 
-  @XmlElements({@XmlElement(name = "NotificationMessage", namespace = "http://docs.oasis-open.org/wsn/b-2", type = NotificationMessageHolderType.class),
-      @XmlElement(name = "Extension", type = EventStreamExtension.class)})
+  @XmlElements({
+    @XmlElement(
+        name = "NotificationMessage",
+        namespace = "http://docs.oasis-open.org/wsn/b-2",
+        type = NotificationMessageHolderType.class),
+    @XmlElement(name = "Extension", type = EventStreamExtension.class)
+  })
   protected List<java.lang.Object> notificationMessageOrExtension;
 
   /**
    * Gets the value of the notificationMessageOrExtension property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the notificationMessageOrExtension property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the notificationMessageOrExtension property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getNotificationMessageOrExtension().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link NotificationMessageHolderType } {@link EventStreamExtension }
+   * <p>Objects of the following type(s) are allowed in the list {@link
+   * NotificationMessageHolderType } {@link EventStreamExtension }
    */
   public List<java.lang.Object> getNotificationMessageOrExtension() {
     if (notificationMessageOrExtension == null) {
@@ -61,5 +65,4 @@ public class EventStream {
     }
     return this.notificationMessageOrExtension;
   }
-
 }

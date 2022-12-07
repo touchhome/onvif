@@ -8,8 +8,17 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DeviceEntity")
-@XmlSeeAlso({RelayOutput.class, NetworkInterface.class, VideoOutput.class, AudioSource.class, OSDConfiguration.class, AudioOutput.class, VideoSource.class,
-    DigitalInput.class, PTZNode.class})
+@XmlSeeAlso({
+  RelayOutput.class,
+  NetworkInterface.class,
+  VideoOutput.class,
+  AudioSource.class,
+  OSDConfiguration.class,
+  AudioOutput.class,
+  VideoSource.class,
+  DigitalInput.class,
+  PTZNode.class
+})
 public class DeviceEntity {
 
   @XmlAttribute(name = "token", required = true)
@@ -32,5 +41,4 @@ public class DeviceEntity {
   public void setToken(String value) {
     this.token = value;
   }
-
 }

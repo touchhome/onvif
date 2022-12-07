@@ -11,7 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"dot1XConfigurationToken"})
+@XmlType(
+    name = "",
+    propOrder = {"dot1XConfigurationToken"})
 @XmlRootElement(name = "GetDot1XConfiguration")
 public class GetDot1XConfiguration {
 

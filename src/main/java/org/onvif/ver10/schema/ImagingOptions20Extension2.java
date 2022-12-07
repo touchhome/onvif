@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ImagingOptions20Extension2 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ImagingOptions20Extension2">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ImagingOptions20Extension2", propOrder = {"irCutFilterAutoAdjustment", "extension"})
+@XmlType(
+    name = "ImagingOptions20Extension2",
+    propOrder = {"irCutFilterAutoAdjustment", "extension"})
 public class ImagingOptions20Extension2 {
 
   @XmlElement(name = "IrCutFilterAutoAdjustment")
   protected IrCutFilterAutoAdjustmentOptions irCutFilterAutoAdjustment;
+
   @XmlElement(name = "Extension")
   protected ImagingOptions20Extension3 extension;
 
@@ -69,5 +71,4 @@ public class ImagingOptions20Extension2 {
   public void setExtension(ImagingOptions20Extension3 value) {
     this.extension = value;
   }
-
 }

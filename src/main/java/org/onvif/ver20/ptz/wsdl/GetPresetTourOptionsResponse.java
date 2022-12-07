@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PTZPresetTourOptions;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -27,7 +26,9 @@ import org.onvif.ver10.schema.PTZPresetTourOptions;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"options"})
+@XmlType(
+    name = "",
+    propOrder = {"options"})
 @XmlRootElement(name = "GetPresetTourOptionsResponse")
 public class GetPresetTourOptionsResponse {
 
@@ -51,5 +52,4 @@ public class GetPresetTourOptionsResponse {
   public void setOptions(PTZPresetTourOptions value) {
     this.options = value;
   }
-
 }

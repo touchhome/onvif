@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r IPType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IPType")
 @XmlEnum
 public enum IPType {
-
   @XmlEnumValue("IPv4")
-  I_PV_4("IPv4"), @XmlEnumValue("IPv6")
+  I_PV_4("IPv4"),
+  @XmlEnumValue("IPv6")
   I_PV_6("IPv6");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum IPType {
   public String value() {
     return value;
   }
-
 }

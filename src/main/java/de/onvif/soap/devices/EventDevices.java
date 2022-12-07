@@ -63,22 +63,40 @@ public class EventDevices {
 
   public void initFully() {
     // first listen for events
-    soap.addAsyncListener(PullMessagesResponse.class, "listen-PullMessagesResponse", this::handleEventReceived);
-    soap.addAsyncListener(RenewResponse.class, "listen-RenewResponse", response -> {
-      log.debug("[{}]: Pulling messages from onvif", entityID);
-      this.lastTimeRenewResponse = System.currentTimeMillis();
-      soap.sendSOAPSubscribeRequestAsync(new PullMessages());
-    });
+    soap.addAsyncListener(
+        PullMessagesResponse.class, "listen-PullMessagesResponse", this::handleEventReceived);
+    soap.addAsyncListener(
+        RenewResponse.class,
+        "listen-RenewResponse",
+        response -> {
+          log.debug("[{}]: Pulling messages from onvif", entityID);
+          this.lastTimeRenewResponse = System.currentTimeMillis();
+          soap.sendSOAPSubscribeRequestAsync(new PullMessages());
+        });
 
-    this.eventProperties = soap.createSOAPDeviceRequestType(new GetEventProperties(), GetEventPropertiesResponse.class);
+    this.eventProperties =
+        soap.createSOAPDeviceRequestType(
+            new GetEventProperties(), GetEventPropertiesResponse.class);
 
     fetchSubscriptionUrlAndSendPullMessages();
 
-    GetServiceCapabilitiesResponse serviceCapabilities = soap.createSOAPDeviceRequestType(new GetServiceCapabilities(), GetServiceCapabilitiesResponse.class);
-    if (serviceCapabilities != null && serviceCapabilities.getCapabilities().getWsSubscriptionPolicySupport()) {
-      Subscribe subscribe = new Subscribe().setConsumerReference(new EndpointReferenceType()
-          .setAddress(new AttributedURIType().setValue(onvifDeviceState.getIp() + ":" + onvifDeviceState.getServerPort())));
-      SubscribeResponse subscribeResponse = soap.createSOAPDeviceRequestType(subscribe, SubscribeResponse.class);
+    GetServiceCapabilitiesResponse serviceCapabilities =
+        soap.createSOAPDeviceRequestType(
+            new GetServiceCapabilities(), GetServiceCapabilitiesResponse.class);
+    if (serviceCapabilities != null
+        && serviceCapabilities.getCapabilities().getWsSubscriptionPolicySupport()) {
+      Subscribe subscribe =
+          new Subscribe()
+              .setConsumerReference(
+                  new EndpointReferenceType()
+                      .setAddress(
+                          new AttributedURIType()
+                              .setValue(
+                                  onvifDeviceState.getIp()
+                                      + ":"
+                                      + onvifDeviceState.getServerPort())));
+      SubscribeResponse subscribeResponse =
+          soap.createSOAPDeviceRequestType(subscribe, SubscribeResponse.class);
       if (subscribeResponse != null) {
         log.info("[{}]: Onvif Subscribe appears to be working for Alarms/Events.", entityID);
       }
@@ -86,14 +104,20 @@ public class EventDevices {
   }
 
   private void fetchSubscriptionUrlAndSendPullMessages() {
-    log.info("[{}]: Trying fetch onvif message subscription for ip address <{}>...", entityID, this.onvifDeviceState.getIp());
+    log.info(
+        "[{}]: Trying fetch onvif message subscription for ip address <{}>...",
+        entityID,
+        this.onvifDeviceState.getIp());
     try {
-      CreatePullPointSubscriptionResponse pullPointResponse = soap.createSOAPDeviceRequestTypeThrowError(
-          new CreatePullPointSubscription(),
-          CreatePullPointSubscriptionResponse.class);
-      onvifDeviceState.setSubscriptionUri(pullPointResponse.getSubscriptionReference().getAddress().getValue());
+      CreatePullPointSubscriptionResponse pullPointResponse =
+          soap.createSOAPDeviceRequestTypeThrowError(
+              new CreatePullPointSubscription(), CreatePullPointSubscriptionResponse.class);
+      onvifDeviceState.setSubscriptionUri(
+          pullPointResponse.getSubscriptionReference().getAddress().getValue());
       soap.sendSOAPSubscribeRequestAsync(new PullMessages());
-      log.info("[{}]: Successfully fetched onvif message subscription: <{}>", entityID,
+      log.info(
+          "[{}]: Successfully fetched onvif message subscription: <{}>",
+          entityID,
           onvifDeviceState.getSubscriptionIpLessUri());
       onvifDeviceState.setSubscriptionError(null);
     } catch (Exception ex) {
@@ -119,7 +143,8 @@ public class EventDevices {
   private void handleEventReceived(PullMessagesResponse pullMessagesResponse) {
     if (pullMessagesResponse != null) {
       boolean handled = pullMessagesResponse.getNotificationMessage().isEmpty();
-      for (NotificationMessageHolderType notificationMessageHolderType : pullMessagesResponse.getNotificationMessage()) {
+      for (NotificationMessageHolderType notificationMessageHolderType :
+          pullMessagesResponse.getNotificationMessage()) {
         String topic = notificationMessageHolderType.getTopic().getContent().get(0).toString();
         if (topic.startsWith("tns1:")) {
           topic = topic.substring("tns1:".length());
@@ -129,7 +154,12 @@ public class EventDevices {
               handled = true;
               String name = data.getAttributes().getNamedItem("Name").getTextContent();
               String value = data.getAttributes().getNamedItem("Value").getTextContent();
-              log.info("[{}]: Received onvif event <{}>. Name: <{}>. Value: <{}>", entityID, topic, name, value);
+              log.info(
+                  "[{}]: Received onvif event <{}>. Name: <{}>. Value: <{}>",
+                  entityID,
+                  topic,
+                  name,
+                  value);
               eventHandlers.get(topic).handle(name, value);
             }
           }
@@ -143,7 +173,8 @@ public class EventDevices {
   }
 
   private Node findEventData(NotificationMessageHolderType notificationMessageHolderType) {
-    NodeList childNodes = ((Node) notificationMessageHolderType.getMessage().getAny()).getChildNodes();
+    NodeList childNodes =
+        ((Node) notificationMessageHolderType.getMessage().getAny()).getChildNodes();
     for (int i = 0; i < childNodes.getLength(); i++) {
       if (childNodes.item(i).getLocalName().equals("Data")) {
         return childNodes.item(i).getFirstChild();

@@ -45,6 +45,7 @@ public class OnvifDeviceState {
   private final MediaDevices mediaDevices;
   private final ImagingDevices imagingDevices;
   private final EventDevices eventDevices;
+  private final String entityID;
   private String HOST_IP;
   private String originalIp;
   private boolean isProxy;
@@ -67,11 +68,9 @@ public class OnvifDeviceState {
   private int onvifPort;
   private int serverPort;
   private String profileToken;
-  @Setter
-  private Consumer<String> unreachableHandler;
+  @Setter private Consumer<String> unreachableHandler;
   private Capabilities capabilities;
   private String subscriptionError;
-  private final String entityID;
 
   @SneakyThrows
   public OnvifDeviceState(String entityID) {
@@ -98,7 +97,8 @@ public class OnvifDeviceState {
     this.subscriptionError = subscriptionError;
   }
 
-  public void updateParameters(String ip, int onvifPort, int serverPort, String user, String password) {
+  public void updateParameters(
+      String ip, int onvifPort, int serverPort, String user, String password) {
     this.ip = ip;
     this.onvifPort = onvifPort;
     this.serverPort = serverPort;
@@ -109,9 +109,7 @@ public class OnvifDeviceState {
     this.password = password;
   }
 
-  /**
-   * Internal function to check, if device is available and answers to ping requests.
-   */
+  /** Internal function to check, if device is available and answers to ping requests. */
   public boolean isOnline() {
     String port = HOST_IP.contains(":") ? HOST_IP.substring(HOST_IP.indexOf(':') + 1) : "80";
     String ip = HOST_IP.contains(":") ? HOST_IP.substring(0, HOST_IP.indexOf(':')) : HOST_IP;
@@ -122,7 +120,7 @@ public class OnvifDeviceState {
       socket = new Socket();
 
       socket.connect(sockaddr, 5000);
-    } catch (NumberFormatException | IOException e) {
+    } catch (Exception e) {
       return false;
     } finally {
       try {
@@ -136,7 +134,8 @@ public class OnvifDeviceState {
   }
 
   /**
-   * Initalizes the addresses used for SOAP messages and to get the internal IP, if given IP is a proxy.
+   * Initalizes the addresses used for SOAP messages and to get the internal IP, if given IP is a
+   * proxy.
    */
   @SneakyThrows
   private void init() {
@@ -190,11 +189,19 @@ public class OnvifDeviceState {
   public void initFully(int onvifMediaProfile, boolean supportOnvifEvents) {
     this.init();
     this.profiles = initialDevices.getProfiles();
-    this.resolutionProfiles = new TreeMap<>(this.profiles.stream().collect(Collectors.toMap(profile ->
-        new VideoEncodeResolution(profile.getVideoEncoderConfiguration().getResolution()), Function.identity())));
+    this.resolutionProfiles =
+        new TreeMap<>(
+            this.profiles.stream()
+                .collect(
+                    Collectors.toMap(
+                        profile ->
+                            new VideoEncodeResolution(
+                                profile.getVideoEncoderConfiguration().getResolution()),
+                        Function.identity())));
 
     int activeProfileIndex = onvifMediaProfile >= this.profiles.size() ? 0 : onvifMediaProfile;
-    Profile profile = this.profiles.size() > activeProfileIndex ? this.profiles.get(activeProfileIndex) : null;
+    Profile profile =
+        this.profiles.size() > activeProfileIndex ? this.profiles.get(activeProfileIndex) : null;
     if (profile != null) {
       this.profileToken = profile.getToken();
     }
@@ -236,9 +243,7 @@ public class OnvifDeviceState {
     return encryptPassword();
   }
 
-  /**
-   * Returns encrypted version of given password like algorithm like in WS-UsernameToken
-   */
+  /** Returns encrypted version of given password like algorithm like in WS-UsernameToken */
   public String encryptPassword() {
     String nonce = getNonce();
     String timestamp = getUTCTime();
@@ -288,25 +293,27 @@ public class OnvifDeviceState {
     return utcTime;
   }
 
-    /*public Date getDate() {
-        init();
-        return initialDevices.getDate();
-    }*/
+  /*public Date getDate() {
+      init();
+      return initialDevices.getDate();
+  }*/
 
   public String getIEEEAddress() {
     try {
       this.init();
       GetDeviceInformationResponse deviceInformation = initialDevices.getDeviceInformation();
-      return deviceInformation.getSerialNumber() == null ? null : deviceInformation.getModel() + "~" + deviceInformation.getSerialNumber();
+      return deviceInformation.getSerialNumber() == null
+          ? null
+          : deviceInformation.getModel() + "~" + deviceInformation.getSerialNumber();
     } catch (Exception ex) {
       // in case of auth this method may throws exception
       return null;
     }
   }
 
-    /*public String getHostname() {
-        return initialDevices.getHostname();
-    }*/
+  /*public String getHostname() {
+      return initialDevices.getHostname();
+  }*/
 
   public void checkForErrors() {
     if (!isOnline()) {
@@ -329,7 +336,9 @@ public class OnvifDeviceState {
   }
 
   public String getProfile(boolean highResolution) {
-    return highResolution ? resolutionProfiles.firstEntry().getValue().getName() : resolutionProfiles.lastEntry().getValue().getName();
+    return highResolution
+        ? resolutionProfiles.firstEntry().getValue().getName()
+        : resolutionProfiles.lastEntry().getValue().getName();
   }
 
   public void runOncePerMinute() {

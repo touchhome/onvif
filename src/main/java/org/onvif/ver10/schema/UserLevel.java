@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r UserLevel.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -27,12 +27,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "UserLevel")
 @XmlEnum
 public enum UserLevel {
-
   @XmlEnumValue("Administrator")
-  ADMINISTRATOR("Administrator"), @XmlEnumValue("Operator")
-  OPERATOR("Operator"), @XmlEnumValue("User")
-  USER("User"), @XmlEnumValue("Anonymous")
-  ANONYMOUS("Anonymous"), @XmlEnumValue("Extended")
+  ADMINISTRATOR("Administrator"),
+  @XmlEnumValue("Operator")
+  OPERATOR("Operator"),
+  @XmlEnumValue("User")
+  USER("User"),
+  @XmlEnumValue("Anonymous")
+  ANONYMOUS("Anonymous"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -52,5 +55,4 @@ public enum UserLevel {
   public String value() {
     return value;
   }
-
 }

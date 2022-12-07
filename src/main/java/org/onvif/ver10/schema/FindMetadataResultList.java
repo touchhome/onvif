@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r FindMetadataResultList complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FindMetadataResultList">
@@ -28,11 +27,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FindMetadataResultList", propOrder = {"searchState", "result"})
+@XmlType(
+    name = "FindMetadataResultList",
+    propOrder = {"searchState", "result"})
 public class FindMetadataResultList {
 
   @XmlElement(name = "SearchState", required = true)
   protected SearchState searchState;
+
   @XmlElement(name = "Result")
   protected List<FindMetadataResult> result;
 
@@ -57,20 +59,17 @@ public class FindMetadataResultList {
   /**
    * Gets the value of the result property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the result property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the result property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getResult().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link FindMetadataResult }
+   * <p>Objects of the following type(s) are allowed in the list {@link FindMetadataResult }
    */
   public List<FindMetadataResult> getResult() {
     if (result == null) {
@@ -78,5 +77,4 @@ public class FindMetadataResultList {
     }
     return this.result;
   }
-
 }

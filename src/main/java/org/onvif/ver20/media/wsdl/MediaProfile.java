@@ -10,14 +10,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
-
 /**
  * A media profile consists of a set of media configurations.
  *
- *
  * <p>Java-Klasse f�r MediaProfile complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType name="MediaProfile">
@@ -36,22 +35,24 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MediaProfile", propOrder = {
-    "name",
-    "configurations"
-})
+@XmlType(
+    name = "MediaProfile",
+    propOrder = {"name", "configurations"})
 public class MediaProfile {
 
   @XmlElement(name = "Name", required = true)
   protected String name;
+
   @XmlElement(name = "Configurations", required = true)
   protected ConfigurationSet configurations;
+
   @XmlAttribute(name = "token", required = true)
   protected String token;
+
   @XmlAttribute(name = "fixed")
   protected Boolean fixed;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der name-Eigenschaft ab.
@@ -128,15 +129,15 @@ public class MediaProfile {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

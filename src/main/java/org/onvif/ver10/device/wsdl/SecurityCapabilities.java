@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.04 um 12:22:03 PM CET
@@ -19,11 +20,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r SecurityCapabilities complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="SecurityCapabilities">
@@ -57,38 +57,53 @@ public class SecurityCapabilities {
 
   @XmlAttribute(name = "TLS1.0")
   protected Boolean tls10;
+
   @XmlAttribute(name = "TLS1.1")
   protected Boolean tls11;
+
   @XmlAttribute(name = "TLS1.2")
   protected Boolean tls12;
+
   @XmlAttribute(name = "OnboardKeyGeneration")
   protected Boolean onboardKeyGeneration;
+
   @XmlAttribute(name = "AccessPolicyConfig")
   protected Boolean accessPolicyConfig;
+
   @XmlAttribute(name = "DefaultAccessPolicy")
   protected Boolean defaultAccessPolicy;
+
   @XmlAttribute(name = "Dot1X")
   protected Boolean dot1X;
+
   @XmlAttribute(name = "RemoteUserHandling")
   protected Boolean remoteUserHandling;
+
   @XmlAttribute(name = "X.509Token")
   protected Boolean x509Token;
+
   @XmlAttribute(name = "SAMLToken")
   protected Boolean samlToken;
+
   @XmlAttribute(name = "KerberosToken")
   protected Boolean kerberosToken;
+
   @XmlAttribute(name = "UsernameToken")
   protected Boolean usernameToken;
+
   @XmlAttribute(name = "HttpDigest")
   protected Boolean httpDigest;
+
   @XmlAttribute(name = "RELToken")
   protected Boolean relToken;
+
   @XmlAttribute(name = "SupportedEAPMethods")
   protected List<Integer> supportedEAPMethods;
+
   @XmlAttribute(name = "MaxUsers")
   protected Integer maxUsers;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der tls10-Eigenschaft ab.
@@ -345,20 +360,17 @@ public class SecurityCapabilities {
   /**
    * Gets the value of the supportedEAPMethods property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the supportedEAPMethods property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the supportedEAPMethods property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getSupportedEAPMethods().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Integer }
+   * <p>Objects of the following type(s) are allowed in the list {@link Integer }
    */
   public List<Integer> getSupportedEAPMethods() {
     if (supportedEAPMethods == null) {
@@ -388,15 +400,15 @@ public class SecurityCapabilities {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -7,11 +7,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.VideoEncoder2Configuration;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -26,9 +26,9 @@ import org.onvif.ver10.schema.VideoEncoder2Configuration;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "configuration"
-})
+@XmlType(
+    name = "",
+    propOrder = {"configuration"})
 @XmlRootElement(name = "SetVideoEncoderConfiguration")
 public class SetVideoEncoderConfiguration {
 
@@ -52,5 +52,4 @@ public class SetVideoEncoderConfiguration {
   public void setConfiguration(VideoEncoder2Configuration value) {
     this.configuration = value;
   }
-
 }

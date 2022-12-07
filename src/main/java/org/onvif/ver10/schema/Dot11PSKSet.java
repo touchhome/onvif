@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r Dot11PSKSet complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Dot11PSKSet">
@@ -34,18 +33,22 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Dot11PSKSet", propOrder = {"key", "passphrase", "extension"})
+@XmlType(
+    name = "Dot11PSKSet",
+    propOrder = {"key", "passphrase", "extension"})
 public class Dot11PSKSet {
 
   @XmlElement(name = "Key", type = String.class)
   @XmlJavaTypeAdapter(HexBinaryAdapter.class)
   protected byte[] key;
+
   @XmlElement(name = "Passphrase")
   protected String passphrase;
+
   @XmlElement(name = "Extension")
   protected Dot11PSKSetExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der key-Eigenschaft ab.
@@ -104,15 +107,15 @@ public class Dot11PSKSet {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -27,12 +26,15 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"profileToken", "auxiliaryData"})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken", "auxiliaryData"})
 @XmlRootElement(name = "SendAuxiliaryCommand")
 public class SendAuxiliaryCommand {
 
   @XmlElement(name = "ProfileToken", required = true)
   protected String profileToken;
+
   @XmlElement(name = "AuxiliaryData", required = true)
   protected String auxiliaryData;
 
@@ -71,5 +73,4 @@ public class SendAuxiliaryCommand {
   public void setAuxiliaryData(String value) {
     this.auxiliaryData = value;
   }
-
 }

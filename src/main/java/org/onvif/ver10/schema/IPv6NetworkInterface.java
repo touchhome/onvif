@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r IPv6NetworkInterface complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IPv6NetworkInterface">
@@ -26,24 +25,23 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IPv6NetworkInterface", propOrder = {"enabled", "config"})
+@XmlType(
+    name = "IPv6NetworkInterface",
+    propOrder = {"enabled", "config"})
 public class IPv6NetworkInterface {
 
   @XmlElement(name = "Enabled")
   protected boolean enabled;
+
   @XmlElement(name = "Config")
   protected IPv6Configuration config;
 
-  /**
-   * Ruft den Wert der enabled-Eigenschaft ab.
-   */
+  /** Ruft den Wert der enabled-Eigenschaft ab. */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /**
-   * Legt den Wert der enabled-Eigenschaft fest.
-   */
+  /** Legt den Wert der enabled-Eigenschaft fest. */
   public void setEnabled(boolean value) {
     this.enabled = value;
   }
@@ -65,5 +63,4 @@ public class IPv6NetworkInterface {
   public void setConfig(IPv6Configuration value) {
     this.config = value;
   }
-
 }

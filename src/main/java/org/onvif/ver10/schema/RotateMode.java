@@ -4,11 +4,11 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r RotateMode.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,8 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RotateMode")
 @XmlEnum
 public enum RotateMode {
-
-  OFF, ON, AUTO;
+  OFF,
+  ON,
+  AUTO;
 
   public static RotateMode fromValue(String v) {
     return valueOf(v);
@@ -34,5 +35,4 @@ public enum RotateMode {
   public String value() {
     return name();
   }
-
 }

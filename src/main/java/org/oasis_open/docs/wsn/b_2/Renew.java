@@ -14,12 +14,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"terminationTime", "any"})
+@XmlType(
+    name = "",
+    propOrder = {"terminationTime", "any"})
 @XmlRootElement(name = "Renew")
 public class Renew {
 
   @XmlElement(name = "TerminationTime", required = true, nillable = true)
   protected String terminationTime = "PT1M";
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

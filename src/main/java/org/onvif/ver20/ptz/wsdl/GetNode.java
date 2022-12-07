@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -26,7 +25,9 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"nodeToken"})
+@XmlType(
+    name = "",
+    propOrder = {"nodeToken"})
 @XmlRootElement(name = "GetNode")
 public class GetNode {
 
@@ -50,5 +51,4 @@ public class GetNode {
   public void setNodeToken(String value) {
     this.nodeToken = value;
   }
-
 }

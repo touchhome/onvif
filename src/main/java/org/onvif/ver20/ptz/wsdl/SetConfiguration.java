@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PTZConfiguration;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -28,12 +27,15 @@ import org.onvif.ver10.schema.PTZConfiguration;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"ptzConfiguration", "forcePersistence"})
+@XmlType(
+    name = "",
+    propOrder = {"ptzConfiguration", "forcePersistence"})
 @XmlRootElement(name = "SetConfiguration")
 public class SetConfiguration {
 
   @XmlElement(name = "PTZConfiguration", required = true)
   protected PTZConfiguration ptzConfiguration;
+
   @XmlElement(name = "ForcePersistence")
   protected boolean forcePersistence;
 
@@ -55,18 +57,13 @@ public class SetConfiguration {
     this.ptzConfiguration = value;
   }
 
-  /**
-   * Ruft den Wert der forcePersistence-Eigenschaft ab.
-   */
+  /** Ruft den Wert der forcePersistence-Eigenschaft ab. */
   public boolean isForcePersistence() {
     return forcePersistence;
   }
 
-  /**
-   * Legt den Wert der forcePersistence-Eigenschaft fest.
-   */
+  /** Legt den Wert der forcePersistence-Eigenschaft fest. */
   public void setForcePersistence(boolean value) {
     this.forcePersistence = value;
   }
-
 }

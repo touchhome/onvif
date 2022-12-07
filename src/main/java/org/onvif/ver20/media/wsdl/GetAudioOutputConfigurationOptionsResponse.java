@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.AudioOutputConfigurationOptions;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "options"
-})
+@XmlType(
+    name = "",
+    propOrder = {"options"})
 @XmlRootElement(name = "GetAudioOutputConfigurationOptionsResponse")
 public class GetAudioOutputConfigurationOptionsResponse {
 
@@ -34,5 +34,4 @@ public class GetAudioOutputConfigurationOptionsResponse {
   public void setOptions(AudioOutputConfigurationOptions value) {
     this.options = value;
   }
-
 }

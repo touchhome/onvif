@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AudioEncodingMimeNames")
 @XmlEnum
 public enum AudioEncodingMimeNames {
-
   PCMU("PCMU"),
   @XmlEnumValue("G726")
   G_726("G726"),
@@ -31,5 +30,4 @@ public enum AudioEncodingMimeNames {
   public String value() {
     return value;
   }
-
 }

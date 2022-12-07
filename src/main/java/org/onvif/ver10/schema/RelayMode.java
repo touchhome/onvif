@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r RelayMode.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RelayMode")
 @XmlEnum
 public enum RelayMode {
-
   @XmlEnumValue("Monostable")
-  MONOSTABLE("Monostable"), @XmlEnumValue("Bistable")
+  MONOSTABLE("Monostable"),
+  @XmlEnumValue("Bistable")
   BISTABLE("Bistable");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum RelayMode {
   public String value() {
     return value;
   }
-
 }

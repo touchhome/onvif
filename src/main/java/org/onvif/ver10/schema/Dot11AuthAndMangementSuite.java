@@ -7,10 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Dot11AuthAndMangementSuite")
 @XmlEnum
 public enum Dot11AuthAndMangementSuite {
-
   @XmlEnumValue("None")
-  NONE("None"), @XmlEnumValue("Dot1X")
-  DOT_1_X("Dot1X"), PSK("PSK"), @XmlEnumValue("Extended")
+  NONE("None"),
+  @XmlEnumValue("Dot1X")
+  DOT_1_X("Dot1X"),
+  PSK("PSK"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -30,5 +32,4 @@ public enum Dot11AuthAndMangementSuite {
   public String value() {
     return value;
   }
-
 }

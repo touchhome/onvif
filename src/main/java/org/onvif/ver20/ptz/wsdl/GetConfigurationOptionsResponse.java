@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PTZConfigurationOptions;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -27,7 +26,9 @@ import org.onvif.ver10.schema.PTZConfigurationOptions;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"ptzConfigurationOptions"})
+@XmlType(
+    name = "",
+    propOrder = {"ptzConfigurationOptions"})
 @XmlRootElement(name = "GetConfigurationOptionsResponse")
 public class GetConfigurationOptionsResponse {
 
@@ -51,5 +52,4 @@ public class GetConfigurationOptionsResponse {
   public void setPTZConfigurationOptions(PTZConfigurationOptions value) {
     this.ptzConfigurationOptions = value;
   }
-
 }

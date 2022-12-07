@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ReverseMode.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -26,8 +26,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ReverseMode")
 @XmlEnum
 public enum ReverseMode {
-
-  OFF("OFF"), ON("ON"), AUTO("AUTO"), @XmlEnumValue("Extended")
+  OFF("OFF"),
+  ON("ON"),
+  AUTO("AUTO"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -47,5 +49,4 @@ public enum ReverseMode {
   public String value() {
     return value;
   }
-
 }

@@ -18,13 +18,15 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AttributedURIType", propOrder = {"value"})
+@XmlType(
+    name = "AttributedURIType",
+    propOrder = {"value"})
 @ToString
 public class AttributedURIType {
 
   @XmlValue
   @XmlSchemaType(name = "anyURI")
   protected String value;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<>();
 }

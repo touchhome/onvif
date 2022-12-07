@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "profileToken"
-})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken"})
 @XmlRootElement(name = "GetSnapshotUri")
 public class GetSnapshotUri {
 
@@ -33,5 +33,4 @@ public class GetSnapshotUri {
   public void setProfileToken(String value) {
     this.profileToken = value;
   }
-
 }

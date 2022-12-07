@@ -13,7 +13,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"any"})
+@XmlType(
+    name = "",
+    propOrder = {"any"})
 @XmlRootElement(name = "DeleteOSDResponse")
 public class DeleteOSDResponse {
 

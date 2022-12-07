@@ -6,14 +6,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GetConfiguration", propOrder = {
-    "configurationToken",
-    "profileToken"
-})
+@XmlType(
+    name = "GetConfiguration",
+    propOrder = {"configurationToken", "profileToken"})
 public class GetConfiguration {
 
   @XmlElement(name = "ConfigurationToken")
   protected String configurationToken;
+
   @XmlElement(name = "ProfileToken")
   protected String profileToken;
 
@@ -52,5 +52,4 @@ public class GetConfiguration {
   public void setProfileToken(String value) {
     this.profileToken = value;
   }
-
 }

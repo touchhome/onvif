@@ -19,11 +19,9 @@ import org.oasis_open.docs.wsn.b_2.NotificationMessageHolderType;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "currentTime",
-    "terminationTime",
-    "notificationMessage"
-})
+@XmlType(
+    name = "",
+    propOrder = {"currentTime", "terminationTime", "notificationMessage"})
 @XmlRootElement(name = "PullMessagesResponse")
 @ToString
 public class PullMessagesResponse {
@@ -31,9 +29,11 @@ public class PullMessagesResponse {
   @XmlElement(name = "CurrentTime", required = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar currentTime;
+
   @XmlElement(name = "TerminationTime", required = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar terminationTime;
+
   @XmlElement(name = "NotificationMessage", namespace = "http://docs.oasis-open.org/wsn/b-2")
   protected List<NotificationMessageHolderType> notificationMessage;
 

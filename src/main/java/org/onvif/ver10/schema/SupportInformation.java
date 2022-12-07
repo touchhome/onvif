@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r SupportInformation complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="SupportInformation">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SupportInformation", propOrder = {"binary", "string"})
+@XmlType(
+    name = "SupportInformation",
+    propOrder = {"binary", "string"})
 public class SupportInformation {
 
   @XmlElement(name = "Binary")
   protected AttachmentData binary;
+
   @XmlElement(name = "String")
   protected String string;
 
@@ -69,5 +71,4 @@ public class SupportInformation {
   public void setString(String value) {
     this.string = value;
   }
-
 }

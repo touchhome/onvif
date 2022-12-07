@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "uri"
-})
+@XmlType(
+    name = "",
+    propOrder = {"uri"})
 @XmlRootElement(name = "GetSnapshotUriResponse")
 public class GetSnapshotUriResponse {
 
@@ -35,5 +35,4 @@ public class GetSnapshotUriResponse {
   public void setUri(String value) {
     this.uri = value;
   }
-
 }

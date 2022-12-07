@@ -13,23 +13,30 @@ import org.w3._2005._08.addressing.EndpointReferenceType;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NotificationMessageHolderType", propOrder = {"subscriptionReference", "topic", "producerReference", "message"})
+@XmlType(
+    name = "NotificationMessageHolderType",
+    propOrder = {"subscriptionReference", "topic", "producerReference", "message"})
 @ToString
 public class NotificationMessageHolderType {
 
   @XmlElement(name = "SubscriptionReference")
   protected EndpointReferenceType subscriptionReference;
+
   @XmlElement(name = "Topic")
   protected TopicExpressionType topic;
+
   @XmlElement(name = "ProducerReference")
   protected EndpointReferenceType producerReference;
+
   @XmlElement(name = "Message", required = true)
   protected NotificationMessageHolderType.Message message;
 
   @Getter
   @Setter
   @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name = "", propOrder = {"any"})
+  @XmlType(
+      name = "",
+      propOrder = {"any"})
   public static class Message {
 
     @XmlAnyElement(lax = true)

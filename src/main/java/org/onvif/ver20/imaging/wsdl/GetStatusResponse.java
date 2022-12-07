@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.ImagingStatus20;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "status"
-})
+@XmlType(
+    name = "",
+    propOrder = {"status"})
 @XmlRootElement(name = "GetStatusResponse")
 public class GetStatusResponse {
 
@@ -34,5 +34,4 @@ public class GetStatusResponse {
   public void setStatus(ImagingStatus20 value) {
     this.status = value;
   }
-
 }

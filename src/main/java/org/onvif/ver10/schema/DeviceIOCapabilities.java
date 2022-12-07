@@ -15,26 +15,42 @@ import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DeviceIOCapabilities", propOrder = {"xAddr", "videoSources", "videoOutputs", "audioSources", "audioOutputs", "relayOutputs", "any"})
+@XmlType(
+    name = "DeviceIOCapabilities",
+    propOrder = {
+      "xAddr",
+      "videoSources",
+      "videoOutputs",
+      "audioSources",
+      "audioOutputs",
+      "relayOutputs",
+      "any"
+    })
 public class DeviceIOCapabilities {
 
   @XmlElement(name = "XAddr", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String xAddr;
+
   @XmlElement(name = "VideoSources")
   protected int videoSources;
+
   @XmlElement(name = "VideoOutputs")
   protected int videoOutputs;
+
   @XmlElement(name = "AudioSources")
   protected int audioSources;
+
   @XmlElement(name = "AudioOutputs")
   protected int audioOutputs;
+
   @XmlElement(name = "RelayOutputs")
   protected int relayOutputs;
+
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der xAddr-Eigenschaft ab.
@@ -54,72 +70,52 @@ public class DeviceIOCapabilities {
     this.xAddr = value;
   }
 
-  /**
-   * Ruft den Wert der videoSources-Eigenschaft ab.
-   */
+  /** Ruft den Wert der videoSources-Eigenschaft ab. */
   public int getVideoSources() {
     return videoSources;
   }
 
-  /**
-   * Legt den Wert der videoSources-Eigenschaft fest.
-   */
+  /** Legt den Wert der videoSources-Eigenschaft fest. */
   public void setVideoSources(int value) {
     this.videoSources = value;
   }
 
-  /**
-   * Ruft den Wert der videoOutputs-Eigenschaft ab.
-   */
+  /** Ruft den Wert der videoOutputs-Eigenschaft ab. */
   public int getVideoOutputs() {
     return videoOutputs;
   }
 
-  /**
-   * Legt den Wert der videoOutputs-Eigenschaft fest.
-   */
+  /** Legt den Wert der videoOutputs-Eigenschaft fest. */
   public void setVideoOutputs(int value) {
     this.videoOutputs = value;
   }
 
-  /**
-   * Ruft den Wert der audioSources-Eigenschaft ab.
-   */
+  /** Ruft den Wert der audioSources-Eigenschaft ab. */
   public int getAudioSources() {
     return audioSources;
   }
 
-  /**
-   * Legt den Wert der audioSources-Eigenschaft fest.
-   */
+  /** Legt den Wert der audioSources-Eigenschaft fest. */
   public void setAudioSources(int value) {
     this.audioSources = value;
   }
 
-  /**
-   * Ruft den Wert der audioOutputs-Eigenschaft ab.
-   */
+  /** Ruft den Wert der audioOutputs-Eigenschaft ab. */
   public int getAudioOutputs() {
     return audioOutputs;
   }
 
-  /**
-   * Legt den Wert der audioOutputs-Eigenschaft fest.
-   */
+  /** Legt den Wert der audioOutputs-Eigenschaft fest. */
   public void setAudioOutputs(int value) {
     this.audioOutputs = value;
   }
 
-  /**
-   * Ruft den Wert der relayOutputs-Eigenschaft ab.
-   */
+  /** Ruft den Wert der relayOutputs-Eigenschaft ab. */
   public int getRelayOutputs() {
     return relayOutputs;
   }
 
-  /**
-   * Legt den Wert der relayOutputs-Eigenschaft fest.
-   */
+  /** Legt den Wert der relayOutputs-Eigenschaft fest. */
   public void setRelayOutputs(int value) {
     this.relayOutputs = value;
   }
@@ -127,20 +123,18 @@ public class DeviceIOCapabilities {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element } {@link
+   * java.lang.Object }
    */
   public List<java.lang.Object> getAny() {
     if (any == null) {
@@ -152,15 +146,15 @@ public class DeviceIOCapabilities {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

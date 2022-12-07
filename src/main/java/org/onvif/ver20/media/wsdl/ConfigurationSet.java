@@ -23,42 +23,51 @@ import org.onvif.ver10.schema.VideoSourceConfiguration;
 import org.w3c.dom.Element;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConfigurationSet", propOrder = {
-    "videoSource",
-    "audioSource",
-    "videoEncoder",
-    "audioEncoder",
-    "analytics",
-    "ptz",
-    "metadata",
-    "audioOutput",
-    "audioDecoder",
-    "any"
-})
+@XmlType(
+    name = "ConfigurationSet",
+    propOrder = {
+      "videoSource",
+      "audioSource",
+      "videoEncoder",
+      "audioEncoder",
+      "analytics",
+      "ptz",
+      "metadata",
+      "audioOutput",
+      "audioDecoder",
+      "any"
+    })
 public class ConfigurationSet {
 
   @XmlElement(name = "VideoSource")
   protected VideoSourceConfiguration videoSource;
+
   @XmlElement(name = "AudioSource")
   protected AudioSourceConfiguration audioSource;
+
   @XmlElement(name = "VideoEncoder")
   protected VideoEncoder2Configuration videoEncoder;
+
   @XmlElement(name = "AudioEncoder")
   protected AudioEncoder2Configuration audioEncoder;
+
   @XmlElement(name = "Analytics")
   protected ConfigurationEntity analytics;
+
   @XmlElement(name = "PTZ")
   protected PTZConfiguration ptz;
+
   @XmlElement(name = "Metadata")
   protected MetadataConfiguration metadata;
+
   @XmlElement(name = "AudioOutput")
   protected AudioOutputConfiguration audioOutput;
+
   @XmlElement(name = "AudioDecoder")
   protected AudioDecoderConfiguration audioDecoder;
-  @XmlAnyElement
-  protected List<Element> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyElement protected List<Element> any;
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der videoSource-Eigenschaft ab.
@@ -225,19 +234,17 @@ public class ConfigurationSet {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element }
    */
   public List<Element> getAny() {
     if (any == null) {
@@ -249,15 +256,15 @@ public class ConfigurationSet {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

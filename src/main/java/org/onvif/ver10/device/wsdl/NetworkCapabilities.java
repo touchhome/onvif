@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.04 um 12:22:03 PM CET
@@ -17,11 +18,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkCapabilities complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkCapabilities">
@@ -48,24 +48,32 @@ public class NetworkCapabilities {
 
   @XmlAttribute(name = "IPFilter")
   protected Boolean ipFilter;
+
   @XmlAttribute(name = "ZeroConfiguration")
   protected Boolean zeroConfiguration;
+
   @XmlAttribute(name = "IPVersion6")
   protected Boolean ipVersion6;
+
   @XmlAttribute(name = "DynDNS")
   protected Boolean dynDNS;
+
   @XmlAttribute(name = "Dot11Configuration")
   protected Boolean dot11Configuration;
+
   @XmlAttribute(name = "Dot1XConfigurations")
   protected Integer dot1XConfigurations;
+
   @XmlAttribute(name = "HostnameFromDHCP")
   protected Boolean hostnameFromDHCP;
+
   @XmlAttribute(name = "NTP")
   protected Integer ntp;
+
   @XmlAttribute(name = "DHCPv6")
   protected Boolean dhcPv6;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der ipFilter-Eigenschaft ab.
@@ -232,15 +240,15 @@ public class NetworkCapabilities {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "osdToken"
-})
+@XmlType(
+    name = "",
+    propOrder = {"osdToken"})
 @XmlRootElement(name = "DeleteOSD")
 public class DeleteOSD {
 
@@ -33,5 +33,4 @@ public class DeleteOSD {
   public void setOSDToken(String value) {
     this.osdToken = value;
   }
-
 }

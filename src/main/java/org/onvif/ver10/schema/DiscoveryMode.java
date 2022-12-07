@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DiscoveryMode")
 @XmlEnum
 public enum DiscoveryMode {
-
   @XmlEnumValue("Discoverable")
-  DISCOVERABLE("Discoverable"), @XmlEnumValue("NonDiscoverable")
+  DISCOVERABLE("Discoverable"),
+  @XmlEnumValue("NonDiscoverable")
   NON_DISCOVERABLE("NonDiscoverable");
   private final String value;
 
@@ -29,5 +29,4 @@ public enum DiscoveryMode {
   public String value() {
     return value;
   }
-
 }

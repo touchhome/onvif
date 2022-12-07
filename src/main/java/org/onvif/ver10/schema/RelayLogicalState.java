@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r RelayLogicalState.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RelayLogicalState")
 @XmlEnum
 public enum RelayLogicalState {
-
   @XmlEnumValue("active")
-  ACTIVE("active"), @XmlEnumValue("inactive")
+  ACTIVE("active"),
+  @XmlEnumValue("inactive")
   INACTIVE("inactive");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum RelayLogicalState {
   public String value() {
     return value;
   }
-
 }

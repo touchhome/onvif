@@ -20,18 +20,21 @@ import lombok.ToString;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TopicExpressionType", propOrder = {"content"})
+@XmlType(
+    name = "TopicExpressionType",
+    propOrder = {"content"})
 @ToString
 public class TopicExpressionType {
 
   @XmlMixed
   @XmlAnyElement(lax = true)
   protected List<Object> content;
+
   @XmlAttribute(name = "Dialect", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String dialect;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   public List<Object> getContent() {
     if (content == null) {

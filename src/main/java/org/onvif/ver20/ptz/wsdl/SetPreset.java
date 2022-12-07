@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -28,14 +27,18 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"profileToken", "presetName", "presetToken"})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken", "presetName", "presetToken"})
 @XmlRootElement(name = "SetPreset")
 public class SetPreset {
 
   @XmlElement(name = "ProfileToken", required = true)
   protected String profileToken;
+
   @XmlElement(name = "PresetName")
   protected String presetName;
+
   @XmlElement(name = "PresetToken")
   protected String presetToken;
 
@@ -92,5 +95,4 @@ public class SetPreset {
   public void setPresetToken(String value) {
     this.presetToken = value;
   }
-
 }

@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r H264Profile.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -26,11 +26,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "H264Profile")
 @XmlEnum
 public enum H264Profile {
-
   @XmlEnumValue("Baseline")
-  BASELINE("Baseline"), @XmlEnumValue("Main")
-  MAIN("Main"), @XmlEnumValue("Extended")
-  EXTENDED("Extended"), @XmlEnumValue("High")
+  BASELINE("Baseline"),
+  @XmlEnumValue("Main")
+  MAIN("Main"),
+  @XmlEnumValue("Extended")
+  EXTENDED("Extended"),
+  @XmlEnumValue("High")
   HIGH("High");
   private final String value;
 
@@ -50,5 +52,4 @@ public enum H264Profile {
   public String value() {
     return value;
   }
-
 }

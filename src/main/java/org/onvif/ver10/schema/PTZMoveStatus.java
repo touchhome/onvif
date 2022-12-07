@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r PTZMoveStatus complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PTZMoveStatus">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZMoveStatus", propOrder = {"panTilt", "zoom"})
+@XmlType(
+    name = "PTZMoveStatus",
+    propOrder = {"panTilt", "zoom"})
 public class PTZMoveStatus {
 
   @XmlElement(name = "PanTilt")
   protected MoveStatus panTilt;
+
   @XmlElement(name = "Zoom")
   protected MoveStatus zoom;
 
@@ -69,5 +71,4 @@ public class PTZMoveStatus {
   public void setZoom(MoveStatus value) {
     this.zoom = value;
   }
-
 }

@@ -14,11 +14,10 @@ import javax.xml.namespace.QName;
 /**
  * A layout describes a set of Video windows that are displayed simultaniously on a display.
  *
- * <p>
- * Java-Klasse f�r Layout complex type.
+ * <p>Java-Klasse f�r Layout complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Layout">
@@ -35,33 +34,33 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Layout", propOrder = {"paneLayout", "extension"})
+@XmlType(
+    name = "Layout",
+    propOrder = {"paneLayout", "extension"})
 public class Layout {
 
   @XmlElement(name = "PaneLayout", required = true)
   protected List<PaneLayout> paneLayout;
+
   @XmlElement(name = "Extension")
   protected LayoutExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Gets the value of the paneLayout property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the paneLayout property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the paneLayout property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getPaneLayout().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PaneLayout }
+   * <p>Objects of the following type(s) are allowed in the list {@link PaneLayout }
    */
   public List<PaneLayout> getPaneLayout() {
     if (paneLayout == null) {
@@ -91,15 +90,15 @@ public class Layout {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r NTPInformation complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NTPInformation">
@@ -35,30 +34,31 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NTPInformation", propOrder = {"fromDHCP", "ntpFromDHCP", "ntpManual", "extension"})
+@XmlType(
+    name = "NTPInformation",
+    propOrder = {"fromDHCP", "ntpFromDHCP", "ntpManual", "extension"})
 public class NTPInformation {
 
   @XmlElement(name = "FromDHCP")
   protected boolean fromDHCP;
+
   @XmlElement(name = "NTPFromDHCP")
   protected List<NetworkHost> ntpFromDHCP;
+
   @XmlElement(name = "NTPManual")
   protected List<NetworkHost> ntpManual;
+
   @XmlElement(name = "Extension")
   protected NTPInformationExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der fromDHCP-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der fromDHCP-Eigenschaft ab. */
   public boolean isFromDHCP() {
     return fromDHCP;
   }
 
-  /**
-   * Legt den Wert der fromDHCP-Eigenschaft fest.
-   */
+  /** Legt den Wert der fromDHCP-Eigenschaft fest. */
   public void setFromDHCP(boolean value) {
     this.fromDHCP = value;
   }
@@ -66,20 +66,17 @@ public class NTPInformation {
   /**
    * Gets the value of the ntpFromDHCP property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the ntpFromDHCP property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the ntpFromDHCP property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getNTPFromDHCP().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link NetworkHost }
+   * <p>Objects of the following type(s) are allowed in the list {@link NetworkHost }
    */
   public List<NetworkHost> getNTPFromDHCP() {
     if (ntpFromDHCP == null) {
@@ -91,20 +88,17 @@ public class NTPInformation {
   /**
    * Gets the value of the ntpManual property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the ntpManual property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the ntpManual property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getNTPManual().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link NetworkHost }
+   * <p>Objects of the following type(s) are allowed in the list {@link NetworkHost }
    */
   public List<NetworkHost> getNTPManual() {
     if (ntpManual == null) {
@@ -134,15 +128,15 @@ public class NTPInformation {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

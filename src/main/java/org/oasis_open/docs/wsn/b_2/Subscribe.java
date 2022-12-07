@@ -19,18 +19,34 @@ import org.w3._2005._08.addressing.EndpointReferenceType;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"consumerReference", "filter", "initialTerminationTime", "subscriptionPolicy", "any"})
+@XmlType(
+    name = "",
+    propOrder = {
+      "consumerReference",
+      "filter",
+      "initialTerminationTime",
+      "subscriptionPolicy",
+      "any"
+    })
 @XmlRootElement(name = "Subscribe")
 public class Subscribe {
 
   @XmlElement(name = "ConsumerReference", required = true)
   protected EndpointReferenceType consumerReference;
+
   @XmlElement(name = "Filter")
   protected FilterType filter;
-  @XmlElementRef(name = "InitialTerminationTime", namespace = "http://docs.oasis-open.org/wsn/b-2", type = JAXBElement.class, required = false)
+
+  @XmlElementRef(
+      name = "InitialTerminationTime",
+      namespace = "http://docs.oasis-open.org/wsn/b-2",
+      type = JAXBElement.class,
+      required = false)
   protected JAXBElement<String> initialTerminationTime;
+
   @XmlElement(name = "SubscriptionPolicy")
   protected Subscribe.SubscriptionPolicy subscriptionPolicy;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 
@@ -42,7 +58,9 @@ public class Subscribe {
   }
 
   @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name = "", propOrder = {"any"})
+  @XmlType(
+      name = "",
+      propOrder = {"any"})
   public static class SubscriptionPolicy {
 
     @XmlAnyElement(lax = true)

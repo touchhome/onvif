@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Space2DDescription complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Space2DDescription">
@@ -28,14 +27,18 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Space2DDescription", propOrder = {"uri", "xRange", "yRange"})
+@XmlType(
+    name = "Space2DDescription",
+    propOrder = {"uri", "xRange", "yRange"})
 public class Space2DDescription {
 
   @XmlElement(name = "URI", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String uri;
+
   @XmlElement(name = "XRange", required = true)
   protected FloatRange xRange;
+
   @XmlElement(name = "YRange", required = true)
   protected FloatRange yRange;
 
@@ -92,5 +95,4 @@ public class Space2DDescription {
   public void setYRange(FloatRange value) {
     this.yRange = value;
   }
-
 }

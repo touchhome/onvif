@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.OSDConfiguration;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "osd"
-})
+@XmlType(
+    name = "",
+    propOrder = {"osd"})
 @XmlRootElement(name = "CreateOSD")
 public class CreateOSD {
 
@@ -34,5 +34,4 @@ public class CreateOSD {
   public void setOSD(OSDConfiguration value) {
     this.osd = value;
   }
-
 }

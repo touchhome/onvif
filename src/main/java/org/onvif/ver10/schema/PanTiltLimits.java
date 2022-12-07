@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r PanTiltLimits complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PanTiltLimits">
@@ -25,7 +24,9 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PanTiltLimits", propOrder = {"range"})
+@XmlType(
+    name = "PanTiltLimits",
+    propOrder = {"range"})
 public class PanTiltLimits {
 
   @XmlElement(name = "Range", required = true)
@@ -48,5 +49,4 @@ public class PanTiltLimits {
   public void setRange(Space2DDescription value) {
     this.range = value;
   }
-
 }

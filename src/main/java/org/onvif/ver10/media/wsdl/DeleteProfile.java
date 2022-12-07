@@ -11,7 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"profileToken"})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken"})
 @XmlRootElement(name = "DeleteProfile")
 public class DeleteProfile {
 

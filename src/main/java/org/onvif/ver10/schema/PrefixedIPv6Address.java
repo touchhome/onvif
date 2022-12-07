@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * <p>
  * Java-Klasse f�r PrefixedIPv6Address complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PrefixedIPv6Address">
@@ -28,12 +27,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PrefixedIPv6Address", propOrder = {"address", "prefixLength"})
+@XmlType(
+    name = "PrefixedIPv6Address",
+    propOrder = {"address", "prefixLength"})
 public class PrefixedIPv6Address {
 
   @XmlElement(name = "Address", required = true)
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected String address;
+
   @XmlElement(name = "PrefixLength")
   protected int prefixLength;
 
@@ -55,18 +57,13 @@ public class PrefixedIPv6Address {
     this.address = value;
   }
 
-  /**
-   * Ruft den Wert der prefixLength-Eigenschaft ab.
-   */
+  /** Ruft den Wert der prefixLength-Eigenschaft ab. */
   public int getPrefixLength() {
     return prefixLength;
   }
 
-  /**
-   * Legt den Wert der prefixLength-Eigenschaft fest.
-   */
+  /** Legt den Wert der prefixLength-Eigenschaft fest. */
   public void setPrefixLength(int value) {
     this.prefixLength = value;
   }
-
 }

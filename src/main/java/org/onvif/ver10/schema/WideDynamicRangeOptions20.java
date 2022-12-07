@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r WideDynamicRangeOptions20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="WideDynamicRangeOptions20">
@@ -28,31 +27,31 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WideDynamicRangeOptions20", propOrder = {"mode", "level"})
+@XmlType(
+    name = "WideDynamicRangeOptions20",
+    propOrder = {"mode", "level"})
 public class WideDynamicRangeOptions20 {
 
   @XmlElement(name = "Mode", required = true)
   protected List<WideDynamicMode> mode;
+
   @XmlElement(name = "Level")
   protected FloatRange level;
 
   /**
    * Gets the value of the mode property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the mode property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the mode property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getMode().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link WideDynamicMode }
+   * <p>Objects of the following type(s) are allowed in the list {@link WideDynamicMode }
    */
   public List<WideDynamicMode> getMode() {
     if (mode == null) {
@@ -78,5 +77,4 @@ public class WideDynamicRangeOptions20 {
   public void setLevel(FloatRange value) {
     this.level = value;
   }
-
 }

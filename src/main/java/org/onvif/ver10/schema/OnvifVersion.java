@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r OnvifVersion complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="OnvifVersion">
@@ -26,40 +25,34 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OnvifVersion", propOrder = {"major", "minor"})
+@XmlType(
+    name = "OnvifVersion",
+    propOrder = {"major", "minor"})
 public class OnvifVersion {
 
   @XmlElement(name = "Major")
   protected int major;
+
   @XmlElement(name = "Minor")
   protected int minor;
 
-  /**
-   * Ruft den Wert der major-Eigenschaft ab.
-   */
+  /** Ruft den Wert der major-Eigenschaft ab. */
   public int getMajor() {
     return major;
   }
 
-  /**
-   * Legt den Wert der major-Eigenschaft fest.
-   */
+  /** Legt den Wert der major-Eigenschaft fest. */
   public void setMajor(int value) {
     this.major = value;
   }
 
-  /**
-   * Ruft den Wert der minor-Eigenschaft ab.
-   */
+  /** Ruft den Wert der minor-Eigenschaft ab. */
   public int getMinor() {
     return minor;
   }
 
-  /**
-   * Legt den Wert der minor-Eigenschaft fest.
-   */
+  /** Legt den Wert der minor-Eigenschaft fest. */
   public void setMinor(int value) {
     this.minor = value;
   }
-
 }

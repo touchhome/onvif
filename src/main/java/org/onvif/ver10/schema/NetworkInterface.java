@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkInterface complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkInterface">
@@ -35,34 +34,37 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkInterface", propOrder = {"enabled", "info", "link", "iPv4", "iPv6", "extension"})
+@XmlType(
+    name = "NetworkInterface",
+    propOrder = {"enabled", "info", "link", "iPv4", "iPv6", "extension"})
 public class NetworkInterface extends DeviceEntity {
 
   @XmlElement(name = "Enabled")
   protected boolean enabled;
+
   @XmlElement(name = "Info")
   protected NetworkInterfaceInfo info;
+
   @XmlElement(name = "Link")
   protected NetworkInterfaceLink link;
+
   @XmlElement(name = "IPv4")
   protected IPv4NetworkInterface iPv4;
+
   @XmlElement(name = "IPv6")
   protected IPv6NetworkInterface iPv6;
+
   @XmlElement(name = "Extension")
   protected NetworkInterfaceExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der enabled-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der enabled-Eigenschaft ab. */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /**
-   * Legt den Wert der enabled-Eigenschaft fest.
-   */
+  /** Legt den Wert der enabled-Eigenschaft fest. */
   public void setEnabled(boolean value) {
     this.enabled = value;
   }
@@ -160,15 +162,15 @@ public class NetworkInterface extends DeviceEntity {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

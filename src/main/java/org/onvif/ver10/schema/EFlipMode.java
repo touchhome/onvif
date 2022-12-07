@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r EFlipMode.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,8 +25,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EFlipMode")
 @XmlEnum
 public enum EFlipMode {
-
-  OFF("OFF"), ON("ON"), @XmlEnumValue("Extended")
+  OFF("OFF"),
+  ON("ON"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -46,5 +47,4 @@ public enum EFlipMode {
   public String value() {
     return value;
   }
-
 }

@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r FocusConfiguration20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FocusConfiguration20">
@@ -34,21 +33,27 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FocusConfiguration20", propOrder = {"autoFocusMode", "defaultSpeed", "nearLimit", "farLimit", "extension"})
+@XmlType(
+    name = "FocusConfiguration20",
+    propOrder = {"autoFocusMode", "defaultSpeed", "nearLimit", "farLimit", "extension"})
 public class FocusConfiguration20 {
 
   @XmlElement(name = "AutoFocusMode", required = true)
   protected AutoFocusMode autoFocusMode;
+
   @XmlElement(name = "DefaultSpeed")
   protected Float defaultSpeed;
+
   @XmlElement(name = "NearLimit")
   protected Float nearLimit;
+
   @XmlElement(name = "FarLimit")
   protected Float farLimit;
+
   @XmlElement(name = "Extension")
   protected FocusConfiguration20Extension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der autoFocusMode-Eigenschaft ab.
@@ -143,15 +148,15 @@ public class FocusConfiguration20 {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

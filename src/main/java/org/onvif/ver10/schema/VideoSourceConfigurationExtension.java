@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r VideoSourceConfigurationExtension complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoSourceConfigurationExtension">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoSourceConfigurationExtension", propOrder = {"rotate", "extension"})
+@XmlType(
+    name = "VideoSourceConfigurationExtension",
+    propOrder = {"rotate", "extension"})
 public class VideoSourceConfigurationExtension {
 
   @XmlElement(name = "Rotate")
   protected Rotate rotate;
+
   @XmlElement(name = "Extension")
   protected VideoSourceConfigurationExtension2 extension;
 
@@ -69,5 +71,4 @@ public class VideoSourceConfigurationExtension {
   public void setExtension(VideoSourceConfigurationExtension2 value) {
     this.extension = value;
   }
-
 }

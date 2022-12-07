@@ -7,11 +7,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.FocusMove;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -27,15 +27,15 @@ import org.onvif.ver10.schema.FocusMove;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "videoSourceToken",
-    "focus"
-})
+@XmlType(
+    name = "",
+    propOrder = {"videoSourceToken", "focus"})
 @XmlRootElement(name = "Move")
 public class Move {
 
   @XmlElement(name = "VideoSourceToken", required = true)
   protected String videoSourceToken;
+
   @XmlElement(name = "Focus", required = true)
   protected FocusMove focus;
 
@@ -74,5 +74,4 @@ public class Move {
   public void setFocus(FocusMove value) {
     this.focus = value;
   }
-
 }

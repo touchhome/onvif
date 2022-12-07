@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r PTZSpaces complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PTZSpaces">
@@ -40,48 +39,64 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZSpaces", propOrder = {"absolutePanTiltPositionSpace", "absoluteZoomPositionSpace", "relativePanTiltTranslationSpace",
-    "relativeZoomTranslationSpace", "continuousPanTiltVelocitySpace", "continuousZoomVelocitySpace", "panTiltSpeedSpace", "zoomSpeedSpace", "extension"})
+@XmlType(
+    name = "PTZSpaces",
+    propOrder = {
+      "absolutePanTiltPositionSpace",
+      "absoluteZoomPositionSpace",
+      "relativePanTiltTranslationSpace",
+      "relativeZoomTranslationSpace",
+      "continuousPanTiltVelocitySpace",
+      "continuousZoomVelocitySpace",
+      "panTiltSpeedSpace",
+      "zoomSpeedSpace",
+      "extension"
+    })
 public class PTZSpaces {
 
   @XmlElement(name = "AbsolutePanTiltPositionSpace")
   protected List<Space2DDescription> absolutePanTiltPositionSpace;
+
   @XmlElement(name = "AbsoluteZoomPositionSpace")
   protected List<Space1DDescription> absoluteZoomPositionSpace;
+
   @XmlElement(name = "RelativePanTiltTranslationSpace")
   protected List<Space2DDescription> relativePanTiltTranslationSpace;
+
   @XmlElement(name = "RelativeZoomTranslationSpace")
   protected List<Space1DDescription> relativeZoomTranslationSpace;
+
   @XmlElement(name = "ContinuousPanTiltVelocitySpace")
   protected List<Space2DDescription> continuousPanTiltVelocitySpace;
+
   @XmlElement(name = "ContinuousZoomVelocitySpace")
   protected List<Space1DDescription> continuousZoomVelocitySpace;
+
   @XmlElement(name = "PanTiltSpeedSpace")
   protected List<Space1DDescription> panTiltSpeedSpace;
+
   @XmlElement(name = "ZoomSpeedSpace")
   protected List<Space1DDescription> zoomSpeedSpace;
+
   @XmlElement(name = "Extension")
   protected PTZSpacesExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Gets the value of the absolutePanTiltPositionSpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the absolutePanTiltPositionSpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the absolutePanTiltPositionSpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAbsolutePanTiltPositionSpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space2DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space2DDescription }
    */
   public List<Space2DDescription> getAbsolutePanTiltPositionSpace() {
     if (absolutePanTiltPositionSpace == null) {
@@ -93,20 +108,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the absoluteZoomPositionSpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the absoluteZoomPositionSpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the absoluteZoomPositionSpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAbsoluteZoomPositionSpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space1DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space1DDescription }
    */
   public List<Space1DDescription> getAbsoluteZoomPositionSpace() {
     if (absoluteZoomPositionSpace == null) {
@@ -118,20 +130,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the relativePanTiltTranslationSpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the relativePanTiltTranslationSpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the relativePanTiltTranslationSpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getRelativePanTiltTranslationSpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space2DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space2DDescription }
    */
   public List<Space2DDescription> getRelativePanTiltTranslationSpace() {
     if (relativePanTiltTranslationSpace == null) {
@@ -143,20 +152,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the relativeZoomTranslationSpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the relativeZoomTranslationSpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the relativeZoomTranslationSpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getRelativeZoomTranslationSpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space1DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space1DDescription }
    */
   public List<Space1DDescription> getRelativeZoomTranslationSpace() {
     if (relativeZoomTranslationSpace == null) {
@@ -168,20 +174,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the continuousPanTiltVelocitySpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the continuousPanTiltVelocitySpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the continuousPanTiltVelocitySpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getContinuousPanTiltVelocitySpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space2DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space2DDescription }
    */
   public List<Space2DDescription> getContinuousPanTiltVelocitySpace() {
     if (continuousPanTiltVelocitySpace == null) {
@@ -193,20 +196,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the continuousZoomVelocitySpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the continuousZoomVelocitySpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the continuousZoomVelocitySpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getContinuousZoomVelocitySpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space1DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space1DDescription }
    */
   public List<Space1DDescription> getContinuousZoomVelocitySpace() {
     if (continuousZoomVelocitySpace == null) {
@@ -218,20 +218,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the panTiltSpeedSpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the panTiltSpeedSpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the panTiltSpeedSpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getPanTiltSpeedSpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space1DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space1DDescription }
    */
   public List<Space1DDescription> getPanTiltSpeedSpace() {
     if (panTiltSpeedSpace == null) {
@@ -243,20 +240,17 @@ public class PTZSpaces {
   /**
    * Gets the value of the zoomSpeedSpace property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the zoomSpeedSpace property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the zoomSpeedSpace property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getZoomSpeedSpace().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Space1DDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link Space1DDescription }
    */
   public List<Space1DDescription> getZoomSpeedSpace() {
     if (zoomSpeedSpace == null) {
@@ -286,15 +280,15 @@ public class PTZSpaces {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

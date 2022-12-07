@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DigitalIdleState")
 @XmlEnum
 public enum DigitalIdleState {
-
   @XmlEnumValue("closed")
   CLOSED("closed"),
   @XmlEnumValue("open")
@@ -30,5 +29,4 @@ public enum DigitalIdleState {
   public String value() {
     return value;
   }
-
 }

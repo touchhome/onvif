@@ -20,20 +20,25 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EndpointReferenceType", propOrder = {"address", "referenceParameters", "metadata", "any"})
+@XmlType(
+    name = "EndpointReferenceType",
+    propOrder = {"address", "referenceParameters", "metadata", "any"})
 @ToString
 public class EndpointReferenceType {
 
   @XmlElement(name = "Address", required = true)
   protected AttributedURIType address;
+
   @XmlElement(name = "ReferenceParameters")
   protected ReferenceParametersType referenceParameters;
+
   @XmlElement(name = "Metadata")
   protected MetadataType metadata;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<>();
 
   public List<Object> getAny() {
     if (any == null) {

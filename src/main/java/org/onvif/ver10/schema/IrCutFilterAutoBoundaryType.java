@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r IrCutFilterAutoBoundaryType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -26,11 +26,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IrCutFilterAutoBoundaryType")
 @XmlEnum
 public enum IrCutFilterAutoBoundaryType {
-
   @XmlEnumValue("Common")
-  COMMON("Common"), @XmlEnumValue("ToOn")
-  TO_ON("ToOn"), @XmlEnumValue("ToOff")
-  TO_OFF("ToOff"), @XmlEnumValue("Extended")
+  COMMON("Common"),
+  @XmlEnumValue("ToOn")
+  TO_ON("ToOn"),
+  @XmlEnumValue("ToOff")
+  TO_OFF("ToOff"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -50,5 +52,4 @@ public enum IrCutFilterAutoBoundaryType {
   public String value() {
     return value;
   }
-
 }

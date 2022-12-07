@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PTZSpeed;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -28,12 +27,15 @@ import org.onvif.ver10.schema.PTZSpeed;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"profileToken", "speed"})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken", "speed"})
 @XmlRootElement(name = "GotoHomePosition")
 public class GotoHomePosition {
 
   @XmlElement(name = "ProfileToken", required = true)
   protected String profileToken;
+
   @XmlElement(name = "Speed")
   protected PTZSpeed speed;
 
@@ -72,5 +74,4 @@ public class GotoHomePosition {
   public void setSpeed(PTZSpeed value) {
     this.speed = value;
   }
-
 }

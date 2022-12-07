@@ -11,20 +11,25 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ColorspaceRange", propOrder = {"x", "y", "z", "colorspace"})
+@XmlType(
+    name = "ColorspaceRange",
+    propOrder = {"x", "y", "z", "colorspace"})
 public class ColorspaceRange {
 
   @XmlElement(name = "X", required = true)
   protected FloatRange x;
+
   @XmlElement(name = "Y", required = true)
   protected FloatRange y;
+
   @XmlElement(name = "Z", required = true)
   protected FloatRange z;
+
   @XmlElement(name = "Colorspace", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String colorspace;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der x-Eigenschaft ab.
@@ -101,15 +106,15 @@ public class ColorspaceRange {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

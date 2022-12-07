@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "videoSourceToken"
-})
+@XmlType(
+    name = "",
+    propOrder = {"videoSourceToken"})
 @XmlRootElement(name = "GetOptions")
 public class GetOptions {
 
@@ -33,5 +33,4 @@ public class GetOptions {
   public void setVideoSourceToken(String value) {
     this.videoSourceToken = value;
   }
-
 }

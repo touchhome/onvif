@@ -11,11 +11,10 @@ import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r IrCutFilterAutoAdjustment complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IrCutFilterAutoAdjustment">
@@ -34,19 +33,24 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IrCutFilterAutoAdjustment", propOrder = {"boundaryType", "boundaryOffset", "responseTime", "extension"})
+@XmlType(
+    name = "IrCutFilterAutoAdjustment",
+    propOrder = {"boundaryType", "boundaryOffset", "responseTime", "extension"})
 public class IrCutFilterAutoAdjustment {
 
   @XmlElement(name = "BoundaryType", required = true)
   protected String boundaryType;
+
   @XmlElement(name = "BoundaryOffset")
   protected Float boundaryOffset;
+
   @XmlElement(name = "ResponseTime")
   protected Duration responseTime;
+
   @XmlElement(name = "Extension")
   protected IrCutFilterAutoAdjustmentExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der boundaryType-Eigenschaft ab.
@@ -123,15 +127,15 @@ public class IrCutFilterAutoAdjustment {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

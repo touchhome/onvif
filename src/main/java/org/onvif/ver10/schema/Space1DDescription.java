@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Space1DDescription complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Space1DDescription">
@@ -27,12 +26,15 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Space1DDescription", propOrder = {"uri", "xRange"})
+@XmlType(
+    name = "Space1DDescription",
+    propOrder = {"uri", "xRange"})
 public class Space1DDescription {
 
   @XmlElement(name = "URI", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String uri;
+
   @XmlElement(name = "XRange", required = true)
   protected FloatRange xRange;
 
@@ -71,5 +73,4 @@ public class Space1DDescription {
   public void setXRange(FloatRange value) {
     this.xRange = value;
   }
-
 }

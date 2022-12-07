@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Range of values greater equal Min value and less equal Max value.
  *
- * <p>
- * Java-Klasse f�r FloatRange complex type.
+ * <p>Java-Klasse f�r FloatRange complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FloatRange">
@@ -28,40 +27,34 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FloatRange", propOrder = {"min", "max"})
+@XmlType(
+    name = "FloatRange",
+    propOrder = {"min", "max"})
 public class FloatRange {
 
   @XmlElement(name = "Min")
   protected float min;
+
   @XmlElement(name = "Max")
   protected float max;
 
-  /**
-   * Ruft den Wert der min-Eigenschaft ab.
-   */
+  /** Ruft den Wert der min-Eigenschaft ab. */
   public float getMin() {
     return min;
   }
 
-  /**
-   * Legt den Wert der min-Eigenschaft fest.
-   */
+  /** Legt den Wert der min-Eigenschaft fest. */
   public void setMin(float value) {
     this.min = value;
   }
 
-  /**
-   * Ruft den Wert der max-Eigenschaft ab.
-   */
+  /** Ruft den Wert der max-Eigenschaft ab. */
   public float getMax() {
     return max;
   }
 
-  /**
-   * Legt den Wert der max-Eigenschaft fest.
-   */
+  /** Legt den Wert der max-Eigenschaft fest. */
   public void setMax(float value) {
     this.max = value;
   }
-
 }

@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Rename complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Rename">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Rename", propOrder = {"from", "to"})
+@XmlType(
+    name = "Rename",
+    propOrder = {"from", "to"})
 public class Rename {
 
   @XmlElement(required = true)
   protected ObjectId from;
+
   @XmlElement(required = true)
   protected ObjectId to;
 
@@ -69,5 +71,4 @@ public class Rename {
   public void setTo(ObjectId value) {
     this.to = value;
   }
-
 }

@@ -8,6 +8,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "AddMetadataConfigurationResponse")
-public class AddMetadataConfigurationResponse {
-
-}
+public class AddMetadataConfigurationResponse {}

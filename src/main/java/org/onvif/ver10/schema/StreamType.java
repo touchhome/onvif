@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r StreamType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "StreamType")
 @XmlEnum
 public enum StreamType {
-
   @XmlEnumValue("RTP-Unicast")
-  RTP_UNICAST("RTP-Unicast"), @XmlEnumValue("RTP-Multicast")
+  RTP_UNICAST("RTP-Unicast"),
+  @XmlEnumValue("RTP-Multicast")
   RTP_MULTICAST("RTP-Multicast");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum StreamType {
   public String value() {
     return value;
   }
-
 }

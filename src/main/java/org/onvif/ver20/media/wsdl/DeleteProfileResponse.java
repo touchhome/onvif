@@ -8,7 +8,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "DeleteProfileResponse")
-public class DeleteProfileResponse {
-
-
-}
+public class DeleteProfileResponse {}

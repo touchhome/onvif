@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.OSDConfigurationOptions;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "osdOptions"
-})
+@XmlType(
+    name = "",
+    propOrder = {"osdOptions"})
 @XmlRootElement(name = "GetOSDOptionsResponse")
 public class GetOSDOptionsResponse {
 
@@ -34,5 +34,4 @@ public class GetOSDOptionsResponse {
   public void setOSDOptions(OSDConfigurationOptions value) {
     this.osdOptions = value;
   }
-
 }

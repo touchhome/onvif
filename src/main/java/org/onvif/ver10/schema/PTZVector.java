@@ -12,11 +12,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZVector", propOrder = {"panTilt", "zoom"})
+@XmlType(
+    name = "PTZVector",
+    propOrder = {"panTilt", "zoom"})
 public class PTZVector {
 
   @XmlElement(name = "PanTilt")
   protected Vector2D panTilt;
+
   @XmlElement(name = "Zoom")
   protected Vector1D zoom;
 

@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r IPv6DHCPConfiguration.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -26,11 +26,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IPv6DHCPConfiguration")
 @XmlEnum
 public enum IPv6DHCPConfiguration {
-
   @XmlEnumValue("Auto")
-  AUTO("Auto"), @XmlEnumValue("Stateful")
-  STATEFUL("Stateful"), @XmlEnumValue("Stateless")
-  STATELESS("Stateless"), @XmlEnumValue("Off")
+  AUTO("Auto"),
+  @XmlEnumValue("Stateful")
+  STATEFUL("Stateful"),
+  @XmlEnumValue("Stateless")
+  STATELESS("Stateless"),
+  @XmlEnumValue("Off")
   OFF("Off");
   private final String value;
 
@@ -50,5 +52,4 @@ public enum IPv6DHCPConfiguration {
   public String value() {
     return value;
   }
-
 }

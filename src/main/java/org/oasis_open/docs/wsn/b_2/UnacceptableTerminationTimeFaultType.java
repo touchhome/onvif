@@ -13,12 +13,15 @@ import org.oasis_open.docs.wsrf.bf_2.BaseFaultType;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UnacceptableTerminationTimeFaultType", propOrder = {"minimumTime", "maximumTime"})
+@XmlType(
+    name = "UnacceptableTerminationTimeFaultType",
+    propOrder = {"minimumTime", "maximumTime"})
 public class UnacceptableTerminationTimeFaultType extends BaseFaultType {
 
   @XmlElement(name = "MinimumTime", required = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar minimumTime;
+
   @XmlElement(name = "MaximumTime")
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar maximumTime;

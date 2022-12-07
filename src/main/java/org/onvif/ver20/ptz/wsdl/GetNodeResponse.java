@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PTZNode;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -27,7 +26,9 @@ import org.onvif.ver10.schema.PTZNode;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"ptzNode"})
+@XmlType(
+    name = "",
+    propOrder = {"ptzNode"})
 @XmlRootElement(name = "GetNodeResponse")
 public class GetNodeResponse {
 
@@ -51,5 +52,4 @@ public class GetNodeResponse {
   public void setPTZNode(PTZNode value) {
     this.ptzNode = value;
   }
-
 }

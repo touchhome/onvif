@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r IPv6NetworkInterfaceSetConfiguration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IPv6NetworkInterfaceSetConfiguration">
@@ -30,15 +29,20 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IPv6NetworkInterfaceSetConfiguration", propOrder = {"enabled", "acceptRouterAdvert", "manual", "dhcp"})
+@XmlType(
+    name = "IPv6NetworkInterfaceSetConfiguration",
+    propOrder = {"enabled", "acceptRouterAdvert", "manual", "dhcp"})
 public class IPv6NetworkInterfaceSetConfiguration {
 
   @XmlElement(name = "Enabled")
   protected Boolean enabled;
+
   @XmlElement(name = "AcceptRouterAdvert")
   protected Boolean acceptRouterAdvert;
+
   @XmlElement(name = "Manual")
   protected List<PrefixedIPv6Address> manual;
+
   @XmlElement(name = "DHCP")
   protected IPv6DHCPConfiguration dhcp;
 
@@ -81,20 +85,17 @@ public class IPv6NetworkInterfaceSetConfiguration {
   /**
    * Gets the value of the manual property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the manual property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the manual property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getManual().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
    */
   public List<PrefixedIPv6Address> getManual() {
     if (manual == null) {
@@ -120,5 +121,4 @@ public class IPv6NetworkInterfaceSetConfiguration {
   public void setDHCP(IPv6DHCPConfiguration value) {
     this.dhcp = value;
   }
-
 }

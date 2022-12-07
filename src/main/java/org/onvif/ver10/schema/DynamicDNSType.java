@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r DynamicDNSType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,10 +25,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DynamicDNSType")
 @XmlEnum
 public enum DynamicDNSType {
-
   @XmlEnumValue("NoUpdate")
-  NO_UPDATE("NoUpdate"), @XmlEnumValue("ClientUpdates")
-  CLIENT_UPDATES("ClientUpdates"), @XmlEnumValue("ServerUpdates")
+  NO_UPDATE("NoUpdate"),
+  @XmlEnumValue("ClientUpdates")
+  CLIENT_UPDATES("ClientUpdates"),
+  @XmlEnumValue("ServerUpdates")
   SERVER_UPDATES("ServerUpdates");
   private final String value;
 
@@ -48,5 +49,4 @@ public enum DynamicDNSType {
   public String value() {
     return value;
   }
-
 }

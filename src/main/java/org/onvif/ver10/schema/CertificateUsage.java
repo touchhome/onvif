@@ -7,11 +7,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CertificateUsage", propOrder = {"value"})
+@XmlType(
+    name = "CertificateUsage",
+    propOrder = {"value"})
 public class CertificateUsage {
 
-  @XmlValue
-  protected String value;
+  @XmlValue protected String value;
+
   @XmlAttribute(name = "Critical", required = true)
   protected boolean critical;
 
@@ -33,18 +35,13 @@ public class CertificateUsage {
     this.value = value;
   }
 
-  /**
-   * Ruft den Wert der critical-Eigenschaft ab.
-   */
+  /** Ruft den Wert der critical-Eigenschaft ab. */
   public boolean isCritical() {
     return critical;
   }
 
-  /**
-   * Legt den Wert der critical-Eigenschaft fest.
-   */
+  /** Legt den Wert der critical-Eigenschaft fest. */
   public void setCritical(boolean value) {
     this.critical = value;
   }
-
 }

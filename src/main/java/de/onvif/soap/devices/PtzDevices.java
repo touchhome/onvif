@@ -144,8 +144,8 @@ public class PtzDevices {
   }
 
   /**
-   * @param x    Pan-Position
-   * @param y    Tilt-Position
+   * @param x Pan-Position
+   * @param y Tilt-Position
    * @param zoom Zoom
    * @return True if move successful
    */
@@ -154,9 +154,12 @@ public class PtzDevices {
     String profileToken = onvifDeviceState.getProfileToken();
     PTZNode node = getNode(profileToken);
     if (node != null) {
-      FloatRange xRange = node.getSupportedPTZSpaces().getAbsolutePanTiltPositionSpace().get(0).getXRange();
-      FloatRange yRange = node.getSupportedPTZSpaces().getAbsolutePanTiltPositionSpace().get(0).getYRange();
-      FloatRange zRange = node.getSupportedPTZSpaces().getAbsoluteZoomPositionSpace().get(0).getXRange();
+      FloatRange xRange =
+          node.getSupportedPTZSpaces().getAbsolutePanTiltPositionSpace().get(0).getXRange();
+      FloatRange yRange =
+          node.getSupportedPTZSpaces().getAbsolutePanTiltPositionSpace().get(0).getYRange();
+      FloatRange zRange =
+          node.getSupportedPTZSpaces().getAbsoluteZoomPositionSpace().get(0).getXRange();
 
       if (zoom < zRange.getMin() || zoom > zRange.getMax()) {
         throw new IllegalArgumentException("Bad value for zoom: " + zoom);
@@ -234,7 +237,8 @@ public class PtzDevices {
 
     request.setProfileToken(onvifDeviceState.getProfileToken());
 
-    ContinuousMoveResponse response = soap.createSOAPPtzRequest(request, ContinuousMoveResponse.class);
+    ContinuousMoveResponse response =
+        soap.createSOAPPtzRequest(request, ContinuousMoveResponse.class);
     return response != null;
   }
 
@@ -270,7 +274,8 @@ public class PtzDevices {
     SetHomePosition request = new SetHomePosition();
     request.setProfileToken(profileToken);
 
-    SetHomePositionResponse response = soap.createSOAPPtzRequest(request, SetHomePositionResponse.class);
+    SetHomePositionResponse response =
+        soap.createSOAPPtzRequest(request, SetHomePositionResponse.class);
     return response != null;
   }
 
@@ -334,7 +339,7 @@ public class PtzDevices {
     absoluteMove(currentPanCamValue, currentTiltCamValue, currentZoomCamValue);
   }
 
-  public void setAbsoluteZoom(Float zoomValue) {// Value is 0-100% of cameras range
+  public void setAbsoluteZoom(Float zoomValue) { // Value is 0-100% of cameras range
     currentZoomPercentage = zoomValue;
     currentZoomCamValue = ((((zoomMin - zoomMax) * -1) / 100) * zoomValue + zoomMin);
     absoluteMove(currentPanCamValue, currentTiltCamValue, currentZoomCamValue);
@@ -393,13 +398,16 @@ public class PtzDevices {
     this.presets = getPresets();
 
     currentPanCamValue = ptzStatus.getPosition().getPanTilt().getX();
-    currentPanPercentage = (((panRangeMin - currentPanCamValue) * -1) / ((panRangeMin - panRangeMax) * -1)) * 100;
+    currentPanPercentage =
+        (((panRangeMin - currentPanCamValue) * -1) / ((panRangeMin - panRangeMax) * -1)) * 100;
 
     currentTiltCamValue = ptzStatus.getPosition().getPanTilt().getY();
-    currentTiltPercentage = (((tiltRangeMin - currentTiltCamValue) * -1) / ((tiltRangeMin - tiltRangeMax) * -1)) * 100;
+    currentTiltPercentage =
+        (((tiltRangeMin - currentTiltCamValue) * -1) / ((tiltRangeMin - tiltRangeMax) * -1)) * 100;
 
     currentZoomCamValue = ptzStatus.getPosition().getZoom().getX();
-    currentZoomPercentage = (((zoomMin - currentZoomCamValue) * -1) / ((zoomMin - zoomMax) * -1)) * 100;
+    currentZoomPercentage =
+        (((zoomMin - currentZoomCamValue) * -1) / ((zoomMin - zoomMax) * -1)) * 100;
   }
 
   public void gotoPreset(int index) {

@@ -11,12 +11,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"name", "token"})
+@XmlType(
+    name = "",
+    propOrder = {"name", "token"})
 @XmlRootElement(name = "CreateProfile")
 public class CreateProfile {
 
   @XmlElement(name = "Name", required = true)
   protected String name;
+
   @XmlElement(name = "Token")
   protected String token;
 }

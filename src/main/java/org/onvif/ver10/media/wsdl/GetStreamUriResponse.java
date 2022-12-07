@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.19 um 02:35:56 PM CET
@@ -15,11 +16,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.MediaUri;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -34,7 +34,9 @@ import org.onvif.ver10.schema.MediaUri;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"mediaUri"})
+@XmlType(
+    name = "",
+    propOrder = {"mediaUri"})
 @XmlRootElement(name = "GetStreamUriResponse")
 public class GetStreamUriResponse {
 
@@ -58,5 +60,4 @@ public class GetStreamUriResponse {
   public void setMediaUri(MediaUri value) {
     this.mediaUri = value;
   }
-
 }

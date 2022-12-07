@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r H264Configuration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="H264Configuration">
@@ -26,24 +25,23 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "H264Configuration", propOrder = {"govLength", "h264Profile"})
+@XmlType(
+    name = "H264Configuration",
+    propOrder = {"govLength", "h264Profile"})
 public class H264Configuration {
 
   @XmlElement(name = "GovLength")
   protected int govLength;
+
   @XmlElement(name = "H264Profile", required = true)
   protected H264Profile h264Profile;
 
-  /**
-   * Ruft den Wert der govLength-Eigenschaft ab.
-   */
+  /** Ruft den Wert der govLength-Eigenschaft ab. */
   public int getGovLength() {
     return govLength;
   }
 
-  /**
-   * Legt den Wert der govLength-Eigenschaft fest.
-   */
+  /** Legt den Wert der govLength-Eigenschaft fest. */
   public void setGovLength(int value) {
     this.govLength = value;
   }
@@ -65,5 +63,4 @@ public class H264Configuration {
   public void setH264Profile(H264Profile value) {
     this.h264Profile = value;
   }
-
 }

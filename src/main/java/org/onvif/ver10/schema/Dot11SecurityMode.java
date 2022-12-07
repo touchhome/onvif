@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Dot11SecurityMode.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -27,10 +27,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Dot11SecurityMode")
 @XmlEnum
 public enum Dot11SecurityMode {
-
   @XmlEnumValue("None")
-  NONE("None"), WEP("WEP"), PSK("PSK"), @XmlEnumValue("Dot1X")
-  DOT_1_X("Dot1X"), @XmlEnumValue("Extended")
+  NONE("None"),
+  WEP("WEP"),
+  PSK("PSK"),
+  @XmlEnumValue("Dot1X")
+  DOT_1_X("Dot1X"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -50,5 +53,4 @@ public enum Dot11SecurityMode {
   public String value() {
     return value;
   }
-
 }

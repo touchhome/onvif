@@ -13,9 +13,9 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "capabilities"
-})
+@XmlType(
+    name = "",
+    propOrder = {"capabilities"})
 @XmlRootElement(name = "GetServiceCapabilitiesResponse")
 public class GetServiceCapabilitiesResponse {
 

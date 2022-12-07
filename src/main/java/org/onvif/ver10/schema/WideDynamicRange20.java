@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Type describing whether WDR mode is enabled or disabled (on/off).
  *
- * <p>
- * Java-Klasse f�r WideDynamicRange20 complex type.
+ * <p>Java-Klasse f�r WideDynamicRange20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="WideDynamicRange20">
@@ -28,11 +27,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WideDynamicRange20", propOrder = {"mode", "level"})
+@XmlType(
+    name = "WideDynamicRange20",
+    propOrder = {"mode", "level"})
 public class WideDynamicRange20 {
 
   @XmlElement(name = "Mode", required = true)
   protected WideDynamicMode mode;
+
   @XmlElement(name = "Level")
   protected Float level;
 
@@ -71,5 +73,4 @@ public class WideDynamicRange20 {
   public void setLevel(Float value) {
     this.level = value;
   }
-
 }

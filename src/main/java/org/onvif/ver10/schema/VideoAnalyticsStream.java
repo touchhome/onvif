@@ -9,11 +9,10 @@ import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r VideoAnalyticsStream complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoAnalyticsStream">
@@ -29,29 +28,32 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoAnalyticsStream", propOrder = {"frameOrExtension"})
+@XmlType(
+    name = "VideoAnalyticsStream",
+    propOrder = {"frameOrExtension"})
 public class VideoAnalyticsStream {
 
-  @XmlElements({@XmlElement(name = "Frame", type = Frame.class), @XmlElement(name = "Extension", type = VideoAnalyticsStreamExtension.class)})
+  @XmlElements({
+    @XmlElement(name = "Frame", type = Frame.class),
+    @XmlElement(name = "Extension", type = VideoAnalyticsStreamExtension.class)
+  })
   protected List<java.lang.Object> frameOrExtension;
 
   /**
    * Gets the value of the frameOrExtension property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the frameOrExtension property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the frameOrExtension property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getFrameOrExtension().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Frame } {@link VideoAnalyticsStreamExtension }
+   * <p>Objects of the following type(s) are allowed in the list {@link Frame } {@link
+   * VideoAnalyticsStreamExtension }
    */
   public List<java.lang.Object> getFrameOrExtension() {
     if (frameOrExtension == null) {
@@ -59,5 +61,4 @@ public class VideoAnalyticsStream {
     }
     return this.frameOrExtension;
   }
-
 }

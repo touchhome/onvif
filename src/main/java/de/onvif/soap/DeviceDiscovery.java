@@ -43,14 +43,14 @@ public class DeviceDiscovery {
   public static int WS_DISCOVERY_TIMEOUT = 4000;
   public static int WS_DISCOVERY_PORT = 3702;
   public static String WS_DISCOVERY_ADDRESS_IPv4 = "239.255.255.250";
-  /**
-   * Not supported yet.
-   */
+  /** Not supported yet. */
   public static String WS_DISCOVERY_ADDRESS_IPv6 = "[FF02::C]";
-  public static String WS_DISCOVERY_PROBE_MESSAGE = "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsa=\"http://schemas.xmlsoap"
-      + ".org/ws/2004/08/addressing\" xmlns:tns=\"http://schemas.xmlsoap.org/ws/2005/04/discovery\"><soap:Header><wsa:Action>http://schemas.xmlsoap"
-      + ".org/ws/2005/04/discovery/Probe</wsa:Action><wsa:MessageID>urn:uuid:c032cfdd-c3ca-49dc-820e-ee6696ad63e2</wsa:MessageID><wsa:To>urn:schemas-xmlsoap-org:ws:2005:04"
-      + ":discovery</wsa:To></soap:Header><soap:Body><tns:Probe/></soap:Body></soap:Envelope>";
+
+  public static String WS_DISCOVERY_PROBE_MESSAGE =
+      "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsa=\"http://schemas.xmlsoap"
+          + ".org/ws/2004/08/addressing\" xmlns:tns=\"http://schemas.xmlsoap.org/ws/2005/04/discovery\"><soap:Header><wsa:Action>http://schemas.xmlsoap"
+          + ".org/ws/2005/04/discovery/Probe</wsa:Action><wsa:MessageID>urn:uuid:c032cfdd-c3ca-49dc-820e-ee6696ad63e2</wsa:MessageID><wsa:To>urn:schemas-xmlsoap-org:ws:2005:04"
+          + ":discovery</wsa:To></soap:Header><soap:Body><tns:Probe/></soap:Body></soap:Envelope>";
 
   public static void main(String[] args) throws InterruptedException {
     for (URL url : discoverWsDevicesAsUrls()) {
@@ -71,15 +71,17 @@ public class DeviceDiscovery {
    * Discover WS device on the local network with specified filter
    *
    * @param regexpProtocol url protocol matching regexp like "^http$", might be empty ""
-   * @param regexpPath     url path matching regexp like "onvif", might be empty ""
+   * @param regexpPath url path matching regexp like "onvif", might be empty ""
    * @return list of unique device urls filtered
    */
   public static Collection<URL> discoverWsDevicesAsUrls(String regexpProtocol, String regexpPath) {
-    final Collection<URL> urls = new TreeSet<>(new Comparator<URL>() {
-      public int compare(URL o1, URL o2) {
-        return o1.toString().compareTo(o2.toString());
-      }
-    });
+    final Collection<URL> urls =
+        new TreeSet<>(
+            new Comparator<URL>() {
+              public int compare(URL o1, URL o2) {
+                return o1.toString().compareTo(o2.toString());
+              }
+            });
     for (String key : discoverWsDevices()) {
       try {
         final URL url = new URL(key);
@@ -128,56 +130,73 @@ public class DeviceDiscovery {
     }
     ExecutorService executorService = Executors.newCachedThreadPool();
     for (final InetAddress address : addressList) {
-      Runnable runnable = new Runnable() {
-        public void run() {
-          try {
-            final String uuid = UUID.randomUUID().toString();
-            final String probe = WS_DISCOVERY_PROBE_MESSAGE.replaceAll("<wsa:MessageID>urn:uuid:.*</wsa:MessageID>", "<wsa:MessageID>urn:uuid:" + uuid + "</wsa:MessageID>");
-            final int port = random.nextInt(20000) + 40000;
-            @SuppressWarnings("SocketOpenedButNotSafelyClosed") final DatagramSocket server = new DatagramSocket(port, address);
-            new Thread() {
-              public void run() {
-                try {
-                  final DatagramPacket packet = new DatagramPacket(new byte[4096], 4096);
-                  server.setSoTimeout(WS_DISCOVERY_TIMEOUT);
-                  long timerStarted = System.currentTimeMillis();
-                  while (System.currentTimeMillis() - timerStarted < (WS_DISCOVERY_TIMEOUT)) {
-                    serverStarted.countDown();
-                    server.receive(packet);
-                    final Collection<String> collection = parseSoapResponseForUrls(Arrays.copyOf(packet.getData(), packet.getLength()));
-                    for (String key : collection) {
-                      addresses.add(key);
+      Runnable runnable =
+          new Runnable() {
+            public void run() {
+              try {
+                final String uuid = UUID.randomUUID().toString();
+                final String probe =
+                    WS_DISCOVERY_PROBE_MESSAGE.replaceAll(
+                        "<wsa:MessageID>urn:uuid:.*</wsa:MessageID>",
+                        "<wsa:MessageID>urn:uuid:" + uuid + "</wsa:MessageID>");
+                final int port = random.nextInt(20000) + 40000;
+                @SuppressWarnings("SocketOpenedButNotSafelyClosed")
+                final DatagramSocket server = new DatagramSocket(port, address);
+                new Thread() {
+                  public void run() {
+                    try {
+                      final DatagramPacket packet = new DatagramPacket(new byte[4096], 4096);
+                      server.setSoTimeout(WS_DISCOVERY_TIMEOUT);
+                      long timerStarted = System.currentTimeMillis();
+                      while (System.currentTimeMillis() - timerStarted < (WS_DISCOVERY_TIMEOUT)) {
+                        serverStarted.countDown();
+                        server.receive(packet);
+                        final Collection<String> collection =
+                            parseSoapResponseForUrls(
+                                Arrays.copyOf(packet.getData(), packet.getLength()));
+                        for (String key : collection) {
+                          addresses.add(key);
+                        }
+                      }
+                    } catch (SocketTimeoutException ignored) {
+                    } catch (Exception e) {
+                      e.printStackTrace();
+                    } finally {
+                      serverFinished.countDown();
+                      server.close();
                     }
                   }
-                } catch (SocketTimeoutException ignored) {
-                } catch (Exception e) {
+                }.start();
+                try {
+                  serverStarted.await(1000, TimeUnit.MILLISECONDS);
+                } catch (InterruptedException e) {
                   e.printStackTrace();
-                } finally {
-                  serverFinished.countDown();
-                  server.close();
                 }
+                if (address instanceof Inet4Address) {
+                  server.send(
+                      new DatagramPacket(
+                          probe.getBytes(),
+                          probe.length(),
+                          InetAddress.getByName(WS_DISCOVERY_ADDRESS_IPv4),
+                          WS_DISCOVERY_PORT));
+                } else {
+                  server.send(
+                      new DatagramPacket(
+                          probe.getBytes(),
+                          probe.length(),
+                          InetAddress.getByName(WS_DISCOVERY_ADDRESS_IPv6),
+                          WS_DISCOVERY_PORT));
+                }
+              } catch (Exception e) {
+                e.printStackTrace();
               }
-            }.start();
-            try {
-              serverStarted.await(1000, TimeUnit.MILLISECONDS);
-            } catch (InterruptedException e) {
-              e.printStackTrace();
+              try {
+                serverFinished.await((WS_DISCOVERY_TIMEOUT), TimeUnit.MILLISECONDS);
+              } catch (InterruptedException e) {
+                e.printStackTrace();
+              }
             }
-            if (address instanceof Inet4Address) {
-              server.send(new DatagramPacket(probe.getBytes(), probe.length(), InetAddress.getByName(WS_DISCOVERY_ADDRESS_IPv4), WS_DISCOVERY_PORT));
-            } else {
-              server.send(new DatagramPacket(probe.getBytes(), probe.length(), InetAddress.getByName(WS_DISCOVERY_ADDRESS_IPv6), WS_DISCOVERY_PORT));
-            }
-          } catch (Exception e) {
-            e.printStackTrace();
-          }
-          try {
-            serverFinished.await((WS_DISCOVERY_TIMEOUT), TimeUnit.MILLISECONDS);
-          } catch (InterruptedException e) {
-            e.printStackTrace();
-          }
-        }
-      };
+          };
       executorService.submit(runnable);
     }
     try {
@@ -204,8 +223,9 @@ public class DeviceDiscovery {
     return nodes;
   }
 
-  private static Collection<String> parseSoapResponseForUrls(byte[] data) throws SOAPException, IOException {
-    //System.out.println(new String(data));
+  private static Collection<String> parseSoapResponseForUrls(byte[] data)
+      throws SOAPException, IOException {
+    // System.out.println(new String(data));
     final Collection<String> urls = new ArrayList<>();
     MessageFactory factory = MessageFactory.newInstance(WS_DISCOVERY_SOAP_VERSION);
     final MimeHeaders headers = new MimeHeaders();

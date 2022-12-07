@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * <p>
  * Java-Klasse f�r IPAddress complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IPAddress">
@@ -29,14 +28,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IPAddress", propOrder = {"type", "iPv4Address", "iPv6Address"})
+@XmlType(
+    name = "IPAddress",
+    propOrder = {"type", "iPv4Address", "iPv6Address"})
 public class IPAddress {
 
   @XmlElement(name = "Type", required = true)
   protected IPType type;
+
   @XmlElement(name = "IPv4Address")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected String iPv4Address;
+
   @XmlElement(name = "IPv6Address")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected String iPv6Address;
@@ -94,5 +97,4 @@ public class IPAddress {
   public void setIPv6Address(String value) {
     this.iPv6Address = value;
   }
-
 }

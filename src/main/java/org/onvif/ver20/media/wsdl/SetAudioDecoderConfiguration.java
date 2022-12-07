@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.AudioDecoderConfiguration;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "configuration"
-})
+@XmlType(
+    name = "",
+    propOrder = {"configuration"})
 @XmlRootElement(name = "SetAudioDecoderConfiguration")
 public class SetAudioDecoderConfiguration {
 
@@ -34,5 +34,4 @@ public class SetAudioDecoderConfiguration {
   public void setConfiguration(AudioDecoderConfiguration value) {
     this.configuration = value;
   }
-
 }

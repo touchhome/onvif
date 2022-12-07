@@ -7,7 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"configurationToken"})
+@XmlType(
+    name = "",
+    propOrder = {"configurationToken"})
 @XmlRootElement(name = "GetMetadataConfiguration")
 public class GetMetadataConfiguration {
 
@@ -21,5 +23,4 @@ public class GetMetadataConfiguration {
   public void setConfigurationToken(String value) {
     this.configurationToken = value;
   }
-
 }

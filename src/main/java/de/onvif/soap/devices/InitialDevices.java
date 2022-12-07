@@ -66,11 +66,20 @@ public class InitialDevices {
   public java.util.Date getDate() {
     Calendar cal;
 
-    GetSystemDateAndTimeResponse response = soap.createSOAPDeviceRequestType(new GetSystemDateAndTime(), GetSystemDateAndTimeResponse.class);
+    GetSystemDateAndTimeResponse response =
+        soap.createSOAPDeviceRequestType(
+            new GetSystemDateAndTime(), GetSystemDateAndTimeResponse.class);
 
     Date date = response.getSystemDateAndTime().getUTCDateTime().getDate();
     Time time = response.getSystemDateAndTime().getUTCDateTime().getTime();
-    cal = new GregorianCalendar(date.getYear(), date.getMonth() - 1, date.getDay(), time.getHour(), time.getMinute(), time.getSecond());
+    cal =
+        new GregorianCalendar(
+            date.getYear(),
+            date.getMonth() - 1,
+            date.getDay(),
+            time.getHour(),
+            time.getMinute(),
+            time.getSecond());
 
     return cal.getTime();
   }
@@ -78,14 +87,16 @@ public class InitialDevices {
   public GetDeviceInformationResponse getDeviceInformation() {
     if (this.deviceInformation == null) {
       GetDeviceInformation getHostname = new GetDeviceInformation();
-      this.deviceInformation = soap.createSOAPDeviceRequestType(getHostname, GetDeviceInformationResponse.class);
+      this.deviceInformation =
+          soap.createSOAPDeviceRequestType(getHostname, GetDeviceInformationResponse.class);
     }
     return this.deviceInformation;
   }
 
   public String getHostname() {
     GetHostname getHostname = new GetHostname();
-    GetHostnameResponse response = soap.createSOAPDeviceRequestType(getHostname, GetHostnameResponse.class);
+    GetHostnameResponse response =
+        soap.createSOAPDeviceRequestType(getHostname, GetHostnameResponse.class);
     return response == null ? null : response.getHostnameInformation().getName();
   }
 
@@ -104,8 +115,13 @@ public class InitialDevices {
   @SneakyThrows
   public Capabilities getCapabilities() {
     GetCapabilities request = new GetCapabilities();
-    GetCapabilitiesResponse response = soap.createSOAPRequest(request,
-        GetCapabilitiesResponse.class, onvifDeviceState.getServerDeviceUri(), onvifDeviceState.getServerDeviceIpLessUri(), false);
+    GetCapabilitiesResponse response =
+        soap.createSOAPRequest(
+            request,
+            GetCapabilitiesResponse.class,
+            onvifDeviceState.getServerDeviceUri(),
+            onvifDeviceState.getServerDeviceIpLessUri(),
+            false);
     return response == null ? null : response.getCapabilities();
   }
 
@@ -137,14 +153,16 @@ public class InitialDevices {
     CreateProfile request = new CreateProfile();
     request.setName(name);
 
-    CreateProfileResponse response = soap.createSOAPMediaRequest(request, CreateProfileResponse.class);
+    CreateProfileResponse response =
+        soap.createSOAPMediaRequest(request, CreateProfileResponse.class);
     return response == null ? null : response.getProfile();
   }
 
   public List<Service> getServices() {
     if (services == null) {
       GetServices request = new GetServices().setIncludeCapability(true);
-      GetServicesResponse response = soap.createSOAPDeviceRequestType(request, GetServicesResponse.class);
+      GetServicesResponse response =
+          soap.createSOAPDeviceRequestType(request, GetServicesResponse.class);
       services = response == null ? null : response.getService();
     }
     return services;
@@ -152,7 +170,8 @@ public class InitialDevices {
 
   public List<Scope> getScopes() {
     if (this.scopes == null) {
-      GetScopesResponse response = soap.createSOAPMediaRequest(new GetScopes(), GetScopesResponse.class);
+      GetScopesResponse response =
+          soap.createSOAPMediaRequest(new GetScopes(), GetScopesResponse.class);
       if (response == null) {
         return null;
       }
@@ -168,7 +187,9 @@ public class InitialDevices {
       return nameScopes.get(nameScopes.size() - 1).substring("odm:name:".length());
     }
     nameScopes = getScope("onvif://www.onvif.org/name/");
-    return nameScopes.isEmpty() ? "" : nameScopes.get(nameScopes.size() - 1).substring("onvif://www.onvif.org/name/".length());
+    return nameScopes.isEmpty()
+        ? ""
+        : nameScopes.get(nameScopes.size() - 1).substring("onvif://www.onvif.org/name/".length());
   }
 
   @SneakyThrows
@@ -185,11 +206,15 @@ public class InitialDevices {
   @SneakyThrows
   public String reboot() {
     SystemReboot request = new SystemReboot();
-    SystemRebootResponse response = soap.createSOAPMediaRequest(request, SystemRebootResponse.class);
+    SystemRebootResponse response =
+        soap.createSOAPMediaRequest(request, SystemRebootResponse.class);
     return response == null ? null : response.getMessage();
   }
 
   public List<String> getScope(String name) {
-    return getScopes().stream().map(Scope::getScopeItem).filter(s -> s.startsWith(name)).collect(Collectors.toList());
+    return getScopes().stream()
+        .map(Scope::getScopeItem)
+        .filter(s -> s.startsWith(name))
+        .collect(Collectors.toList());
   }
 }

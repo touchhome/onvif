@@ -6,7 +6,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContinuousFocusOptions", propOrder = {"speed"})
+@XmlType(
+    name = "ContinuousFocusOptions",
+    propOrder = {"speed"})
 public class ContinuousFocusOptions {
 
   @XmlElement(name = "Speed", required = true)
@@ -29,5 +31,4 @@ public class ContinuousFocusOptions {
   public void setSpeed(FloatRange value) {
     this.speed = value;
   }
-
 }

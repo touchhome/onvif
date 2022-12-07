@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkGateway complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkGateway">
@@ -30,12 +29,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkGateway", propOrder = {"iPv4Address", "iPv6Address"})
+@XmlType(
+    name = "NetworkGateway",
+    propOrder = {"iPv4Address", "iPv6Address"})
 public class NetworkGateway {
 
   @XmlElement(name = "IPv4Address")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected List<String> iPv4Address;
+
   @XmlElement(name = "IPv6Address")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected List<String> iPv6Address;
@@ -43,20 +45,17 @@ public class NetworkGateway {
   /**
    * Gets the value of the iPv4Address property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the iPv4Address property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the iPv4Address property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIPv4Address().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getIPv4Address() {
     if (iPv4Address == null) {
@@ -68,20 +67,17 @@ public class NetworkGateway {
   /**
    * Gets the value of the iPv6Address property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the iPv6Address property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the iPv6Address property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIPv6Address().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getIPv6Address() {
     if (iPv6Address == null) {
@@ -89,5 +85,4 @@ public class NetworkGateway {
     }
     return this.iPv6Address;
   }
-
 }

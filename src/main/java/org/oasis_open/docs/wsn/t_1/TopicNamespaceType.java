@@ -17,20 +17,26 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TopicNamespaceType", propOrder = {"topic", "any"})
+@XmlType(
+    name = "TopicNamespaceType",
+    propOrder = {"topic", "any"})
 public class TopicNamespaceType extends ExtensibleDocumented {
 
   @XmlElement(name = "Topic")
   protected List<TopicNamespaceType.Topic> topic;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
+
   @XmlAttribute(name = "name")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   @XmlSchemaType(name = "NCName")
   protected String name;
+
   @XmlAttribute(name = "targetNamespace", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String targetNamespace;
+
   @XmlAttribute(name = "final")
   protected Boolean _final;
 

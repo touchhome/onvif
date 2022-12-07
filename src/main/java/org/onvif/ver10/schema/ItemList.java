@@ -15,14 +15,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * List of parameters according to the corresponding ItemListDescription. Each item in the list shall have a unique name.
+ * List of parameters according to the corresponding ItemListDescription. Each item in the list
+ * shall have a unique name.
  *
+ * <p>Java-Klasse f�r ItemList complex type.
  *
- * <p>
- * Java-Klasse f�r ItemList complex type.
- *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ItemList">
@@ -60,35 +59,36 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItemList", propOrder = {"simpleItem", "elementItem", "extension"})
+@XmlType(
+    name = "ItemList",
+    propOrder = {"simpleItem", "elementItem", "extension"})
 public class ItemList {
 
   @XmlElement(name = "SimpleItem")
   protected List<ItemList.SimpleItem> simpleItem;
+
   @XmlElement(name = "ElementItem")
   protected List<ItemList.ElementItem> elementItem;
+
   @XmlElement(name = "Extension")
   protected ItemListExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Gets the value of the simpleItem property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the simpleItem property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the simpleItem property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getSimpleItem().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ItemList.SimpleItem }
+   * <p>Objects of the following type(s) are allowed in the list {@link ItemList.SimpleItem }
    */
   public List<ItemList.SimpleItem> getSimpleItem() {
     if (simpleItem == null) {
@@ -100,20 +100,17 @@ public class ItemList {
   /**
    * Gets the value of the elementItem property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the elementItem property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the elementItem property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getElementItem().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ItemList.ElementItem }
+   * <p>Objects of the following type(s) are allowed in the list {@link ItemList.ElementItem }
    */
   public List<ItemList.ElementItem> getElementItem() {
     if (elementItem == null) {
@@ -143,10 +140,11 @@ public class ItemList {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
@@ -155,11 +153,10 @@ public class ItemList {
   }
 
   /**
-   * <p>
    * Java-Klasse f�r anonymous complex type.
    *
-   * <p>
-   * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+   * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+   * ist.
    *
    * <pre>
    * <complexType>
@@ -175,11 +172,14 @@ public class ItemList {
    * </pre>
    */
   @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name = "", propOrder = {"any"})
+  @XmlType(
+      name = "",
+      propOrder = {"any"})
   public static class ElementItem {
 
     @XmlAnyElement(lax = true)
     protected java.lang.Object any;
+
     @XmlAttribute(name = "Name", required = true)
     protected String name;
 
@@ -218,15 +218,13 @@ public class ItemList {
     public void setName(String value) {
       this.name = value;
     }
-
   }
 
   /**
-   * <p>
    * Java-Klasse f�r anonymous complex type.
    *
-   * <p>
-   * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+   * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+   * ist.
    *
    * <pre>
    * <complexType>
@@ -245,6 +243,7 @@ public class ItemList {
 
     @XmlAttribute(name = "Name", required = true)
     protected String name;
+
     @XmlAttribute(name = "Value", required = true)
     @XmlSchemaType(name = "anySimpleType")
     protected String value;
@@ -284,7 +283,5 @@ public class ItemList {
     public void setValue(String value) {
       this.value = value;
     }
-
   }
-
 }

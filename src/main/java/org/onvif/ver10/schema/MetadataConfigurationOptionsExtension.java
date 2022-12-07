@@ -7,11 +7,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r MetadataConfigurationOptionsExtension complex type.
+ * Java-Klasse f�r MetadataConfigurationOptionsExtension complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType name="MetadataConfigurationOptionsExtension">
@@ -27,33 +27,31 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MetadataConfigurationOptionsExtension", propOrder = {
-    "compressionType",
-    "extension"
-})
+@XmlType(
+    name = "MetadataConfigurationOptionsExtension",
+    propOrder = {"compressionType", "extension"})
 public class MetadataConfigurationOptionsExtension {
 
   @XmlElement(name = "CompressionType")
   protected List<String> compressionType;
+
   @XmlElement(name = "Extension")
   protected MetadataConfigurationOptionsExtension2 extension;
 
   /**
    * Gets the value of the compressionType property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the compressionType property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the compressionType property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getCompressionType().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getCompressionType() {
     if (compressionType == null) {
@@ -79,5 +77,4 @@ public class MetadataConfigurationOptionsExtension {
   public void setExtension(MetadataConfigurationOptionsExtension2 value) {
     this.extension = value;
   }
-
 }

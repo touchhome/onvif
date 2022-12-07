@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r FocusOptions complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FocusOptions">
@@ -30,35 +29,37 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FocusOptions", propOrder = {"autoFocusModes", "defaultSpeed", "nearLimit", "farLimit"})
+@XmlType(
+    name = "FocusOptions",
+    propOrder = {"autoFocusModes", "defaultSpeed", "nearLimit", "farLimit"})
 public class FocusOptions {
 
   @XmlElement(name = "AutoFocusModes")
   protected List<AutoFocusMode> autoFocusModes;
+
   @XmlElement(name = "DefaultSpeed", required = true)
   protected FloatRange defaultSpeed;
+
   @XmlElement(name = "NearLimit", required = true)
   protected FloatRange nearLimit;
+
   @XmlElement(name = "FarLimit", required = true)
   protected FloatRange farLimit;
 
   /**
    * Gets the value of the autoFocusModes property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the autoFocusModes property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the autoFocusModes property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAutoFocusModes().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link AutoFocusMode }
+   * <p>Objects of the following type(s) are allowed in the list {@link AutoFocusMode }
    */
   public List<AutoFocusMode> getAutoFocusModes() {
     if (autoFocusModes == null) {
@@ -120,5 +121,4 @@ public class FocusOptions {
   public void setFarLimit(FloatRange value) {
     this.farLimit = value;
   }
-
 }

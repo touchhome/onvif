@@ -12,11 +12,10 @@ import javax.xml.namespace.QName;
 /**
  * General date time inforamtion returned by the GetSystemDateTime method.
  *
- * <p>
- * Java-Klasse f�r SystemDateTime complex type.
+ * <p>Java-Klasse f�r SystemDateTime complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="SystemDateTime">
@@ -37,23 +36,37 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SystemDateTime", propOrder = {"dateTimeType", "daylightSavings", "timeZone", "utcDateTime", "localDateTime", "extension"})
+@XmlType(
+    name = "SystemDateTime",
+    propOrder = {
+      "dateTimeType",
+      "daylightSavings",
+      "timeZone",
+      "utcDateTime",
+      "localDateTime",
+      "extension"
+    })
 public class SystemDateTime {
 
   @XmlElement(name = "DateTimeType", required = true)
   protected SetDateTimeType dateTimeType;
+
   @XmlElement(name = "DaylightSavings")
   protected boolean daylightSavings;
+
   @XmlElement(name = "TimeZone")
   protected TimeZone timeZone;
+
   @XmlElement(name = "UTCDateTime")
   protected DateTime utcDateTime;
+
   @XmlElement(name = "LocalDateTime")
   protected DateTime localDateTime;
+
   @XmlElement(name = "Extension")
   protected SystemDateTimeExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der dateTimeType-Eigenschaft ab.
@@ -73,16 +86,12 @@ public class SystemDateTime {
     this.dateTimeType = value;
   }
 
-  /**
-   * Ruft den Wert der daylightSavings-Eigenschaft ab.
-   */
+  /** Ruft den Wert der daylightSavings-Eigenschaft ab. */
   public boolean isDaylightSavings() {
     return daylightSavings;
   }
 
-  /**
-   * Legt den Wert der daylightSavings-Eigenschaft fest.
-   */
+  /** Legt den Wert der daylightSavings-Eigenschaft fest. */
   public void setDaylightSavings(boolean value) {
     this.daylightSavings = value;
   }
@@ -162,15 +171,15 @@ public class SystemDateTime {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

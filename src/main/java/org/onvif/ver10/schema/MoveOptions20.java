@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r MoveOptions20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="MoveOptions20">
@@ -27,13 +26,17 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MoveOptions20", propOrder = {"absolute", "relative", "continuous"})
+@XmlType(
+    name = "MoveOptions20",
+    propOrder = {"absolute", "relative", "continuous"})
 public class MoveOptions20 {
 
   @XmlElement(name = "Absolute")
   protected AbsoluteFocusOptions absolute;
+
   @XmlElement(name = "Relative")
   protected RelativeFocusOptions20 relative;
+
   @XmlElement(name = "Continuous")
   protected ContinuousFocusOptions continuous;
 
@@ -90,5 +93,4 @@ public class MoveOptions20 {
   public void setContinuous(ContinuousFocusOptions value) {
     this.continuous = value;
   }
-
 }

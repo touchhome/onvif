@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r IPv6Configuration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IPv6Configuration">
@@ -38,25 +37,41 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IPv6Configuration", propOrder = {"acceptRouterAdvert", "dhcp", "manual", "linkLocal", "fromDHCP", "fromRA", "extension"})
+@XmlType(
+    name = "IPv6Configuration",
+    propOrder = {
+      "acceptRouterAdvert",
+      "dhcp",
+      "manual",
+      "linkLocal",
+      "fromDHCP",
+      "fromRA",
+      "extension"
+    })
 public class IPv6Configuration {
 
   @XmlElement(name = "AcceptRouterAdvert")
   protected Boolean acceptRouterAdvert;
+
   @XmlElement(name = "DHCP", required = true)
   protected IPv6DHCPConfiguration dhcp;
+
   @XmlElement(name = "Manual")
   protected List<PrefixedIPv6Address> manual;
+
   @XmlElement(name = "LinkLocal")
   protected List<PrefixedIPv6Address> linkLocal;
+
   @XmlElement(name = "FromDHCP")
   protected List<PrefixedIPv6Address> fromDHCP;
+
   @XmlElement(name = "FromRA")
   protected List<PrefixedIPv6Address> fromRA;
+
   @XmlElement(name = "Extension")
   protected IPv6ConfigurationExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der acceptRouterAdvert-Eigenschaft ab.
@@ -97,20 +112,17 @@ public class IPv6Configuration {
   /**
    * Gets the value of the manual property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the manual property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the manual property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getManual().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
    */
   public List<PrefixedIPv6Address> getManual() {
     if (manual == null) {
@@ -122,20 +134,17 @@ public class IPv6Configuration {
   /**
    * Gets the value of the linkLocal property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the linkLocal property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the linkLocal property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getLinkLocal().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
    */
   public List<PrefixedIPv6Address> getLinkLocal() {
     if (linkLocal == null) {
@@ -147,20 +156,17 @@ public class IPv6Configuration {
   /**
    * Gets the value of the fromDHCP property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the fromDHCP property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the fromDHCP property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getFromDHCP().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
    */
   public List<PrefixedIPv6Address> getFromDHCP() {
     if (fromDHCP == null) {
@@ -172,20 +178,17 @@ public class IPv6Configuration {
   /**
    * Gets the value of the fromRA property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the fromRA property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the fromRA property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getFromRA().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
    */
   public List<PrefixedIPv6Address> getFromRA() {
     if (fromRA == null) {
@@ -215,15 +218,15 @@ public class IPv6Configuration {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

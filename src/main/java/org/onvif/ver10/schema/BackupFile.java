@@ -6,11 +6,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BackupFile", propOrder = {"name", "data"})
+@XmlType(
+    name = "BackupFile",
+    propOrder = {"name", "data"})
 public class BackupFile {
 
   @XmlElement(name = "Name", required = true)
   protected String name;
+
   @XmlElement(name = "Data", required = true)
   protected AttachmentData data;
 
@@ -49,5 +52,4 @@ public class BackupFile {
   public void setData(AttachmentData value) {
     this.data = value;
   }
-
 }

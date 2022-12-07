@@ -7,14 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum BacklightCompensationMode {
 
-  /**
-   * Backlight compensation is disabled.
-   */
+  /** Backlight compensation is disabled. */
   OFF,
 
-  /**
-   * Backlight compensation is enabled.
-   */
+  /** Backlight compensation is enabled. */
   ON;
 
   public static BacklightCompensationMode fromValue(String v) {
@@ -24,5 +20,4 @@ public enum BacklightCompensationMode {
   public String value() {
     return name();
   }
-
 }

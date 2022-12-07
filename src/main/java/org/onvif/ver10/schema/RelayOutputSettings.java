@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 
 /**
- * <p>
  * Java-Klasse f�r RelayOutputSettings complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="RelayOutputSettings">
@@ -28,13 +27,17 @@ import javax.xml.datatype.Duration;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RelayOutputSettings", propOrder = {"mode", "delayTime", "idleState"})
+@XmlType(
+    name = "RelayOutputSettings",
+    propOrder = {"mode", "delayTime", "idleState"})
 public class RelayOutputSettings {
 
   @XmlElement(name = "Mode", required = true)
   protected RelayMode mode;
+
   @XmlElement(name = "DelayTime", required = true)
   protected Duration delayTime;
+
   @XmlElement(name = "IdleState", required = true)
   protected RelayIdleState idleState;
 
@@ -91,5 +94,4 @@ public class RelayOutputSettings {
   public void setIdleState(RelayIdleState value) {
     this.idleState = value;
   }
-
 }

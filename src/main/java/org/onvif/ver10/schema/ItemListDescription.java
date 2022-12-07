@@ -13,15 +13,14 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * Describes a list of items. Each item in the list shall have a unique name. The list is designed as linear structure without optional or unbounded elements. Use ElementItems only
- * when complex structures are inevitable.
+ * Describes a list of items. Each item in the list shall have a unique name. The list is designed
+ * as linear structure without optional or unbounded elements. Use ElementItems only when complex
+ * structures are inevitable.
  *
+ * <p>Java-Klasse f�r ItemListDescription complex type.
  *
- * <p>
- * Java-Klasse f�r ItemListDescription complex type.
- *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ItemListDescription">
@@ -57,35 +56,37 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ItemListDescription", propOrder = {"simpleItemDescription", "elementItemDescription", "extension"})
+@XmlType(
+    name = "ItemListDescription",
+    propOrder = {"simpleItemDescription", "elementItemDescription", "extension"})
 public class ItemListDescription {
 
   @XmlElement(name = "SimpleItemDescription")
   protected List<ItemListDescription.SimpleItemDescription> simpleItemDescription;
+
   @XmlElement(name = "ElementItemDescription")
   protected List<ItemListDescription.ElementItemDescription> elementItemDescription;
+
   @XmlElement(name = "Extension")
   protected ItemListDescriptionExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Gets the value of the simpleItemDescription property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the simpleItemDescription property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the simpleItemDescription property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getSimpleItemDescription().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ItemListDescription.SimpleItemDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link
+   * ItemListDescription.SimpleItemDescription }
    */
   public List<ItemListDescription.SimpleItemDescription> getSimpleItemDescription() {
     if (simpleItemDescription == null) {
@@ -97,20 +98,18 @@ public class ItemListDescription {
   /**
    * Gets the value of the elementItemDescription property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the elementItemDescription property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the elementItemDescription property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getElementItemDescription().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ItemListDescription.ElementItemDescription }
+   * <p>Objects of the following type(s) are allowed in the list {@link
+   * ItemListDescription.ElementItemDescription }
    */
   public List<ItemListDescription.ElementItemDescription> getElementItemDescription() {
     if (elementItemDescription == null) {
@@ -140,10 +139,11 @@ public class ItemListDescription {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
@@ -152,11 +152,10 @@ public class ItemListDescription {
   }
 
   /**
-   * <p>
    * Java-Klasse f�r anonymous complex type.
    *
-   * <p>
-   * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+   * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+   * ist.
    *
    * <pre>
    * <complexType>
@@ -175,6 +174,7 @@ public class ItemListDescription {
 
     @XmlAttribute(name = "Name", required = true)
     protected String name;
+
     @XmlAttribute(name = "Type", required = true)
     protected QName type;
 
@@ -213,15 +213,13 @@ public class ItemListDescription {
     public void setType(QName value) {
       this.type = value;
     }
-
   }
 
   /**
-   * <p>
    * Java-Klasse f�r anonymous complex type.
    *
-   * <p>
-   * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+   * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+   * ist.
    *
    * <pre>
    * <complexType>
@@ -240,6 +238,7 @@ public class ItemListDescription {
 
     @XmlAttribute(name = "Name", required = true)
     protected String name;
+
     @XmlAttribute(name = "Type", required = true)
     protected QName type;
 
@@ -278,7 +277,5 @@ public class ItemListDescription {
     public void setType(QName value) {
       this.type = value;
     }
-
   }
-
 }

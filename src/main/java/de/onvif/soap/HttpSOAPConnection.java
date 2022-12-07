@@ -37,7 +37,6 @@ public class HttpSOAPConnection {
       log.error("[{}]: SAAJ0001.p2p.cannot.create.msg.factory", entityID, ex);
       throw new RuntimeException("Unable to create message factory", ex);
     }
-
   }
 
   public static String decode(String s) {
@@ -136,14 +135,16 @@ public class HttpSOAPConnection {
     try {
       if (endPoint.getProtocol().equals("https")) {
         throw new NotImplementedException("https not implemented");
-        //this.initHttps();
+        // this.initHttps();
       }
 
       URI uri = new URI(endPoint.toString());
       String userInfo = uri.getRawUserInfo();
-      if (!endPoint.getProtocol().equalsIgnoreCase("http") && !endPoint.getProtocol().equalsIgnoreCase("https")) {
+      if (!endPoint.getProtocol().equalsIgnoreCase("http")
+          && !endPoint.getProtocol().equalsIgnoreCase("https")) {
         log.error("[{}]: SAAJ0052.p2p.protocol.mustbe.http.or.https", entityID);
-        throw new IllegalArgumentException("Protocol " + endPoint.getProtocol() + " not supported in URL " + endPoint);
+        throw new IllegalArgumentException(
+            "Protocol " + endPoint.getProtocol() + " not supported in URL " + endPoint);
       }
 
       httpConnection = (HttpURLConnection) endPoint.openConnection();
@@ -225,7 +226,10 @@ public class HttpSOAPConnection {
         if (key == null && value == null) {
           httpIn = isFailure ? httpConnection.getErrorStream() : httpConnection.getInputStream();
           InputStream stream = IOUtils.toBufferedInputStream(httpIn);
-          int length = httpConnection.getContentLength() == -1 ? stream.available() : httpConnection.getContentLength();
+          int length =
+              httpConnection.getContentLength() == -1
+                  ? stream.available()
+                  : httpConnection.getContentLength();
           if (length == 0) {
             log.warn("[{}]: SAAJ0014.p2p.content.zero", entityID);
           } else {

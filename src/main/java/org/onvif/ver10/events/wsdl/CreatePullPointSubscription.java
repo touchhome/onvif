@@ -17,26 +17,31 @@ import org.oasis_open.docs.wsn.b_2.FilterType;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "filter",
-    "initialTerminationTime",
-    "subscriptionPolicy",
-    "any"
-})
+@XmlType(
+    name = "",
+    propOrder = {"filter", "initialTerminationTime", "subscriptionPolicy", "any"})
 @XmlRootElement(name = "CreatePullPointSubscription")
 public class CreatePullPointSubscription {
 
   @XmlElement(name = "Filter")
   protected FilterType filter;
-  @XmlElementRef(name = "InitialTerminationTime", namespace = "http://www.onvif.org/ver10/events/wsdl", type = JAXBElement.class, required = false)
+
+  @XmlElementRef(
+      name = "InitialTerminationTime",
+      namespace = "http://www.onvif.org/ver10/events/wsdl",
+      type = JAXBElement.class,
+      required = false)
   protected JAXBElement<String> initialTerminationTime;
+
   @XmlElement(name = "SubscriptionPolicy")
   protected CreatePullPointSubscription.SubscriptionPolicy subscriptionPolicy;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 
   public CreatePullPointSubscription() {
-    setInitialTerminationTime(new ObjectFactory().createCreatePullPointSubscriptionInitialTerminationTime("PT600S"));
+    setInitialTerminationTime(
+        new ObjectFactory().createCreatePullPointSubscriptionInitialTerminationTime("PT600S"));
   }
 
   public List<Object> getAny() {
@@ -47,9 +52,9 @@ public class CreatePullPointSubscription {
   }
 
   @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name = "", propOrder = {
-      "any"
-  })
+  @XmlType(
+      name = "",
+      propOrder = {"any"})
   public static class SubscriptionPolicy {
 
     @XmlAnyElement(lax = true)

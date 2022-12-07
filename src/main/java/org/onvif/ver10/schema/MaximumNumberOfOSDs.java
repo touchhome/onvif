@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r MaximumNumberOfOSDs complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="MaximumNumberOfOSDs">
@@ -38,29 +37,30 @@ public class MaximumNumberOfOSDs {
 
   @XmlAttribute(name = "Total", required = true)
   protected int total;
+
   @XmlAttribute(name = "Image")
   protected Integer image;
+
   @XmlAttribute(name = "PlainText")
   protected Integer plainText;
+
   @XmlAttribute(name = "Date")
   protected Integer date;
+
   @XmlAttribute(name = "Time")
   protected Integer time;
+
   @XmlAttribute(name = "DateAndTime")
   protected Integer dateAndTime;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der total-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der total-Eigenschaft ab. */
   public int getTotal() {
     return total;
   }
 
-  /**
-   * Legt den Wert der total-Eigenschaft fest.
-   */
+  /** Legt den Wert der total-Eigenschaft fest. */
   public void setTotal(int value) {
     this.total = value;
   }
@@ -158,15 +158,15 @@ public class MaximumNumberOfOSDs {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -7,6 +7,4 @@ import org.oasis_open.docs.wsrf.bf_2.BaseFaultType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UnableToDestroyPullPointFaultType")
-public class UnableToDestroyPullPointFaultType extends BaseFaultType {
-
-}
+public class UnableToDestroyPullPointFaultType extends BaseFaultType {}

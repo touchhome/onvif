@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkInterfaceInfo complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkInterfaceInfo">
@@ -29,14 +28,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkInterfaceInfo", propOrder = {"name", "hwAddress", "mtu"})
+@XmlType(
+    name = "NetworkInterfaceInfo",
+    propOrder = {"name", "hwAddress", "mtu"})
 public class NetworkInterfaceInfo {
 
   @XmlElement(name = "Name")
   protected String name;
+
   @XmlElement(name = "HwAddress", required = true)
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   protected String hwAddress;
+
   @XmlElement(name = "MTU")
   protected Integer mtu;
 
@@ -93,5 +96,4 @@ public class NetworkInterfaceInfo {
   public void setMTU(Integer value) {
     this.mtu = value;
   }
-
 }

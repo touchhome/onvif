@@ -7,11 +7,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.ImagingSettings20;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -28,18 +28,18 @@ import org.onvif.ver10.schema.ImagingSettings20;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "videoSourceToken",
-    "imagingSettings",
-    "forcePersistence"
-})
+@XmlType(
+    name = "",
+    propOrder = {"videoSourceToken", "imagingSettings", "forcePersistence"})
 @XmlRootElement(name = "SetImagingSettings")
 public class SetImagingSettings {
 
   @XmlElement(name = "VideoSourceToken", required = true)
   protected String videoSourceToken;
+
   @XmlElement(name = "ImagingSettings", required = true)
   protected ImagingSettings20 imagingSettings;
+
   @XmlElement(name = "ForcePersistence")
   protected Boolean forcePersistence;
 
@@ -96,5 +96,4 @@ public class SetImagingSettings {
   public void setForcePersistence(Boolean value) {
     this.forcePersistence = value;
   }
-
 }

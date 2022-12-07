@@ -8,11 +8,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -28,15 +28,15 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "profileToken",
-    "configuration"
-})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken", "configuration"})
 @XmlRootElement(name = "RemoveConfiguration")
 public class RemoveConfiguration {
 
   @XmlElement(name = "ProfileToken", required = true)
   protected String profileToken;
+
   @XmlElement(name = "Configuration", required = true)
   protected List<ConfigurationRef> configuration;
 
@@ -61,19 +61,17 @@ public class RemoveConfiguration {
   /**
    * Gets the value of the configuration property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the configuration property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the configuration property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getConfiguration().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ConfigurationRef }
+   * <p>Objects of the following type(s) are allowed in the list {@link ConfigurationRef }
    */
   public List<ConfigurationRef> getConfiguration() {
     if (configuration == null) {
@@ -81,5 +79,4 @@ public class RemoveConfiguration {
     }
     return this.configuration;
   }
-
 }

@@ -9,7 +9,9 @@ import javax.xml.bind.annotation.XmlMixed;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Documentation", propOrder = {"content"})
+@XmlType(
+    name = "Documentation",
+    propOrder = {"content"})
 public class Documentation {
 
   @XmlMixed

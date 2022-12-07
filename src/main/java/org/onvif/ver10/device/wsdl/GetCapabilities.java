@@ -10,7 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.CapabilityCategory;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"category"})
+@XmlType(
+    name = "",
+    propOrder = {"category"})
 @XmlRootElement(name = "GetCapabilities")
 public class GetCapabilities {
 

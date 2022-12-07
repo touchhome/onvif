@@ -13,11 +13,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
-
 /**
- * <p>Java-Klasse f�r VideoResolution2 complex type.
+ * Java-Klasse f�r VideoResolution2 complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType name="VideoResolution2">
@@ -35,46 +35,38 @@ import org.w3c.dom.Element;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoResolution2", propOrder = {
-    "width",
-    "height",
-    "any"
-})
+@XmlType(
+    name = "VideoResolution2",
+    propOrder = {"width", "height", "any"})
 public class VideoResolution2 {
 
   @XmlElement(name = "Width")
   protected int width;
+
   @XmlElement(name = "Height")
   protected int height;
+
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der width-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der width-Eigenschaft ab. */
   public int getWidth() {
     return width;
   }
 
-  /**
-   * Legt den Wert der width-Eigenschaft fest.
-   */
+  /** Legt den Wert der width-Eigenschaft fest. */
   public void setWidth(int value) {
     this.width = value;
   }
 
-  /**
-   * Ruft den Wert der height-Eigenschaft ab.
-   */
+  /** Ruft den Wert der height-Eigenschaft ab. */
   public int getHeight() {
     return height;
   }
 
-  /**
-   * Legt den Wert der height-Eigenschaft fest.
-   */
+  /** Legt den Wert der height-Eigenschaft fest. */
   public void setHeight(int value) {
     this.height = value;
   }
@@ -82,19 +74,18 @@ public class VideoResolution2 {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
+   * <p>Objects of the following type(s) are allowed in the list {@link Element } {@link
+   * java.lang.Object }
    */
   public List<java.lang.Object> getAny() {
     if (any == null) {
@@ -106,15 +97,15 @@ public class VideoResolution2 {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

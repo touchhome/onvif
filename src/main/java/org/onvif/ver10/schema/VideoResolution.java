@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r VideoResolution complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoResolution">
@@ -26,38 +25,33 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoResolution", propOrder = {"width", "height"})
+@XmlType(
+    name = "VideoResolution",
+    propOrder = {"width", "height"})
 public class VideoResolution {
 
   @XmlElement(name = "Width")
   protected int width;
+
   @XmlElement(name = "Height")
   protected int height;
 
-  /**
-   * Ruft den Wert der width-Eigenschaft ab.
-   */
+  /** Ruft den Wert der width-Eigenschaft ab. */
   public int getWidth() {
     return width;
   }
 
-  /**
-   * Legt den Wert der width-Eigenschaft fest.
-   */
+  /** Legt den Wert der width-Eigenschaft fest. */
   public void setWidth(int value) {
     this.width = value;
   }
 
-  /**
-   * Ruft den Wert der height-Eigenschaft ab.
-   */
+  /** Ruft den Wert der height-Eigenschaft ab. */
   public int getHeight() {
     return height;
   }
 
-  /**
-   * Legt den Wert der height-Eigenschaft fest.
-   */
+  /** Legt den Wert der height-Eigenschaft fest. */
   public void setHeight(int value) {
     this.height = value;
   }

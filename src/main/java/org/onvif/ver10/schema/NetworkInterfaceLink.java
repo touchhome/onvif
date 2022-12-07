@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r NetworkInterfaceLink complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="NetworkInterfaceLink">
@@ -27,13 +26,17 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkInterfaceLink", propOrder = {"adminSettings", "operSettings", "interfaceType"})
+@XmlType(
+    name = "NetworkInterfaceLink",
+    propOrder = {"adminSettings", "operSettings", "interfaceType"})
 public class NetworkInterfaceLink {
 
   @XmlElement(name = "AdminSettings", required = true)
   protected NetworkInterfaceConnectionSetting adminSettings;
+
   @XmlElement(name = "OperSettings", required = true)
   protected NetworkInterfaceConnectionSetting operSettings;
+
   @XmlElement(name = "InterfaceType")
   protected int interfaceType;
 
@@ -73,18 +76,13 @@ public class NetworkInterfaceLink {
     this.operSettings = value;
   }
 
-  /**
-   * Ruft den Wert der interfaceType-Eigenschaft ab.
-   */
+  /** Ruft den Wert der interfaceType-Eigenschaft ab. */
   public int getInterfaceType() {
     return interfaceType;
   }
 
-  /**
-   * Legt den Wert der interfaceType-Eigenschaft fest.
-   */
+  /** Legt den Wert der interfaceType-Eigenschaft fest. */
   public void setInterfaceType(int value) {
     this.interfaceType = value;
   }
-
 }

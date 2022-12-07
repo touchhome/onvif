@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ExposureOptions20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ExposureOptions20">
@@ -37,50 +36,70 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExposureOptions20", propOrder = {"mode", "priority", "minExposureTime", "maxExposureTime", "minGain", "maxGain", "minIris", "maxIris",
-    "exposureTime", "gain", "iris"})
+@XmlType(
+    name = "ExposureOptions20",
+    propOrder = {
+      "mode",
+      "priority",
+      "minExposureTime",
+      "maxExposureTime",
+      "minGain",
+      "maxGain",
+      "minIris",
+      "maxIris",
+      "exposureTime",
+      "gain",
+      "iris"
+    })
 public class ExposureOptions20 {
 
   @XmlElement(name = "Mode", required = true)
   protected List<ExposureMode> mode;
+
   @XmlElement(name = "Priority")
   protected List<ExposurePriority> priority;
+
   @XmlElement(name = "MinExposureTime")
   protected FloatRange minExposureTime;
+
   @XmlElement(name = "MaxExposureTime")
   protected FloatRange maxExposureTime;
+
   @XmlElement(name = "MinGain")
   protected FloatRange minGain;
+
   @XmlElement(name = "MaxGain")
   protected FloatRange maxGain;
+
   @XmlElement(name = "MinIris")
   protected FloatRange minIris;
+
   @XmlElement(name = "MaxIris")
   protected FloatRange maxIris;
+
   @XmlElement(name = "ExposureTime")
   protected FloatRange exposureTime;
+
   @XmlElement(name = "Gain")
   protected FloatRange gain;
+
   @XmlElement(name = "Iris")
   protected FloatRange iris;
 
   /**
    * Gets the value of the mode property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the mode property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the mode property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getMode().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ExposureMode }
+   * <p>Objects of the following type(s) are allowed in the list {@link ExposureMode }
    */
   public List<ExposureMode> getMode() {
     if (mode == null) {
@@ -92,20 +111,17 @@ public class ExposureOptions20 {
   /**
    * Gets the value of the priority property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the priority property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the priority property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getPriority().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ExposurePriority }
+   * <p>Objects of the following type(s) are allowed in the list {@link ExposurePriority }
    */
   public List<ExposurePriority> getPriority() {
     if (priority == null) {
@@ -275,5 +291,4 @@ public class ExposureOptions20 {
   public void setIris(FloatRange value) {
     this.iris = value;
   }
-
 }

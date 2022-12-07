@@ -12,11 +12,10 @@ import javax.xml.namespace.QName;
 /**
  * Representation of a physical video input.
  *
- * <p>
- * Java-Klasse f�r VideoSource complex type.
+ * <p>Java-Klasse f�r VideoSource complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoSource">
@@ -35,30 +34,31 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoSource", propOrder = {"framerate", "resolution", "imaging", "extension"})
+@XmlType(
+    name = "VideoSource",
+    propOrder = {"framerate", "resolution", "imaging", "extension"})
 public class VideoSource extends DeviceEntity {
 
   @XmlElement(name = "Framerate")
   protected float framerate;
+
   @XmlElement(name = "Resolution", required = true)
   protected VideoResolution resolution;
+
   @XmlElement(name = "Imaging")
   protected ImagingSettings imaging;
+
   @XmlElement(name = "Extension")
   protected VideoSourceExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der framerate-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der framerate-Eigenschaft ab. */
   public float getFramerate() {
     return framerate;
   }
 
-  /**
-   * Legt den Wert der framerate-Eigenschaft fest.
-   */
+  /** Legt den Wert der framerate-Eigenschaft fest. */
   public void setFramerate(float value) {
     this.framerate = value;
   }
@@ -120,15 +120,15 @@ public class VideoSource extends DeviceEntity {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

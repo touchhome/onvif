@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r SecurityCapabilitiesExtension complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="SecurityCapabilitiesExtension">
@@ -26,24 +25,23 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SecurityCapabilitiesExtension", propOrder = {"tls10", "extension"})
+@XmlType(
+    name = "SecurityCapabilitiesExtension",
+    propOrder = {"tls10", "extension"})
 public class SecurityCapabilitiesExtension {
 
   @XmlElement(name = "TLS1.0")
   protected boolean tls10;
+
   @XmlElement(name = "Extension")
   protected SecurityCapabilitiesExtension2 extension;
 
-  /**
-   * Ruft den Wert der tls10-Eigenschaft ab.
-   */
+  /** Ruft den Wert der tls10-Eigenschaft ab. */
   public boolean isTLS10() {
     return tls10;
   }
 
-  /**
-   * Legt den Wert der tls10-Eigenschaft fest.
-   */
+  /** Legt den Wert der tls10-Eigenschaft fest. */
   public void setTLS10(boolean value) {
     this.tls10 = value;
   }
@@ -65,5 +63,4 @@ public class SecurityCapabilitiesExtension {
   public void setExtension(SecurityCapabilitiesExtension2 value) {
     this.extension = value;
   }
-
 }

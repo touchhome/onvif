@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r WideDynamicRange complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="WideDynamicRange">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WideDynamicRange", propOrder = {"mode", "level"})
+@XmlType(
+    name = "WideDynamicRange",
+    propOrder = {"mode", "level"})
 public class WideDynamicRange {
 
   @XmlElement(name = "Mode", required = true)
   protected WideDynamicMode mode;
+
   @XmlElement(name = "Level")
   protected float level;
 
@@ -52,18 +54,13 @@ public class WideDynamicRange {
     this.mode = value;
   }
 
-  /**
-   * Ruft den Wert der level-Eigenschaft ab.
-   */
+  /** Ruft den Wert der level-Eigenschaft ab. */
   public float getLevel() {
     return level;
   }
 
-  /**
-   * Legt den Wert der level-Eigenschaft fest.
-   */
+  /** Legt den Wert der level-Eigenschaft fest. */
   public void setLevel(float value) {
     this.level = value;
   }
-
 }

@@ -15,14 +15,16 @@ import lombok.ToString;
 
 @Getter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MetadataType", propOrder = {"any"})
+@XmlType(
+    name = "MetadataType",
+    propOrder = {"any"})
 @ToString
 public class MetadataType {
 
   @XmlAnyElement(lax = true)
   protected List<Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<>();
 
   public List<Object> getAny() {
     if (any == null) {

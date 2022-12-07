@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r ImagingSettings complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ImagingSettings">
@@ -40,34 +39,57 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ImagingSettings", propOrder = {"backlightCompensation", "brightness", "colorSaturation", "contrast", "exposure", "focus", "irCutFilter",
-    "sharpness", "wideDynamicRange", "whiteBalance", "extension"})
+@XmlType(
+    name = "ImagingSettings",
+    propOrder = {
+      "backlightCompensation",
+      "brightness",
+      "colorSaturation",
+      "contrast",
+      "exposure",
+      "focus",
+      "irCutFilter",
+      "sharpness",
+      "wideDynamicRange",
+      "whiteBalance",
+      "extension"
+    })
 public class ImagingSettings {
 
   @XmlElement(name = "BacklightCompensation")
   protected BacklightCompensation backlightCompensation;
+
   @XmlElement(name = "Brightness")
   protected Float brightness;
+
   @XmlElement(name = "ColorSaturation")
   protected Float colorSaturation;
+
   @XmlElement(name = "Contrast")
   protected Float contrast;
+
   @XmlElement(name = "Exposure")
   protected Exposure exposure;
+
   @XmlElement(name = "Focus")
   protected FocusConfiguration focus;
+
   @XmlElement(name = "IrCutFilter")
   protected IrCutFilterMode irCutFilter;
+
   @XmlElement(name = "Sharpness")
   protected Float sharpness;
+
   @XmlElement(name = "WideDynamicRange")
   protected WideDynamicRange wideDynamicRange;
+
   @XmlElement(name = "WhiteBalance")
   protected WhiteBalance whiteBalance;
+
   @XmlElement(name = "Extension")
   protected ImagingSettingsExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der backlightCompensation-Eigenschaft ab.
@@ -270,15 +292,15 @@ public class ImagingSettings {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -6,8 +6,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AutoFocusMode")
 @XmlEnum
 public enum AutoFocusMode {
-
-  AUTO, MANUAL;
+  AUTO,
+  MANUAL;
 
   public static AutoFocusMode fromValue(String v) {
     return valueOf(v);
@@ -16,5 +16,4 @@ public enum AutoFocusMode {
   public String value() {
     return name();
   }
-
 }

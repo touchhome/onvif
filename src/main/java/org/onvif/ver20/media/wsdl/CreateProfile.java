@@ -9,15 +9,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "name",
-    "configuration"
-})
+@XmlType(
+    name = "",
+    propOrder = {"name", "configuration"})
 @XmlRootElement(name = "CreateProfile")
 public class CreateProfile {
 
   @XmlElement(name = "Name", required = true)
   protected String name;
+
   @XmlElement(name = "Configuration")
   protected List<ConfigurationRef> configuration;
 
@@ -42,19 +42,17 @@ public class CreateProfile {
   /**
    * Gets the value of the configuration property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the configuration property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the configuration property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getConfiguration().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ConfigurationRef }
+   * <p>Objects of the following type(s) are allowed in the list {@link ConfigurationRef }
    */
   public List<ConfigurationRef> getConfiguration() {
     if (configuration == null) {
@@ -62,5 +60,4 @@ public class CreateProfile {
     }
     return this.configuration;
   }
-
 }

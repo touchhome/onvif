@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.19 um 02:35:56 PM CET
@@ -19,11 +20,10 @@ import org.onvif.ver10.schema.OSDConfiguration;
 import org.w3c.dom.Element;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -39,12 +39,15 @@ import org.w3c.dom.Element;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"osd", "any"})
+@XmlType(
+    name = "",
+    propOrder = {"osd", "any"})
 @XmlRootElement(name = "GetOSDResponse")
 public class GetOSDResponse {
 
   @XmlElement(name = "OSD", required = true)
   protected OSDConfiguration osd;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 
@@ -69,20 +72,17 @@ public class GetOSDResponse {
   /**
    * Gets the value of the any property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the any property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the any property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getAny().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link Object } {@link Element }
+   * <p>Objects of the following type(s) are allowed in the list {@link Object } {@link Element }
    */
   public List<Object> getAny() {
     if (any == null) {
@@ -90,5 +90,4 @@ public class GetOSDResponse {
     }
     return this.any;
   }
-
 }

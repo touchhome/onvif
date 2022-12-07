@@ -8,10 +8,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-  private final static QName _Capabilities_QNAME = new QName("http://www.onvif.org/ver10/events/wsdl", "Capabilities");
-  private final static QName _CreatePullPointSubscriptionInitialTerminationTime_QNAME = new QName("http://www.onvif.org/ver10/events/wsdl", "InitialTerminationTime");
+  private static final QName _Capabilities_QNAME =
+      new QName("http://www.onvif.org/ver10/events/wsdl", "Capabilities");
+  private static final QName _CreatePullPointSubscriptionInitialTerminationTime_QNAME =
+      new QName("http://www.onvif.org/ver10/events/wsdl", "InitialTerminationTime");
 
-  public CreatePullPointSubscription.SubscriptionPolicy createCreatePullPointSubscriptionSubscriptionPolicy() {
+  public CreatePullPointSubscription.SubscriptionPolicy
+      createCreatePullPointSubscriptionSubscriptionPolicy() {
     return new CreatePullPointSubscription.SubscriptionPolicy();
   }
 
@@ -24,9 +27,15 @@ public class ObjectFactory {
     return new JAXBElement<>(_Capabilities_QNAME, Capabilities.class, null, value);
   }
 
-  @XmlElementDecl(namespace = "http://www.onvif.org/ver10/events/wsdl", name = "InitialTerminationTime", scope = CreatePullPointSubscription.class)
+  @XmlElementDecl(
+      namespace = "http://www.onvif.org/ver10/events/wsdl",
+      name = "InitialTerminationTime",
+      scope = CreatePullPointSubscription.class)
   public JAXBElement<String> createCreatePullPointSubscriptionInitialTerminationTime(String value) {
-    return new JAXBElement<>(_CreatePullPointSubscriptionInitialTerminationTime_QNAME, String.class, CreatePullPointSubscription.class, value);
+    return new JAXBElement<>(
+        _CreatePullPointSubscriptionInitialTerminationTime_QNAME,
+        String.class,
+        CreatePullPointSubscription.class,
+        value);
   }
-
 }

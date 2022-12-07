@@ -10,7 +10,9 @@ import javax.xml.namespace.QName;
 import org.oasis_open.docs.wsrf.bf_2.BaseFaultType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UnsupportedPolicyRequestFaultType", propOrder = {"unsupportedPolicy"})
+@XmlType(
+    name = "UnsupportedPolicyRequestFaultType",
+    propOrder = {"unsupportedPolicy"})
 public class UnsupportedPolicyRequestFaultType extends BaseFaultType {
 
   @XmlElement(name = "UnsupportedPolicy")

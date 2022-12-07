@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r OSDConfigurationOptions complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="OSDConfigurationOptions">
@@ -37,23 +36,37 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OSDConfigurationOptions", propOrder = {"maximumNumberOfOSDs", "type", "positionOption", "textOption", "imageOption", "extension"})
+@XmlType(
+    name = "OSDConfigurationOptions",
+    propOrder = {
+      "maximumNumberOfOSDs",
+      "type",
+      "positionOption",
+      "textOption",
+      "imageOption",
+      "extension"
+    })
 public class OSDConfigurationOptions {
 
   @XmlElement(name = "MaximumNumberOfOSDs", required = true)
   protected MaximumNumberOfOSDs maximumNumberOfOSDs;
+
   @XmlElement(name = "Type", required = true)
   protected List<OSDType> type;
+
   @XmlElement(name = "PositionOption", required = true)
   protected List<String> positionOption;
+
   @XmlElement(name = "TextOption")
   protected OSDTextOptions textOption;
+
   @XmlElement(name = "ImageOption")
   protected OSDImgOptions imageOption;
+
   @XmlElement(name = "Extension")
   protected OSDConfigurationOptionsExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der maximumNumberOfOSDs-Eigenschaft ab.
@@ -76,20 +89,17 @@ public class OSDConfigurationOptions {
   /**
    * Gets the value of the type property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the type property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the type property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getType().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link OSDType }
+   * <p>Objects of the following type(s) are allowed in the list {@link OSDType }
    */
   public List<OSDType> getType() {
     if (type == null) {
@@ -101,20 +111,17 @@ public class OSDConfigurationOptions {
   /**
    * Gets the value of the positionOption property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the positionOption property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the positionOption property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getPositionOption().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getPositionOption() {
     if (positionOption == null) {
@@ -180,15 +187,15 @@ public class OSDConfigurationOptions {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

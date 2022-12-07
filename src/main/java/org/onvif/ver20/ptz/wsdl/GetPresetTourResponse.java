@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PresetTour;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -27,7 +26,9 @@ import org.onvif.ver10.schema.PresetTour;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"presetTour"})
+@XmlType(
+    name = "",
+    propOrder = {"presetTour"})
 @XmlRootElement(name = "GetPresetTourResponse")
 public class GetPresetTourResponse {
 
@@ -51,5 +52,4 @@ public class GetPresetTourResponse {
   public void setPresetTour(PresetTour value) {
     this.presetTour = value;
   }
-
 }

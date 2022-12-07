@@ -15,12 +15,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "QueryExpressionType", propOrder = {"content"})
+@XmlType(
+    name = "QueryExpressionType",
+    propOrder = {"content"})
 public class QueryExpressionType {
 
   @XmlMixed
   @XmlAnyElement(lax = true)
   protected List<Object> content;
+
   @XmlAttribute(name = "Dialect", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String dialect;

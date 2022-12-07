@@ -9,11 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.VideoEncoder2ConfigurationOptions;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -28,9 +28,9 @@ import org.onvif.ver10.schema.VideoEncoder2ConfigurationOptions;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "options"
-})
+@XmlType(
+    name = "",
+    propOrder = {"options"})
 @XmlRootElement(name = "GetVideoEncoderConfigurationOptionsResponse")
 public class GetVideoEncoderConfigurationOptionsResponse {
 
@@ -40,19 +40,18 @@ public class GetVideoEncoderConfigurationOptionsResponse {
   /**
    * Gets the value of the options property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the options property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the options property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
+   *
    * <pre>
    *    getOptions().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link VideoEncoder2ConfigurationOptions }
+   * <p>Objects of the following type(s) are allowed in the list {@link
+   * VideoEncoder2ConfigurationOptions }
    */
   public List<VideoEncoder2ConfigurationOptions> getOptions() {
     if (options == null) {
@@ -60,5 +59,4 @@ public class GetVideoEncoderConfigurationOptionsResponse {
     }
     return this.options;
   }
-
 }

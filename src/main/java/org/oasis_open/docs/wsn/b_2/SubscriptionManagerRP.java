@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.04 um 12:22:03 PM CET
@@ -17,11 +18,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import org.w3._2005._08.addressing.EndpointReferenceType;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -39,16 +39,21 @@ import org.w3._2005._08.addressing.EndpointReferenceType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"consumerReference", "filter", "subscriptionPolicy", "creationTime"})
+@XmlType(
+    name = "",
+    propOrder = {"consumerReference", "filter", "subscriptionPolicy", "creationTime"})
 @XmlRootElement(name = "SubscriptionManagerRP")
 public class SubscriptionManagerRP {
 
   @XmlElement(name = "ConsumerReference", required = true)
   protected EndpointReferenceType consumerReference;
+
   @XmlElement(name = "Filter")
   protected FilterType filter;
+
   @XmlElement(name = "SubscriptionPolicy")
   protected SubscriptionPolicyType subscriptionPolicy;
+
   @XmlElement(name = "CreationTime")
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar creationTime;
@@ -124,5 +129,4 @@ public class SubscriptionManagerRP {
   public void setCreationTime(XMLGregorianCalendar value) {
     this.creationTime = value;
   }
-
 }

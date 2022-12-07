@@ -6,11 +6,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BacklightCompensation20", propOrder = {"mode", "level"})
+@XmlType(
+    name = "BacklightCompensation20",
+    propOrder = {"mode", "level"})
 public class BacklightCompensation20 {
 
   @XmlElement(name = "Mode", required = true)
   protected BacklightCompensationMode mode;
+
   @XmlElement(name = "Level")
   protected Float level;
 
@@ -49,5 +52,4 @@ public class BacklightCompensation20 {
   public void setLevel(Float value) {
     this.level = value;
   }
-
 }

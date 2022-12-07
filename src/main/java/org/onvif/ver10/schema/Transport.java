@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Transport complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Transport">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Transport", propOrder = {"protocol", "tunnel"})
+@XmlType(
+    name = "Transport",
+    propOrder = {"protocol", "tunnel"})
 public class Transport {
 
   @XmlElement(name = "Protocol", required = true)
   protected TransportProtocol protocol;
+
   @XmlElement(name = "Tunnel")
   protected Transport tunnel;
 
@@ -69,5 +71,4 @@ public class Transport {
   public void setTunnel(Transport value) {
     this.tunnel = value;
   }
-
 }

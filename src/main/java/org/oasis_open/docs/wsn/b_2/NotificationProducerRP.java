@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.04 um 12:22:03 PM CET
@@ -18,11 +19,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.oasis_open.docs.wsn.t_1.TopicSetType;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -40,37 +40,39 @@ import org.oasis_open.docs.wsn.t_1.TopicSetType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"topicExpression", "fixedTopicSet", "topicExpressionDialect", "topicSet"})
+@XmlType(
+    name = "",
+    propOrder = {"topicExpression", "fixedTopicSet", "topicExpressionDialect", "topicSet"})
 @XmlRootElement(name = "NotificationProducerRP")
 public class NotificationProducerRP {
 
   @XmlElement(name = "TopicExpression")
   protected List<TopicExpressionType> topicExpression;
+
   @XmlElement(name = "FixedTopicSet", defaultValue = "true")
   protected Boolean fixedTopicSet;
+
   @XmlElement(name = "TopicExpressionDialect")
   @XmlSchemaType(name = "anyURI")
   protected List<String> topicExpressionDialect;
+
   @XmlElement(name = "TopicSet", namespace = "http://docs.oasis-open.org/wsn/t-1")
   protected TopicSetType topicSet;
 
   /**
    * Gets the value of the topicExpression property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the topicExpression property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the topicExpression property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getTopicExpression().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link TopicExpressionType }
+   * <p>Objects of the following type(s) are allowed in the list {@link TopicExpressionType }
    */
   public List<TopicExpressionType> getTopicExpression() {
     if (topicExpression == null) {
@@ -100,20 +102,17 @@ public class NotificationProducerRP {
   /**
    * Gets the value of the topicExpressionDialect property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the topicExpressionDialect property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the topicExpressionDialect property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getTopicExpressionDialect().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getTopicExpressionDialect() {
     if (topicExpressionDialect == null) {
@@ -139,5 +138,4 @@ public class NotificationProducerRP {
   public void setTopicSet(TopicSetType value) {
     this.topicSet = value;
   }
-
 }

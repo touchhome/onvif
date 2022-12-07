@@ -6,11 +6,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -26,15 +26,15 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "videoSourceToken",
-    "videoSourceModeToken"
-})
+@XmlType(
+    name = "",
+    propOrder = {"videoSourceToken", "videoSourceModeToken"})
 @XmlRootElement(name = "SetVideoSourceMode")
 public class SetVideoSourceMode {
 
   @XmlElement(name = "VideoSourceToken", required = true)
   protected String videoSourceToken;
+
   @XmlElement(name = "VideoSourceModeToken", required = true)
   protected String videoSourceModeToken;
 
@@ -73,5 +73,4 @@ public class SetVideoSourceMode {
   public void setVideoSourceModeToken(String value) {
     this.videoSourceModeToken = value;
   }
-
 }

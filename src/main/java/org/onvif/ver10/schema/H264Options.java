@@ -9,11 +9,10 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r H264Options complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="H264Options">
@@ -32,38 +31,47 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "H264Options", propOrder = {"resolutionsAvailable", "govLengthRange", "frameRateRange", "encodingIntervalRange", "h264ProfilesSupported"})
+@XmlType(
+    name = "H264Options",
+    propOrder = {
+      "resolutionsAvailable",
+      "govLengthRange",
+      "frameRateRange",
+      "encodingIntervalRange",
+      "h264ProfilesSupported"
+    })
 @XmlSeeAlso({H264Options2.class})
 public class H264Options {
 
   @XmlElement(name = "ResolutionsAvailable", required = true)
   protected List<VideoResolution> resolutionsAvailable;
+
   @XmlElement(name = "GovLengthRange", required = true)
   protected IntRange govLengthRange;
+
   @XmlElement(name = "FrameRateRange", required = true)
   protected IntRange frameRateRange;
+
   @XmlElement(name = "EncodingIntervalRange", required = true)
   protected IntRange encodingIntervalRange;
+
   @XmlElement(name = "H264ProfilesSupported", required = true)
   protected List<H264Profile> h264ProfilesSupported;
 
   /**
    * Gets the value of the resolutionsAvailable property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getResolutionsAvailable().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link VideoResolution }
+   * <p>Objects of the following type(s) are allowed in the list {@link VideoResolution }
    */
   public List<VideoResolution> getResolutionsAvailable() {
     if (resolutionsAvailable == null) {
@@ -129,20 +137,17 @@ public class H264Options {
   /**
    * Gets the value of the h264ProfilesSupported property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the h264ProfilesSupported property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the h264ProfilesSupported property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getH264ProfilesSupported().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link H264Profile }
+   * <p>Objects of the following type(s) are allowed in the list {@link H264Profile }
    */
   public List<H264Profile> getH264ProfilesSupported() {
     if (h264ProfilesSupported == null) {
@@ -150,5 +155,4 @@ public class H264Options {
     }
     return this.h264ProfilesSupported;
   }
-
 }

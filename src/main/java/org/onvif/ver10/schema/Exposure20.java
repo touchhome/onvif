@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Type describing the exposure settings.
  *
- * <p>
- * Java-Klasse f�r Exposure20 complex type.
+ * <p>Java-Klasse f�r Exposure20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Exposure20">
@@ -38,32 +37,57 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Exposure20", propOrder = {"mode", "priority", "window", "minExposureTime", "maxExposureTime", "minGain", "maxGain", "minIris", "maxIris",
-    "exposureTime", "gain", "iris"})
+@XmlType(
+    name = "Exposure20",
+    propOrder = {
+      "mode",
+      "priority",
+      "window",
+      "minExposureTime",
+      "maxExposureTime",
+      "minGain",
+      "maxGain",
+      "minIris",
+      "maxIris",
+      "exposureTime",
+      "gain",
+      "iris"
+    })
 public class Exposure20 {
 
   @XmlElement(name = "Mode", required = true)
   protected ExposureMode mode;
+
   @XmlElement(name = "Priority")
   protected ExposurePriority priority;
+
   @XmlElement(name = "Window")
   protected Rectangle window;
+
   @XmlElement(name = "MinExposureTime")
   protected Float minExposureTime;
+
   @XmlElement(name = "MaxExposureTime")
   protected Float maxExposureTime;
+
   @XmlElement(name = "MinGain")
   protected Float minGain;
+
   @XmlElement(name = "MaxGain")
   protected Float maxGain;
+
   @XmlElement(name = "MinIris")
   protected Float minIris;
+
   @XmlElement(name = "MaxIris")
   protected Float maxIris;
+
   @XmlElement(name = "ExposureTime")
   protected Float exposureTime;
+
   @XmlElement(name = "Gain")
   protected Float gain;
+
   @XmlElement(name = "Iris")
   protected Float iris;
 
@@ -282,5 +306,4 @@ public class Exposure20 {
   public void setIris(Float value) {
     this.iris = value;
   }
-
 }

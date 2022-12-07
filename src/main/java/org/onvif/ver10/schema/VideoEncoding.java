@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r VideoEncoding.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,9 +25,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "VideoEncoding")
 @XmlEnum
 public enum VideoEncoding {
-
-  JPEG("JPEG"), @XmlEnumValue("MPEG4")
-  MPEG_4("MPEG4"), @XmlEnumValue("H264")
+  JPEG("JPEG"),
+  @XmlEnumValue("MPEG4")
+  MPEG_4("MPEG4"),
+  @XmlEnumValue("H264")
   H_264("H264");
   private final String value;
 
@@ -47,5 +48,4 @@ public enum VideoEncoding {
   public String value() {
     return value;
   }
-
 }

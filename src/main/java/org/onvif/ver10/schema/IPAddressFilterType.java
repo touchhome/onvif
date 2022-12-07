@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r IPAddressFilterType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IPAddressFilterType")
 @XmlEnum
 public enum IPAddressFilterType {
-
   @XmlEnumValue("Allow")
-  ALLOW("Allow"), @XmlEnumValue("Deny")
+  ALLOW("Allow"),
+  @XmlEnumValue("Deny")
   DENY("Deny");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum IPAddressFilterType {
   public String value() {
     return value;
   }
-
 }

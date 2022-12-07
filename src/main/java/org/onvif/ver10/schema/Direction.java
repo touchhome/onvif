@@ -7,10 +7,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Direction")
 @XmlEnum
 public enum Direction {
-
   @XmlEnumValue("Left")
-  LEFT("Left"), @XmlEnumValue("Right")
-  RIGHT("Right"), @XmlEnumValue("Any")
+  LEFT("Left"),
+  @XmlEnumValue("Right")
+  RIGHT("Right"),
+  @XmlEnumValue("Any")
   ANY("Any");
   private final String value;
 
@@ -30,5 +31,4 @@ public enum Direction {
   public String value() {
     return value;
   }
-
 }

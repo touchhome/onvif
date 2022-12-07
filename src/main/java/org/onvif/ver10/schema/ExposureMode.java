@@ -4,11 +4,11 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ExposureMode.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -23,8 +23,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ExposureMode")
 @XmlEnum
 public enum ExposureMode {
-
-  AUTO, MANUAL;
+  AUTO,
+  MANUAL;
 
   public static ExposureMode fromValue(String v) {
     return valueOf(v);
@@ -33,5 +33,4 @@ public enum ExposureMode {
   public String value() {
     return name();
   }
-
 }

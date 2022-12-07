@@ -13,27 +13,33 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CertificateGenerationParameters", propOrder = {"certificateID", "subject", "validNotBefore", "validNotAfter", "extension"})
+@XmlType(
+    name = "CertificateGenerationParameters",
+    propOrder = {"certificateID", "subject", "validNotBefore", "validNotAfter", "extension"})
 public class CertificateGenerationParameters {
 
   @XmlElement(name = "CertificateID")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   @XmlSchemaType(name = "token")
   protected String certificateID;
+
   @XmlElement(name = "Subject")
   protected String subject;
+
   @XmlElement(name = "ValidNotBefore")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   @XmlSchemaType(name = "token")
   protected String validNotBefore;
+
   @XmlElement(name = "ValidNotAfter")
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   @XmlSchemaType(name = "token")
   protected String validNotAfter;
+
   @XmlElement(name = "Extension")
   protected CertificateGenerationParametersExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der certificateID-Eigenschaft ab.
@@ -128,15 +134,15 @@ public class CertificateGenerationParameters {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

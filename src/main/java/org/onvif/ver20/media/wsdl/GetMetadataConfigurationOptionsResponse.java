@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.MetadataConfigurationOptions;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "options"
-})
+@XmlType(
+    name = "",
+    propOrder = {"options"})
 @XmlRootElement(name = "GetMetadataConfigurationOptionsResponse")
 public class GetMetadataConfigurationOptionsResponse {
 
@@ -34,5 +34,4 @@ public class GetMetadataConfigurationOptionsResponse {
   public void setOptions(MetadataConfigurationOptions value) {
     this.options = value;
   }
-
 }

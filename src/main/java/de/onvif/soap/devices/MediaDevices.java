@@ -59,7 +59,8 @@ public class MediaDevices {
     GetStreamUri request = new GetStreamUri();
     request.setProfileToken(profileToken);
     request.setStreamSetup(streamSetup);
-    GetStreamUriResponse response = soap.createSOAPMediaRequest(request, GetStreamUriResponse.class);
+    GetStreamUriResponse response =
+        soap.createSOAPMediaRequest(request, GetStreamUriResponse.class);
 
     if (response == null) {
       return null;
@@ -72,7 +73,8 @@ public class MediaDevices {
     GetVideoEncoderConfigurationOptions request = new GetVideoEncoderConfigurationOptions();
     request.setProfileToken(profileToken);
 
-    GetVideoEncoderConfigurationOptionsResponse response = soap.createSOAPMediaRequest(request, GetVideoEncoderConfigurationOptionsResponse.class);
+    GetVideoEncoderConfigurationOptionsResponse response =
+        soap.createSOAPMediaRequest(request, GetVideoEncoderConfigurationOptionsResponse.class);
 
     if (response == null) {
       return null;
@@ -86,7 +88,8 @@ public class MediaDevices {
     request.setConfiguration(videoEncoderConfiguration);
     request.setForcePersistence(true);
 
-    SetVideoEncoderConfigurationResponse response = soap.createSOAPMediaRequest(request, SetVideoEncoderConfigurationResponse.class);
+    SetVideoEncoderConfigurationResponse response =
+        soap.createSOAPMediaRequest(request, SetVideoEncoderConfigurationResponse.class);
     return response != null;
   }
 
@@ -102,12 +105,14 @@ public class MediaDevices {
         GetSnapshotUri request = new GetSnapshotUri();
         request.setProfileToken(profile);
 
-        GetSnapshotUriResponse response = soap.createSOAPMediaRequest(request, GetSnapshotUriResponse.class);
+        GetSnapshotUriResponse response =
+            soap.createSOAPMediaRequest(request, GetSnapshotUriResponse.class);
         if (response == null || response.getMediaUri() == null) {
           return null;
         }
 
-        mediaDeviceCache.snapshotUri = onvifDeviceState.replaceLocalIpWithProxyIp(response.getMediaUri().getUri());
+        mediaDeviceCache.snapshotUri =
+            onvifDeviceState.replaceLocalIpWithProxyIp(response.getMediaUri().getUri());
       } catch (Exception ex) {
         return null;
       }
@@ -117,7 +122,8 @@ public class MediaDevices {
 
   public List<VideoSource> getVideoSources() {
     GetVideoSources request = new GetVideoSources();
-    GetVideoSourcesResponse response = soap.createSOAPMediaRequest(request, GetVideoSourcesResponse.class);
+    GetVideoSourcesResponse response =
+        soap.createSOAPMediaRequest(request, GetVideoSourcesResponse.class);
     if (response == null) {
       return null;
     }
@@ -127,7 +133,8 @@ public class MediaDevices {
 
   public List<AudioSource> getAudioSources() {
     GetAudioSources request = new GetAudioSources();
-    GetAudioSourcesResponse response = soap.createSOAPMediaRequest(request, GetAudioSourcesResponse.class);
+    GetAudioSourcesResponse response =
+        soap.createSOAPMediaRequest(request, GetAudioSourcesResponse.class);
     if (response == null) {
       return null;
     }

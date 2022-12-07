@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Scope complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Scope">
@@ -27,11 +26,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Scope", propOrder = {"scopeDef", "scopeItem"})
+@XmlType(
+    name = "Scope",
+    propOrder = {"scopeDef", "scopeItem"})
 public class Scope {
 
   @XmlElement(name = "ScopeDef", required = true)
   protected ScopeDefinition scopeDef;
+
   @XmlElement(name = "ScopeItem", required = true)
   @XmlSchemaType(name = "anyURI")
   protected String scopeItem;
@@ -71,5 +73,4 @@ public class Scope {
   public void setScopeItem(String value) {
     this.scopeItem = value;
   }
-
 }

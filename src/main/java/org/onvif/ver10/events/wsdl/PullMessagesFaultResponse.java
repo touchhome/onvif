@@ -17,18 +17,18 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "maxTimeout",
-    "maxMessageLimit",
-    "any"
-})
+@XmlType(
+    name = "",
+    propOrder = {"maxTimeout", "maxMessageLimit", "any"})
 @XmlRootElement(name = "PullMessagesFaultResponse")
 public class PullMessagesFaultResponse {
 
   @XmlElement(name = "MaxTimeout", required = true)
   protected Duration maxTimeout;
+
   @XmlElement(name = "MaxMessageLimit")
   protected int maxMessageLimit;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

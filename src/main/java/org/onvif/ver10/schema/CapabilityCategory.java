@@ -7,14 +7,19 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CapabilityCategory")
 @XmlEnum
 public enum CapabilityCategory {
-
   @XmlEnumValue("All")
-  ALL("All"), @XmlEnumValue("Analytics")
-  ANALYTICS("Analytics"), @XmlEnumValue("Device")
-  DEVICE("Device"), @XmlEnumValue("Events")
-  EVENTS("Events"), @XmlEnumValue("Imaging")
-  IMAGING("Imaging"), @XmlEnumValue("Media")
-  MEDIA("Media"), PTZ("PTZ");
+  ALL("All"),
+  @XmlEnumValue("Analytics")
+  ANALYTICS("Analytics"),
+  @XmlEnumValue("Device")
+  DEVICE("Device"),
+  @XmlEnumValue("Events")
+  EVENTS("Events"),
+  @XmlEnumValue("Imaging")
+  IMAGING("Imaging"),
+  @XmlEnumValue("Media")
+  MEDIA("Media"),
+  PTZ("PTZ");
   private final String value;
 
   CapabilityCategory(String v) {
@@ -33,5 +38,4 @@ public enum CapabilityCategory {
   public String value() {
     return value;
   }
-
 }

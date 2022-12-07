@@ -10,7 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.AudioSource;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"audioSources"})
+@XmlType(
+    name = "",
+    propOrder = {"audioSources"})
 @XmlRootElement(name = "GetAudioSourcesResponse")
 public class GetAudioSourcesResponse {
 
@@ -23,5 +25,4 @@ public class GetAudioSourcesResponse {
     }
     return this.audioSources;
   }
-
 }

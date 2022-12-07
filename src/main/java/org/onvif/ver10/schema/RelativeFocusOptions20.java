@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r RelativeFocusOptions20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="RelativeFocusOptions20">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RelativeFocusOptions20", propOrder = {"distance", "speed"})
+@XmlType(
+    name = "RelativeFocusOptions20",
+    propOrder = {"distance", "speed"})
 public class RelativeFocusOptions20 {
 
   @XmlElement(name = "Distance", required = true)
   protected FloatRange distance;
+
   @XmlElement(name = "Speed")
   protected FloatRange speed;
 
@@ -69,5 +71,4 @@ public class RelativeFocusOptions20 {
   public void setSpeed(FloatRange value) {
     this.speed = value;
   }
-
 }

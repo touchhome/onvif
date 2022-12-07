@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r TrackType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -26,15 +26,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "TrackType")
 @XmlEnum
 public enum TrackType {
-
   @XmlEnumValue("Video")
-  VIDEO("Video"), @XmlEnumValue("Audio")
-  AUDIO("Audio"), @XmlEnumValue("Metadata")
+  VIDEO("Video"),
+  @XmlEnumValue("Audio")
+  AUDIO("Audio"),
+  @XmlEnumValue("Metadata")
   METADATA("Metadata"),
 
-  /**
-   * Placeholder for future extension.
-   */
+  /** Placeholder for future extension. */
   @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
@@ -55,5 +54,4 @@ public enum TrackType {
   public String value() {
     return value;
   }
-
 }

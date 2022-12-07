@@ -12,7 +12,9 @@ import org.onvif.ver10.schema.AudioDecoderConfigurationOptions;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"options"})
+@XmlType(
+    name = "",
+    propOrder = {"options"})
 @XmlRootElement(name = "GetAudioDecoderConfigurationOptionsResponse")
 public class GetAudioDecoderConfigurationOptionsResponse {
 

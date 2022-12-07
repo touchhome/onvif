@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PresetTour;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -29,7 +28,9 @@ import org.onvif.ver10.schema.PresetTour;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"presetTour"})
+@XmlType(
+    name = "",
+    propOrder = {"presetTour"})
 @XmlRootElement(name = "GetPresetToursResponse")
 public class GetPresetToursResponse {
 
@@ -39,20 +40,17 @@ public class GetPresetToursResponse {
   /**
    * Gets the value of the presetTour property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the presetTour property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the presetTour property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getPresetTour().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PresetTour }
+   * <p>Objects of the following type(s) are allowed in the list {@link PresetTour }
    */
   public List<PresetTour> getPresetTour() {
     if (presetTour == null) {
@@ -60,5 +58,4 @@ public class GetPresetToursResponse {
     }
     return this.presetTour;
   }
-
 }

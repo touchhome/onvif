@@ -11,12 +11,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"configurationToken", "profileToken"})
+@XmlType(
+    name = "",
+    propOrder = {"configurationToken", "profileToken"})
 @XmlRootElement(name = "GetAudioDecoderConfigurationOptions")
 public class GetAudioDecoderConfigurationOptions {
 
   @XmlElement(name = "ConfigurationToken")
   protected String configurationToken;
+
   @XmlElement(name = "ProfileToken")
   protected String profileToken;
 }

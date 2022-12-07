@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r RecordingJobConfiguration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="RecordingJobConfiguration">
@@ -36,21 +35,27 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RecordingJobConfiguration", propOrder = {"recordingToken", "mode", "priority", "source", "extension"})
+@XmlType(
+    name = "RecordingJobConfiguration",
+    propOrder = {"recordingToken", "mode", "priority", "source", "extension"})
 public class RecordingJobConfiguration {
 
   @XmlElement(name = "RecordingToken", required = true)
   protected String recordingToken;
+
   @XmlElement(name = "Mode", required = true)
   protected String mode;
+
   @XmlElement(name = "Priority")
   protected int priority;
+
   @XmlElement(name = "Source")
   protected List<RecordingJobSource> source;
+
   @XmlElement(name = "Extension")
   protected RecordingJobConfigurationExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der recordingToken-Eigenschaft ab.
@@ -88,16 +93,12 @@ public class RecordingJobConfiguration {
     this.mode = value;
   }
 
-  /**
-   * Ruft den Wert der priority-Eigenschaft ab.
-   */
+  /** Ruft den Wert der priority-Eigenschaft ab. */
   public int getPriority() {
     return priority;
   }
 
-  /**
-   * Legt den Wert der priority-Eigenschaft fest.
-   */
+  /** Legt den Wert der priority-Eigenschaft fest. */
   public void setPriority(int value) {
     this.priority = value;
   }
@@ -105,20 +106,17 @@ public class RecordingJobConfiguration {
   /**
    * Gets the value of the source property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the source property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the source property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getSource().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link RecordingJobSource }
+   * <p>Objects of the following type(s) are allowed in the list {@link RecordingJobSource }
    */
   public List<RecordingJobSource> getSource() {
     if (source == null) {
@@ -148,15 +146,15 @@ public class RecordingJobConfiguration {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

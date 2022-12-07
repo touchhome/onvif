@@ -8,11 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r FindRecordingResultList complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FindRecordingResultList">
@@ -28,11 +27,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FindRecordingResultList", propOrder = {"searchState", "recordingInformation"})
+@XmlType(
+    name = "FindRecordingResultList",
+    propOrder = {"searchState", "recordingInformation"})
 public class FindRecordingResultList {
 
   @XmlElement(name = "SearchState", required = true)
   protected SearchState searchState;
+
   @XmlElement(name = "RecordingInformation")
   protected List<RecordingInformation> recordingInformation;
 
@@ -57,20 +59,17 @@ public class FindRecordingResultList {
   /**
    * Gets the value of the recordingInformation property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the recordingInformation property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the recordingInformation property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getRecordingInformation().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link RecordingInformation }
+   * <p>Objects of the following type(s) are allowed in the list {@link RecordingInformation }
    */
   public List<RecordingInformation> getRecordingInformation() {
     if (recordingInformation == null) {
@@ -78,5 +77,4 @@ public class FindRecordingResultList {
     }
     return this.recordingInformation;
   }
-
 }

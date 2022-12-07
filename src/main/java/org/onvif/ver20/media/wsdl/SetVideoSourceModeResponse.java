@@ -6,11 +6,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r anonymous complex type.
+ * Java-Klasse f�r anonymous complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType>
@@ -25,27 +25,22 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "reboot"
-})
+@XmlType(
+    name = "",
+    propOrder = {"reboot"})
 @XmlRootElement(name = "SetVideoSourceModeResponse")
 public class SetVideoSourceModeResponse {
 
   @XmlElement(name = "Reboot")
   protected boolean reboot;
 
-  /**
-   * Ruft den Wert der reboot-Eigenschaft ab.
-   */
+  /** Ruft den Wert der reboot-Eigenschaft ab. */
   public boolean isReboot() {
     return reboot;
   }
 
-  /**
-   * Legt den Wert der reboot-Eigenschaft fest.
-   */
+  /** Legt den Wert der reboot-Eigenschaft fest. */
   public void setReboot(boolean value) {
     this.reboot = value;
   }
-
 }

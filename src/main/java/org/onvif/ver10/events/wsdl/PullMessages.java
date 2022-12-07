@@ -16,18 +16,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "timeout",
-    "messageLimit",
-    "any"
-})
+@XmlType(
+    name = "",
+    propOrder = {"timeout", "messageLimit", "any"})
 @XmlRootElement(name = "PullMessages")
 public class PullMessages {
 
   @XmlElement(name = "Timeout", required = true)
   protected Duration timeout = SOAP.DATATYPE_FACTORY.newDuration("PT8S");
+
   @XmlElement(name = "MessageLimit")
   protected int messageLimit = 1;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

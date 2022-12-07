@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ZoomLimits complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="ZoomLimits">
@@ -25,7 +24,9 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ZoomLimits", propOrder = {"range"})
+@XmlType(
+    name = "ZoomLimits",
+    propOrder = {"range"})
 public class ZoomLimits {
 
   @XmlElement(name = "Range", required = true)
@@ -48,5 +49,4 @@ public class ZoomLimits {
   public void setRange(Space1DDescription value) {
     this.range = value;
   }
-
 }

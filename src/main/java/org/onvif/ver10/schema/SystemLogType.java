@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r SystemLogType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,15 +25,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SystemLogType {
 
-  /**
-   * Indicates that a system log is requested.
-   */
+  /** Indicates that a system log is requested. */
   @XmlEnumValue("System")
   SYSTEM("System"),
 
-  /**
-   * Indicates that a access log is requested.
-   */
+  /** Indicates that a access log is requested. */
   @XmlEnumValue("Access")
   ACCESS("Access");
   private final String value;
@@ -54,5 +50,4 @@ public enum SystemLogType {
   public String value() {
     return value;
   }
-
 }

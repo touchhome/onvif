@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r IPAddressFilter complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IPAddressFilter">
@@ -35,19 +34,24 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IPAddressFilter", propOrder = {"type", "iPv4Address", "iPv6Address", "extension"})
+@XmlType(
+    name = "IPAddressFilter",
+    propOrder = {"type", "iPv4Address", "iPv6Address", "extension"})
 public class IPAddressFilter {
 
   @XmlElement(name = "Type", required = true)
   protected IPAddressFilterType type;
+
   @XmlElement(name = "IPv4Address")
   protected List<PrefixedIPv4Address> iPv4Address;
+
   @XmlElement(name = "IPv6Address")
   protected List<PrefixedIPv6Address> iPv6Address;
+
   @XmlElement(name = "Extension")
   protected IPAddressFilterExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der type-Eigenschaft ab.
@@ -70,20 +74,17 @@ public class IPAddressFilter {
   /**
    * Gets the value of the iPv4Address property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the iPv4Address property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the iPv4Address property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIPv4Address().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv4Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv4Address }
    */
   public List<PrefixedIPv4Address> getIPv4Address() {
     if (iPv4Address == null) {
@@ -95,20 +96,17 @@ public class IPAddressFilter {
   /**
    * Gets the value of the iPv6Address property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the iPv6Address property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the iPv6Address property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getIPv6Address().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
+   * <p>Objects of the following type(s) are allowed in the list {@link PrefixedIPv6Address }
    */
   public List<PrefixedIPv6Address> getIPv6Address() {
     if (iPv6Address == null) {
@@ -138,15 +136,15 @@ public class IPAddressFilter {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

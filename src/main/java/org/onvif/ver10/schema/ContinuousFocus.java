@@ -6,24 +6,21 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContinuousFocus", propOrder = {"speed"})
+@XmlType(
+    name = "ContinuousFocus",
+    propOrder = {"speed"})
 public class ContinuousFocus {
 
   @XmlElement(name = "Speed")
   protected float speed;
 
-  /**
-   * Ruft den Wert der speed-Eigenschaft ab.
-   */
+  /** Ruft den Wert der speed-Eigenschaft ab. */
   public float getSpeed() {
     return speed;
   }
 
-  /**
-   * Legt den Wert der speed-Eigenschaft fest.
-   */
+  /** Legt den Wert der speed-Eigenschaft fest. */
   public void setSpeed(float value) {
     this.speed = value;
   }
-
 }

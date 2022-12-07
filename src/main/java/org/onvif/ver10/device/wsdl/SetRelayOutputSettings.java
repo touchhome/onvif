@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.04 um 12:22:03 PM CET
@@ -15,11 +16,10 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.RelayOutputSettings;
 
 /**
- * <p>
  * Java-Klasse f�r anonymous complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType>
@@ -35,12 +35,15 @@ import org.onvif.ver10.schema.RelayOutputSettings;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"relayOutputToken", "properties"})
+@XmlType(
+    name = "",
+    propOrder = {"relayOutputToken", "properties"})
 @XmlRootElement(name = "SetRelayOutputSettings")
 public class SetRelayOutputSettings {
 
   @XmlElement(name = "RelayOutputToken", required = true)
   protected String relayOutputToken;
+
   @XmlElement(name = "Properties", required = true)
   protected RelayOutputSettings properties;
 
@@ -79,5 +82,4 @@ public class SetRelayOutputSettings {
   public void setProperties(RelayOutputSettings value) {
     this.properties = value;
   }
-
 }

@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Dot11SignalStrength.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -28,13 +28,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Dot11SignalStrength")
 @XmlEnum
 public enum Dot11SignalStrength {
-
   @XmlEnumValue("None")
-  NONE("None"), @XmlEnumValue("Very Bad")
-  VERY_BAD("Very Bad"), @XmlEnumValue("Bad")
-  BAD("Bad"), @XmlEnumValue("Good")
-  GOOD("Good"), @XmlEnumValue("Very Good")
-  VERY_GOOD("Very Good"), @XmlEnumValue("Extended")
+  NONE("None"),
+  @XmlEnumValue("Very Bad")
+  VERY_BAD("Very Bad"),
+  @XmlEnumValue("Bad")
+  BAD("Bad"),
+  @XmlEnumValue("Good")
+  GOOD("Good"),
+  @XmlEnumValue("Very Good")
+  VERY_GOOD("Very Good"),
+  @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;
 
@@ -54,5 +58,4 @@ public enum Dot11SignalStrength {
   public String value() {
     return value;
   }
-
 }

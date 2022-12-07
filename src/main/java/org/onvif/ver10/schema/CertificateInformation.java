@@ -13,36 +13,59 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CertificateInformation", propOrder = {"certificateID", "issuerDN", "subjectDN", "keyUsage", "extendedKeyUsage", "keyLength", "version",
-    "serialNum", "signatureAlgorithm", "validity", "extension"})
+@XmlType(
+    name = "CertificateInformation",
+    propOrder = {
+      "certificateID",
+      "issuerDN",
+      "subjectDN",
+      "keyUsage",
+      "extendedKeyUsage",
+      "keyLength",
+      "version",
+      "serialNum",
+      "signatureAlgorithm",
+      "validity",
+      "extension"
+    })
 public class CertificateInformation {
 
   @XmlElement(name = "CertificateID", required = true)
   @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
   @XmlSchemaType(name = "token")
   protected String certificateID;
+
   @XmlElement(name = "IssuerDN")
   protected String issuerDN;
+
   @XmlElement(name = "SubjectDN")
   protected String subjectDN;
+
   @XmlElement(name = "KeyUsage")
   protected CertificateUsage keyUsage;
+
   @XmlElement(name = "ExtendedKeyUsage")
   protected CertificateUsage extendedKeyUsage;
+
   @XmlElement(name = "KeyLength")
   protected Integer keyLength;
+
   @XmlElement(name = "Version")
   protected String version;
+
   @XmlElement(name = "SerialNum")
   protected String serialNum;
+
   @XmlElement(name = "SignatureAlgorithm")
   protected String signatureAlgorithm;
+
   @XmlElement(name = "Validity")
   protected DateTimeRange validity;
+
   @XmlElement(name = "Extension")
   protected CertificateInformationExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der certificateID-Eigenschaft ab.
@@ -245,15 +268,15 @@ public class CertificateInformation {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

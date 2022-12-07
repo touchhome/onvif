@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r WhiteBalance20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="WhiteBalance20">
@@ -33,19 +32,24 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "WhiteBalance20", propOrder = {"mode", "crGain", "cbGain", "extension"})
+@XmlType(
+    name = "WhiteBalance20",
+    propOrder = {"mode", "crGain", "cbGain", "extension"})
 public class WhiteBalance20 {
 
   @XmlElement(name = "Mode", required = true)
   protected WhiteBalanceMode mode;
+
   @XmlElement(name = "CrGain")
   protected Float crGain;
+
   @XmlElement(name = "CbGain")
   protected Float cbGain;
+
   @XmlElement(name = "Extension")
   protected WhiteBalance20Extension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der mode-Eigenschaft ab.
@@ -122,15 +126,15 @@ public class WhiteBalance20 {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

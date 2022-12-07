@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r VideoRateControl complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoRateControl">
@@ -27,56 +26,47 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoRateControl", propOrder = {"frameRateLimit", "encodingInterval", "bitrateLimit"})
+@XmlType(
+    name = "VideoRateControl",
+    propOrder = {"frameRateLimit", "encodingInterval", "bitrateLimit"})
 public class VideoRateControl {
 
   @XmlElement(name = "FrameRateLimit")
   protected int frameRateLimit;
+
   @XmlElement(name = "EncodingInterval")
   protected int encodingInterval;
+
   @XmlElement(name = "BitrateLimit")
   protected int bitrateLimit;
 
-  /**
-   * Ruft den Wert der frameRateLimit-Eigenschaft ab.
-   */
+  /** Ruft den Wert der frameRateLimit-Eigenschaft ab. */
   public int getFrameRateLimit() {
     return frameRateLimit;
   }
 
-  /**
-   * Legt den Wert der frameRateLimit-Eigenschaft fest.
-   */
+  /** Legt den Wert der frameRateLimit-Eigenschaft fest. */
   public void setFrameRateLimit(int value) {
     this.frameRateLimit = value;
   }
 
-  /**
-   * Ruft den Wert der encodingInterval-Eigenschaft ab.
-   */
+  /** Ruft den Wert der encodingInterval-Eigenschaft ab. */
   public int getEncodingInterval() {
     return encodingInterval;
   }
 
-  /**
-   * Legt den Wert der encodingInterval-Eigenschaft fest.
-   */
+  /** Legt den Wert der encodingInterval-Eigenschaft fest. */
   public void setEncodingInterval(int value) {
     this.encodingInterval = value;
   }
 
-  /**
-   * Ruft den Wert der bitrateLimit-Eigenschaft ab.
-   */
+  /** Ruft den Wert der bitrateLimit-Eigenschaft ab. */
   public int getBitrateLimit() {
     return bitrateLimit;
   }
 
-  /**
-   * Legt den Wert der bitrateLimit-Eigenschaft fest.
-   */
+  /** Legt den Wert der bitrateLimit-Eigenschaft fest. */
   public void setBitrateLimit(int value) {
     this.bitrateLimit = value;
   }
-
 }

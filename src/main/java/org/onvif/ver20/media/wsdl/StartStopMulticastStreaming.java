@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r StartStopMulticastStreaming complex type.
+ * Java-Klasse f�r StartStopMulticastStreaming complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType name="StartStopMulticastStreaming">
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StartStopMulticastStreaming", propOrder = {
-    "profileToken"
-})
+@XmlType(
+    name = "StartStopMulticastStreaming",
+    propOrder = {"profileToken"})
 public class StartStopMulticastStreaming {
 
   @XmlElement(name = "ProfileToken", required = true)
@@ -49,5 +49,4 @@ public class StartStopMulticastStreaming {
   public void setProfileToken(String value) {
     this.profileToken = value;
   }
-
 }

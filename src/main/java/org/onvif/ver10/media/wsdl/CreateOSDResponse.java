@@ -14,12 +14,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"osdToken", "any"})
+@XmlType(
+    name = "",
+    propOrder = {"osdToken", "any"})
 @XmlRootElement(name = "CreateOSDResponse")
 public class CreateOSDResponse {
 
   @XmlElement(name = "OSDToken", required = true)
   protected String osdToken;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

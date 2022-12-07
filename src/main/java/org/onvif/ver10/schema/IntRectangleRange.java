@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Range of a rectangle. The rectangle itself is defined by lower left corner position and size. Units are pixel.
+ * Range of a rectangle. The rectangle itself is defined by lower left corner position and size.
+ * Units are pixel.
  *
- * <p>
- * Java-Klasse f�r IntRectangleRange complex type.
+ * <p>Java-Klasse f�r IntRectangleRange complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="IntRectangleRange">
@@ -30,15 +30,20 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IntRectangleRange", propOrder = {"xRange", "yRange", "widthRange", "heightRange"})
+@XmlType(
+    name = "IntRectangleRange",
+    propOrder = {"xRange", "yRange", "widthRange", "heightRange"})
 public class IntRectangleRange {
 
   @XmlElement(name = "XRange", required = true)
   protected IntRange xRange;
+
   @XmlElement(name = "YRange", required = true)
   protected IntRange yRange;
+
   @XmlElement(name = "WidthRange", required = true)
   protected IntRange widthRange;
+
   @XmlElement(name = "HeightRange", required = true)
   protected IntRange heightRange;
 
@@ -113,5 +118,4 @@ public class IntRectangleRange {
   public void setHeightRange(IntRange value) {
     this.heightRange = value;
   }
-
 }

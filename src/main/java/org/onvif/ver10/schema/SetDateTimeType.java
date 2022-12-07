@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r SetDateTimeType.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -25,15 +25,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SetDateTimeType {
 
-  /**
-   * Indicates that the date and time are set manually.
-   */
+  /** Indicates that the date and time are set manually. */
   @XmlEnumValue("Manual")
   MANUAL("Manual"),
 
-  /**
-   * Indicates that the date and time are set through NTP
-   */
+  /** Indicates that the date and time are set through NTP */
   NTP("NTP");
   private final String value;
 
@@ -53,5 +49,4 @@ public enum SetDateTimeType {
   public String value() {
     return value;
   }
-
 }

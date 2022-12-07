@@ -12,33 +12,34 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ColorDescriptor", propOrder = {"colorCluster", "extension"})
+@XmlType(
+    name = "ColorDescriptor",
+    propOrder = {"colorCluster", "extension"})
 public class ColorDescriptor {
 
   @XmlElement(name = "ColorCluster")
   protected List<ColorDescriptor.ColorCluster> colorCluster;
+
   @XmlElement(name = "Extension")
   protected ColorDescriptorExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Gets the value of the colorCluster property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the colorCluster property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the colorCluster property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getColorCluster().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ColorDescriptor.ColorCluster }
+   * <p>Objects of the following type(s) are allowed in the list {@link ColorDescriptor.ColorCluster
+   * }
    */
   public List<ColorDescriptor.ColorCluster> getColorCluster() {
     if (colorCluster == null) {
@@ -68,10 +69,11 @@ public class ColorDescriptor {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
@@ -80,11 +82,10 @@ public class ColorDescriptor {
   }
 
   /**
-   * <p>
    * Java-Klasse f�r anonymous complex type.
    *
-   * <p>
-   * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+   * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+   * ist.
    *
    * <pre>
    * <complexType>
@@ -101,13 +102,17 @@ public class ColorDescriptor {
    * </pre>
    */
   @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name = "", propOrder = {"color", "weight", "covariance"})
+  @XmlType(
+      name = "",
+      propOrder = {"color", "weight", "covariance"})
   public static class ColorCluster {
 
     @XmlElement(name = "Color", required = true)
     protected Color color;
+
     @XmlElement(name = "Weight")
     protected Float weight;
+
     @XmlElement(name = "Covariance")
     protected ColorCovariance covariance;
 
@@ -164,7 +169,5 @@ public class ColorDescriptor {
     public void setCovariance(ColorCovariance value) {
       this.covariance = value;
     }
-
   }
-
 }

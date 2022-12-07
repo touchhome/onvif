@@ -9,11 +9,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
-
 /**
- * <p>Java-Klasse f�r StorageReferencePath complex type.
+ * Java-Klasse f�r StorageReferencePath complex type.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * &lt;complexType name="StorageReferencePath">
@@ -31,21 +31,21 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StorageReferencePath", propOrder = {
-    "storageToken",
-    "relativePath",
-    "extension"
-})
+@XmlType(
+    name = "StorageReferencePath",
+    propOrder = {"storageToken", "relativePath", "extension"})
 public class StorageReferencePath {
 
   @XmlElement(name = "StorageToken", required = true)
   protected String storageToken;
+
   @XmlElement(name = "RelativePath")
   protected String relativePath;
+
   @XmlElement(name = "Extension")
   protected StorageReferencePathExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der storageToken-Eigenschaft ab.
@@ -104,15 +104,15 @@ public class StorageReferencePath {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

@@ -8,6 +8,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "AddAudioSourceConfigurationResponse")
-public class AddAudioSourceConfigurationResponse {
-
-}
+public class AddAudioSourceConfigurationResponse {}

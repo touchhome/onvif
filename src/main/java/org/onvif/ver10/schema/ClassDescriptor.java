@@ -8,31 +8,32 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ClassDescriptor", propOrder = {"classCandidate", "extension"})
+@XmlType(
+    name = "ClassDescriptor",
+    propOrder = {"classCandidate", "extension"})
 public class ClassDescriptor {
 
   @XmlElement(name = "ClassCandidate")
   protected List<ClassDescriptor.ClassCandidate> classCandidate;
+
   @XmlElement(name = "Extension")
   protected ClassDescriptorExtension extension;
 
   /**
    * Gets the value of the classCandidate property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the classCandidate property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the classCandidate property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getClassCandidate().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link ClassDescriptor.ClassCandidate }
+   * <p>Objects of the following type(s) are allowed in the list {@link
+   * ClassDescriptor.ClassCandidate }
    */
   public List<ClassDescriptor.ClassCandidate> getClassCandidate() {
     if (classCandidate == null) {
@@ -60,11 +61,10 @@ public class ClassDescriptor {
   }
 
   /**
-   * <p>
    * Java-Klasse f�r anonymous complex type.
    *
-   * <p>
-   * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+   * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+   * ist.
    *
    * <pre>
    * <complexType>
@@ -80,11 +80,14 @@ public class ClassDescriptor {
    * </pre>
    */
   @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name = "", propOrder = {"type", "likelihood"})
+  @XmlType(
+      name = "",
+      propOrder = {"type", "likelihood"})
   public static class ClassCandidate {
 
     @XmlElement(name = "Type", required = true)
     protected ClassType type;
+
     @XmlElement(name = "Likelihood")
     protected float likelihood;
 
@@ -106,20 +109,14 @@ public class ClassDescriptor {
       this.type = value;
     }
 
-    /**
-     * Ruft den Wert der likelihood-Eigenschaft ab.
-     */
+    /** Ruft den Wert der likelihood-Eigenschaft ab. */
     public float getLikelihood() {
       return likelihood;
     }
 
-    /**
-     * Legt den Wert der likelihood-Eigenschaft fest.
-     */
+    /** Legt den Wert der likelihood-Eigenschaft fest. */
     public void setLikelihood(float value) {
       this.likelihood = value;
     }
-
   }
-
 }

@@ -8,11 +8,17 @@ import javax.xml.bind.annotation.XmlType;
 import org.w3._2004._08.xop.include.Include;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AttachmentData", propOrder = {"include"})
+@XmlType(
+    name = "AttachmentData",
+    propOrder = {"include"})
 public class AttachmentData {
 
-  @XmlElement(name = "Include", namespace = "http://www.w3.org/2004/08/xop/include", required = true)
+  @XmlElement(
+      name = "Include",
+      namespace = "http://www.w3.org/2004/08/xop/include",
+      required = true)
   protected Include include;
+
   @XmlAttribute(name = "contentType", namespace = "http://www.w3.org/2005/05/xmlmime")
   protected String contentType;
 
@@ -51,5 +57,4 @@ public class AttachmentData {
   public void setContentType(String value) {
     this.contentType = value;
   }
-
 }

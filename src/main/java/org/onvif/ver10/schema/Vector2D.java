@@ -7,11 +7,10 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Vector2D complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Vector2D">
@@ -31,36 +30,30 @@ public class Vector2D {
 
   @XmlAttribute(name = "x", required = true)
   protected float x;
+
   @XmlAttribute(name = "y", required = true)
   protected float y;
+
   @XmlAttribute(name = "space")
   @XmlSchemaType(name = "anyURI")
   protected String space;
 
-  /**
-   * Ruft den Wert der x-Eigenschaft ab.
-   */
+  /** Ruft den Wert der x-Eigenschaft ab. */
   public float getX() {
     return x;
   }
 
-  /**
-   * Legt den Wert der x-Eigenschaft fest.
-   */
+  /** Legt den Wert der x-Eigenschaft fest. */
   public void setX(float value) {
     this.x = value;
   }
 
-  /**
-   * Ruft den Wert der y-Eigenschaft ab.
-   */
+  /** Ruft den Wert der y-Eigenschaft ab. */
   public float getY() {
     return y;
   }
 
-  /**
-   * Legt den Wert der y-Eigenschaft fest.
-   */
+  /** Legt den Wert der y-Eigenschaft fest. */
   public void setY(float value) {
     this.y = value;
   }
@@ -82,5 +75,4 @@ public class Vector2D {
   public void setSpace(String value) {
     this.space = value;
   }
-
 }

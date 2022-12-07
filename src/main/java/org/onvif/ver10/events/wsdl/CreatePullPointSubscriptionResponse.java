@@ -19,23 +19,30 @@ import org.w3._2005._08.addressing.EndpointReferenceType;
 @Setter
 @Accessors(chain = true)
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "subscriptionReference",
-    "currentTime",
-    "terminationTime",
-    "any"
-})
+@XmlType(
+    name = "",
+    propOrder = {"subscriptionReference", "currentTime", "terminationTime", "any"})
 @XmlRootElement(name = "CreatePullPointSubscriptionResponse")
 public class CreatePullPointSubscriptionResponse {
 
   @XmlElement(name = "SubscriptionReference", required = true)
   protected EndpointReferenceType subscriptionReference;
-  @XmlElement(name = "CurrentTime", namespace = "http://docs.oasis-open.org/wsn/b-2", required = true)
+
+  @XmlElement(
+      name = "CurrentTime",
+      namespace = "http://docs.oasis-open.org/wsn/b-2",
+      required = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar currentTime;
-  @XmlElement(name = "TerminationTime", namespace = "http://docs.oasis-open.org/wsn/b-2", required = true, nillable = true)
+
+  @XmlElement(
+      name = "TerminationTime",
+      namespace = "http://docs.oasis-open.org/wsn/b-2",
+      required = true,
+      nillable = true)
   @XmlSchemaType(name = "dateTime")
   protected XMLGregorianCalendar terminationTime;
+
   @XmlAnyElement(lax = true)
   protected List<Object> any;
 

@@ -7,15 +7,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "osdToken",
-    "configurationToken"
-})
+@XmlType(
+    name = "",
+    propOrder = {"osdToken", "configurationToken"})
 @XmlRootElement(name = "GetOSDs")
 public class GetOSDs {
 
   @XmlElement(name = "OSDToken")
   protected String osdToken;
+
   @XmlElement(name = "ConfigurationToken")
   protected String configurationToken;
 
@@ -54,5 +54,4 @@ public class GetOSDs {
   public void setConfigurationToken(String value) {
     this.configurationToken = value;
   }
-
 }

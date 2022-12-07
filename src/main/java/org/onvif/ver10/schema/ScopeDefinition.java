@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r ScopeDefinition.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
  *
  * <pre>
@@ -24,9 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ScopeDefinition")
 @XmlEnum
 public enum ScopeDefinition {
-
   @XmlEnumValue("Fixed")
-  FIXED("Fixed"), @XmlEnumValue("Configurable")
+  FIXED("Fixed"),
+  @XmlEnumValue("Configurable")
   CONFIGURABLE("Configurable");
   private final String value;
 
@@ -46,5 +46,4 @@ public enum ScopeDefinition {
   public String value() {
     return value;
   }
-
 }

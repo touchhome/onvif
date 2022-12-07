@@ -8,13 +8,17 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Config", propOrder = {"parameters"})
+@XmlType(
+    name = "Config",
+    propOrder = {"parameters"})
 public class Config {
 
   @XmlElement(name = "Parameters", required = true)
   protected ItemList parameters;
+
   @XmlAttribute(name = "Name", required = true)
   protected String name;
+
   @XmlAttribute(name = "Type", required = true)
   protected QName type;
 
@@ -71,5 +75,4 @@ public class Config {
   public void setType(QName value) {
     this.type = value;
   }
-
 }

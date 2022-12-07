@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r Mpeg4Configuration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="Mpeg4Configuration">
@@ -26,24 +25,23 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Mpeg4Configuration", propOrder = {"govLength", "mpeg4Profile"})
+@XmlType(
+    name = "Mpeg4Configuration",
+    propOrder = {"govLength", "mpeg4Profile"})
 public class Mpeg4Configuration {
 
   @XmlElement(name = "GovLength")
   protected int govLength;
+
   @XmlElement(name = "Mpeg4Profile", required = true)
   protected Mpeg4Profile mpeg4Profile;
 
-  /**
-   * Ruft den Wert der govLength-Eigenschaft ab.
-   */
+  /** Ruft den Wert der govLength-Eigenschaft ab. */
   public int getGovLength() {
     return govLength;
   }
 
-  /**
-   * Legt den Wert der govLength-Eigenschaft fest.
-   */
+  /** Legt den Wert der govLength-Eigenschaft fest. */
   public void setGovLength(int value) {
     this.govLength = value;
   }
@@ -65,5 +63,4 @@ public class Mpeg4Configuration {
   public void setMpeg4Profile(Mpeg4Profile value) {
     this.mpeg4Profile = value;
   }
-
 }

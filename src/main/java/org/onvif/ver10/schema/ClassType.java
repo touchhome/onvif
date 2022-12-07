@@ -7,12 +7,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ClassType")
 @XmlEnum
 public enum ClassType {
-
   @XmlEnumValue("Animal")
-  ANIMAL("Animal"), @XmlEnumValue("Face")
-  FACE("Face"), @XmlEnumValue("Human")
-  HUMAN("Human"), @XmlEnumValue("Vehical")
-  VEHICAL("Vehical"), @XmlEnumValue("Other")
+  ANIMAL("Animal"),
+  @XmlEnumValue("Face")
+  FACE("Face"),
+  @XmlEnumValue("Human")
+  HUMAN("Human"),
+  @XmlEnumValue("Vehical")
+  VEHICAL("Vehical"),
+  @XmlEnumValue("Other")
   OTHER("Other");
   private final String value;
 
@@ -32,5 +35,4 @@ public enum ClassType {
   public String value() {
     return value;
   }
-
 }

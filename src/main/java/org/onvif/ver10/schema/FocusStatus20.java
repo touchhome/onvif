@@ -10,11 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r FocusStatus20 complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FocusStatus20">
@@ -33,30 +32,31 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FocusStatus20", propOrder = {"position", "moveStatus", "error", "extension"})
+@XmlType(
+    name = "FocusStatus20",
+    propOrder = {"position", "moveStatus", "error", "extension"})
 public class FocusStatus20 {
 
   @XmlElement(name = "Position")
   protected float position;
+
   @XmlElement(name = "MoveStatus", required = true)
   protected MoveStatus moveStatus;
+
   @XmlElement(name = "Error")
   protected String error;
+
   @XmlElement(name = "Extension")
   protected FocusStatus20Extension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /**
-   * Ruft den Wert der position-Eigenschaft ab.
-   */
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  /** Ruft den Wert der position-Eigenschaft ab. */
   public float getPosition() {
     return position;
   }
 
-  /**
-   * Legt den Wert der position-Eigenschaft fest.
-   */
+  /** Legt den Wert der position-Eigenschaft fest. */
   public void setPosition(float value) {
     this.position = value;
   }
@@ -118,15 +118,15 @@ public class FocusStatus20 {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

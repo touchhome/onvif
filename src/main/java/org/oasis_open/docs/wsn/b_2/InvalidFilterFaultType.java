@@ -1,5 +1,6 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation,
+// v2.2.5-2 generiert
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
 // Generiert: 2014.02.04 um 12:22:03 PM CET
@@ -17,11 +18,10 @@ import javax.xml.namespace.QName;
 import org.oasis_open.docs.wsrf.bf_2.BaseFaultType;
 
 /**
- * <p>
  * Java-Klasse f�r InvalidFilterFaultType complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="InvalidFilterFaultType">
@@ -37,7 +37,9 @@ import org.oasis_open.docs.wsrf.bf_2.BaseFaultType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InvalidFilterFaultType", propOrder = {"unknownFilter"})
+@XmlType(
+    name = "InvalidFilterFaultType",
+    propOrder = {"unknownFilter"})
 public class InvalidFilterFaultType extends BaseFaultType {
 
   @XmlElement(name = "UnknownFilter", required = true)
@@ -46,20 +48,17 @@ public class InvalidFilterFaultType extends BaseFaultType {
   /**
    * Gets the value of the unknownFilter property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the unknownFilter property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the unknownFilter property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getUnknownFilter().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link QName }
+   * <p>Objects of the following type(s) are allowed in the list {@link QName }
    */
   public List<QName> getUnknownFilter() {
     if (unknownFilter == null) {
@@ -67,5 +66,4 @@ public class InvalidFilterFaultType extends BaseFaultType {
     }
     return this.unknownFilter;
   }
-
 }

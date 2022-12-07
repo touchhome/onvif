@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r SystemLog complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="SystemLog">
@@ -26,11 +25,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SystemLog", propOrder = {"binary", "string"})
+@XmlType(
+    name = "SystemLog",
+    propOrder = {"binary", "string"})
 public class SystemLog {
 
   @XmlElement(name = "Binary")
   protected AttachmentData binary;
+
   @XmlElement(name = "String")
   protected String string;
 
@@ -69,5 +71,4 @@ public class SystemLog {
   public void setString(String value) {
     this.string = value;
   }
-
 }

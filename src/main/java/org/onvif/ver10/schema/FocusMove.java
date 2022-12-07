@@ -6,11 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r FocusMove complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="FocusMove">
@@ -27,13 +26,17 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FocusMove", propOrder = {"absolute", "relative", "continuous"})
+@XmlType(
+    name = "FocusMove",
+    propOrder = {"absolute", "relative", "continuous"})
 public class FocusMove {
 
   @XmlElement(name = "Absolute")
   protected AbsoluteFocus absolute;
+
   @XmlElement(name = "Relative")
   protected RelativeFocus relative;
+
   @XmlElement(name = "Continuous")
   protected ContinuousFocus continuous;
 
@@ -90,5 +93,4 @@ public class FocusMove {
   public void setContinuous(ContinuousFocus value) {
     this.continuous = value;
   }
-
 }

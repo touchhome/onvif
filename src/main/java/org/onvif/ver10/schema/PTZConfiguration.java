@@ -12,11 +12,10 @@ import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r PTZConfiguration complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="PTZConfiguration">
@@ -43,43 +42,67 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZConfiguration", propOrder = {"nodeToken", "defaultAbsolutePantTiltPositionSpace", "defaultAbsoluteZoomPositionSpace",
-    "defaultRelativePanTiltTranslationSpace", "defaultRelativeZoomTranslationSpace", "defaultContinuousPanTiltVelocitySpace",
-    "defaultContinuousZoomVelocitySpace", "defaultPTZSpeed", "defaultPTZTimeout", "panTiltLimits", "zoomLimits", "extension"})
+@XmlType(
+    name = "PTZConfiguration",
+    propOrder = {
+      "nodeToken",
+      "defaultAbsolutePantTiltPositionSpace",
+      "defaultAbsoluteZoomPositionSpace",
+      "defaultRelativePanTiltTranslationSpace",
+      "defaultRelativeZoomTranslationSpace",
+      "defaultContinuousPanTiltVelocitySpace",
+      "defaultContinuousZoomVelocitySpace",
+      "defaultPTZSpeed",
+      "defaultPTZTimeout",
+      "panTiltLimits",
+      "zoomLimits",
+      "extension"
+    })
 public class PTZConfiguration extends ConfigurationEntity {
 
   @XmlElement(name = "NodeToken", required = true)
   protected String nodeToken;
+
   @XmlElement(name = "DefaultAbsolutePantTiltPositionSpace")
   @XmlSchemaType(name = "anyURI")
   protected String defaultAbsolutePantTiltPositionSpace;
+
   @XmlElement(name = "DefaultAbsoluteZoomPositionSpace")
   @XmlSchemaType(name = "anyURI")
   protected String defaultAbsoluteZoomPositionSpace;
+
   @XmlElement(name = "DefaultRelativePanTiltTranslationSpace")
   @XmlSchemaType(name = "anyURI")
   protected String defaultRelativePanTiltTranslationSpace;
+
   @XmlElement(name = "DefaultRelativeZoomTranslationSpace")
   @XmlSchemaType(name = "anyURI")
   protected String defaultRelativeZoomTranslationSpace;
+
   @XmlElement(name = "DefaultContinuousPanTiltVelocitySpace")
   @XmlSchemaType(name = "anyURI")
   protected String defaultContinuousPanTiltVelocitySpace;
+
   @XmlElement(name = "DefaultContinuousZoomVelocitySpace")
   @XmlSchemaType(name = "anyURI")
   protected String defaultContinuousZoomVelocitySpace;
+
   @XmlElement(name = "DefaultPTZSpeed")
   protected PTZSpeed defaultPTZSpeed;
+
   @XmlElement(name = "DefaultPTZTimeout")
   protected Duration defaultPTZTimeout;
+
   @XmlElement(name = "PanTiltLimits")
   protected PanTiltLimits panTiltLimits;
+
   @XmlElement(name = "ZoomLimits")
   protected ZoomLimits zoomLimits;
+
   @XmlElement(name = "Extension")
   protected PTZConfigurationExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der nodeToken-Eigenschaft ab.
@@ -300,15 +323,15 @@ public class PTZConfiguration extends ConfigurationEntity {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

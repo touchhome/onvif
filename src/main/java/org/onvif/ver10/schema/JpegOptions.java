@@ -9,11 +9,10 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * <p>
  * Java-Klasse f�r JpegOptions complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="JpegOptions">
@@ -30,34 +29,35 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "JpegOptions", propOrder = {"resolutionsAvailable", "frameRateRange", "encodingIntervalRange"})
+@XmlType(
+    name = "JpegOptions",
+    propOrder = {"resolutionsAvailable", "frameRateRange", "encodingIntervalRange"})
 @XmlSeeAlso({JpegOptions2.class})
 public class JpegOptions {
 
   @XmlElement(name = "ResolutionsAvailable", required = true)
   protected List<VideoResolution> resolutionsAvailable;
+
   @XmlElement(name = "FrameRateRange", required = true)
   protected IntRange frameRateRange;
+
   @XmlElement(name = "EncodingIntervalRange", required = true)
   protected IntRange encodingIntervalRange;
 
   /**
    * Gets the value of the resolutionsAvailable property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getResolutionsAvailable().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link VideoResolution }
+   * <p>Objects of the following type(s) are allowed in the list {@link VideoResolution }
    */
   public List<VideoResolution> getResolutionsAvailable() {
     if (resolutionsAvailable == null) {
@@ -101,5 +101,4 @@ public class JpegOptions {
   public void setEncodingIntervalRange(IntRange value) {
     this.encodingIntervalRange = value;
   }
-
 }

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "capabilities"
-})
+@XmlType(
+    name = "",
+    propOrder = {"capabilities"})
 @XmlRootElement(name = "GetServiceCapabilitiesResponse")
 public class GetServiceCapabilitiesResponse {
 
@@ -33,5 +33,4 @@ public class GetServiceCapabilitiesResponse {
   public void setCapabilities(Capabilities value) {
     this.capabilities = value;
   }
-
 }

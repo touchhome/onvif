@@ -12,11 +12,10 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * <p>
  * Java-Klasse f�r VideoSourceConfigurationOptions complex type.
  *
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
  *
  * <pre>
  * <complexType name="VideoSourceConfigurationOptions">
@@ -34,17 +33,21 @@ import javax.xml.namespace.QName;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoSourceConfigurationOptions", propOrder = {"boundsRange", "videoSourceTokensAvailable", "extension"})
+@XmlType(
+    name = "VideoSourceConfigurationOptions",
+    propOrder = {"boundsRange", "videoSourceTokensAvailable", "extension"})
 public class VideoSourceConfigurationOptions {
 
   @XmlElement(name = "BoundsRange", required = true)
   protected IntRectangleRange boundsRange;
+
   @XmlElement(name = "VideoSourceTokensAvailable", required = true)
   protected List<String> videoSourceTokensAvailable;
+
   @XmlElement(name = "Extension")
   protected VideoSourceConfigurationOptionsExtension extension;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
   /**
    * Ruft den Wert der boundsRange-Eigenschaft ab.
@@ -67,20 +70,17 @@ public class VideoSourceConfigurationOptions {
   /**
    * Gets the value of the videoSourceTokensAvailable property.
    *
-   * <p>
-   * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-   * This is why there is not a <CODE>set</CODE> method for the videoSourceTokensAvailable property.
+   * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
+   * modification you make to the returned list will be present inside the JAXB object. This is why
+   * there is not a <CODE>set</CODE> method for the videoSourceTokensAvailable property.
    *
-   * <p>
-   * For example, to add a new item, do as follows:
+   * <p>For example, to add a new item, do as follows:
    *
    * <pre>
    * getVideoSourceTokensAvailable().add(newItem);
    * </pre>
    *
-   *
-   * <p>
-   * Objects of the following type(s) are allowed in the list {@link String }
+   * <p>Objects of the following type(s) are allowed in the list {@link String }
    */
   public List<String> getVideoSourceTokensAvailable() {
     if (videoSourceTokensAvailable == null) {
@@ -110,15 +110,15 @@ public class VideoSourceConfigurationOptions {
   /**
    * Gets a map that contains attributes that aren't bound to any typed property on this class.
    *
-   * <p>
-   * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-   * <p>
-   * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
+   * <p>the map is keyed by the name of the attribute and the value is the string value of the
+   * attribute.
+   *
+   * <p>the map returned by this method is live, and you can add new attribute by updating the map
+   * directly. Because of this design, there's no setter.
    *
    * @return always non-null
    */
   public Map<QName, String> getOtherAttributes() {
     return otherAttributes;
   }
-
 }

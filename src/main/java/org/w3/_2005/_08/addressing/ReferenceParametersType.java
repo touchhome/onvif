@@ -15,14 +15,16 @@ import lombok.ToString;
 
 @Getter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReferenceParametersType", propOrder = {"any"})
+@XmlType(
+    name = "ReferenceParametersType",
+    propOrder = {"any"})
 @ToString
 public class ReferenceParametersType {
 
   @XmlAnyElement(lax = true)
   protected List<Object> any;
-  @XmlAnyAttribute
-  private Map<QName, String> otherAttributes = new HashMap<>();
+
+  @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<>();
 
   public List<Object> getAny() {
     if (any == null) {

@@ -11,12 +11,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"profileToken", "configurationToken"})
+@XmlType(
+    name = "",
+    propOrder = {"profileToken", "configurationToken"})
 @XmlRootElement(name = "AddVideoEncoderConfiguration")
 public class AddVideoEncoderConfiguration {
 
   @XmlElement(name = "ProfileToken", required = true)
   protected String profileToken;
+
   @XmlElement(name = "ConfigurationToken", required = true)
   protected String configurationToken;
 }

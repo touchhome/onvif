@@ -4,12 +4,14 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java-Klasse f�r VideoEncodingMimeNames.
+ * Java-Klasse f�r VideoEncodingMimeNames.
  *
- * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten
+ * ist.
+ *
  * <p>
+ *
  * <pre>
  * &lt;simpleType name="VideoEncodingMimeNames">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -24,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "VideoEncodingMimeNames")
 @XmlEnum
 public enum VideoEncodingMimeNames {
-
   JPEG("JPEG"),
   @XmlEnumValue("MPV4-ES")
   MPV_4_ES("MPV4-ES"),
@@ -50,5 +51,4 @@ public enum VideoEncodingMimeNames {
   public String value() {
     return value;
   }
-
 }
