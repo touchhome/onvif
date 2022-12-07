@@ -36,22 +36,30 @@ public class VideoResolution {
   @XmlElement(name = "Height")
   protected int height;
 
-  /** Ruft den Wert der width-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der width-Eigenschaft ab.
+   */
   public int getWidth() {
     return width;
   }
 
-  /** Legt den Wert der width-Eigenschaft fest. */
+  /**
+   * Legt den Wert der width-Eigenschaft fest.
+   */
   public void setWidth(int value) {
     this.width = value;
   }
 
-  /** Ruft den Wert der height-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der height-Eigenschaft ab.
+   */
   public int getHeight() {
     return height;
   }
 
-  /** Legt den Wert der height-Eigenschaft fest. */
+  /**
+   * Legt den Wert der height-Eigenschaft fest.
+   */
   public void setHeight(int value) {
     this.height = value;
   }

@@ -42,17 +42,17 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "ImagingSettings",
     propOrder = {
-      "backlightCompensation",
-      "brightness",
-      "colorSaturation",
-      "contrast",
-      "exposure",
-      "focus",
-      "irCutFilter",
-      "sharpness",
-      "wideDynamicRange",
-      "whiteBalance",
-      "extension"
+        "backlightCompensation",
+        "brightness",
+        "colorSaturation",
+        "contrast",
+        "exposure",
+        "focus",
+        "irCutFilter",
+        "sharpness",
+        "wideDynamicRange",
+        "whiteBalance",
+        "extension"
     })
 public class ImagingSettings {
 

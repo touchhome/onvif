@@ -30,7 +30,9 @@ public enum ModeOfOperation {
   @XmlEnumValue("Active")
   ACTIVE("Active"),
 
-  /** This case should never happen. */
+  /**
+   * This case should never happen.
+   */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;

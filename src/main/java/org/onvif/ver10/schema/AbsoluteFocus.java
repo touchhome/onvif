@@ -17,12 +17,16 @@ public class AbsoluteFocus {
   @XmlElement(name = "Speed")
   protected Float speed;
 
-  /** Ruft den Wert der position-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der position-Eigenschaft ab.
+   */
   public float getPosition() {
     return position;
   }
 
-  /** Legt den Wert der position-Eigenschaft fest. */
+  /**
+   * Legt den Wert der position-Eigenschaft fest.
+   */
   public void setPosition(float value) {
     this.position = value;
   }

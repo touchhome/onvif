@@ -48,12 +48,16 @@ public class SecurityCapabilitiesExtension2 {
   @XmlAnyElement(lax = true)
   protected List<java.lang.Object> any;
 
-  /** Ruft den Wert der dot1X-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der dot1X-Eigenschaft ab.
+   */
   public boolean isDot1X() {
     return dot1X;
   }
 
-  /** Legt den Wert der dot1X-Eigenschaft fest. */
+  /**
+   * Legt den Wert der dot1X-Eigenschaft fest.
+   */
   public void setDot1X(boolean value) {
     this.dot1X = value;
   }
@@ -62,8 +66,7 @@ public class SecurityCapabilitiesExtension2 {
    * Gets the value of the supportedEAPMethod property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the supportedEAPMethod property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the supportedEAPMethod property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -80,12 +83,16 @@ public class SecurityCapabilitiesExtension2 {
     return this.supportedEAPMethod;
   }
 
-  /** Ruft den Wert der remoteUserHandling-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der remoteUserHandling-Eigenschaft ab.
+   */
   public boolean isRemoteUserHandling() {
     return remoteUserHandling;
   }
 
-  /** Legt den Wert der remoteUserHandling-Eigenschaft fest. */
+  /**
+   * Legt den Wert der remoteUserHandling-Eigenschaft fest.
+   */
   public void setRemoteUserHandling(boolean value) {
     this.remoteUserHandling = value;
   }
@@ -94,8 +101,7 @@ public class SecurityCapabilitiesExtension2 {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -81,5 +81,6 @@ public class ImagingDevices {
     return response != null;
   }
 
-  public void dispose() {}
+  public void dispose() {
+  }
 }

@@ -40,32 +40,44 @@ public class Time {
   @XmlElement(name = "Second")
   protected int second;
 
-  /** Ruft den Wert der hour-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der hour-Eigenschaft ab.
+   */
   public int getHour() {
     return hour;
   }
 
-  /** Legt den Wert der hour-Eigenschaft fest. */
+  /**
+   * Legt den Wert der hour-Eigenschaft fest.
+   */
   public void setHour(int value) {
     this.hour = value;
   }
 
-  /** Ruft den Wert der minute-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der minute-Eigenschaft ab.
+   */
   public int getMinute() {
     return minute;
   }
 
-  /** Legt den Wert der minute-Eigenschaft fest. */
+  /**
+   * Legt den Wert der minute-Eigenschaft fest.
+   */
   public void setMinute(int value) {
     this.minute = value;
   }
 
-  /** Ruft den Wert der second-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der second-Eigenschaft ab.
+   */
   public int getSecond() {
     return second;
   }
 
-  /** Legt den Wert der second-Eigenschaft fest. */
+  /**
+   * Legt den Wert der second-Eigenschaft fest.
+   */
   public void setSecond(int value) {
     this.second = value;
   }

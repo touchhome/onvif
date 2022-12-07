@@ -53,12 +53,16 @@ public class NTPInformation {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der fromDHCP-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der fromDHCP-Eigenschaft ab.
+   */
   public boolean isFromDHCP() {
     return fromDHCP;
   }
 
-  /** Legt den Wert der fromDHCP-Eigenschaft fest. */
+  /**
+   * Legt den Wert der fromDHCP-Eigenschaft fest.
+   */
   public void setFromDHCP(boolean value) {
     this.fromDHCP = value;
   }
@@ -67,8 +71,7 @@ public class NTPInformation {
    * Gets the value of the ntpFromDHCP property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the ntpFromDHCP property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the ntpFromDHCP property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -89,8 +92,7 @@ public class NTPInformation {
    * Gets the value of the ntpManual property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the ntpManual property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the ntpManual property.
    *
    * <p>For example, to add a new item, do as follows:
    *

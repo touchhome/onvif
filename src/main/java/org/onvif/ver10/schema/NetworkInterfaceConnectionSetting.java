@@ -40,22 +40,30 @@ public class NetworkInterfaceConnectionSetting {
   @XmlElement(name = "Duplex", required = true)
   protected Duplex duplex;
 
-  /** Ruft den Wert der autoNegotiation-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der autoNegotiation-Eigenschaft ab.
+   */
   public boolean isAutoNegotiation() {
     return autoNegotiation;
   }
 
-  /** Legt den Wert der autoNegotiation-Eigenschaft fest. */
+  /**
+   * Legt den Wert der autoNegotiation-Eigenschaft fest.
+   */
   public void setAutoNegotiation(boolean value) {
     this.autoNegotiation = value;
   }
 
-  /** Ruft den Wert der speed-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der speed-Eigenschaft ab.
+   */
   public int getSpeed() {
     return speed;
   }
 
-  /** Legt den Wert der speed-Eigenschaft fest. */
+  /**
+   * Legt den Wert der speed-Eigenschaft fest.
+   */
   public void setSpeed(int value) {
     this.speed = value;
   }

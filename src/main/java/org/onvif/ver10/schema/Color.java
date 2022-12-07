@@ -23,32 +23,44 @@ public class Color {
   @XmlSchemaType(name = "anyURI")
   protected String colorspace;
 
-  /** Ruft den Wert der x-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der x-Eigenschaft ab.
+   */
   public float getX() {
     return x;
   }
 
-  /** Legt den Wert der x-Eigenschaft fest. */
+  /**
+   * Legt den Wert der x-Eigenschaft fest.
+   */
   public void setX(float value) {
     this.x = value;
   }
 
-  /** Ruft den Wert der y-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der y-Eigenschaft ab.
+   */
   public float getY() {
     return y;
   }
 
-  /** Legt den Wert der y-Eigenschaft fest. */
+  /**
+   * Legt den Wert der y-Eigenschaft fest.
+   */
   public void setY(float value) {
     this.y = value;
   }
 
-  /** Ruft den Wert der z-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der z-Eigenschaft ab.
+   */
   public float getZ() {
     return z;
   }
 
-  /** Legt den Wert der z-Eigenschaft fest. */
+  /**
+   * Legt den Wert der z-Eigenschaft fest.
+   */
   public void setZ(float value) {
     this.z = value;
   }

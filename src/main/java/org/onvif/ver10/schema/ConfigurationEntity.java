@@ -12,19 +12,19 @@ import javax.xml.bind.annotation.XmlType;
     name = "ConfigurationEntity",
     propOrder = {"name", "useCount"})
 @XmlSeeAlso({
-  AudioSourceConfiguration.class,
-  PTZConfiguration.class,
-  VideoSourceConfiguration.class,
-  AudioEncoderConfiguration.class,
-  VideoEncoderConfiguration.class,
-  AudioDecoderConfiguration.class,
-  VideoAnalyticsConfiguration.class,
-  AudioOutputConfiguration.class,
-  MetadataConfiguration.class,
-  AnalyticsEngineInput.class,
-  AnalyticsEngineControl.class,
-  AnalyticsEngine.class,
-  VideoOutputConfiguration.class
+    AudioSourceConfiguration.class,
+    PTZConfiguration.class,
+    VideoSourceConfiguration.class,
+    AudioEncoderConfiguration.class,
+    VideoEncoderConfiguration.class,
+    AudioDecoderConfiguration.class,
+    VideoAnalyticsConfiguration.class,
+    AudioOutputConfiguration.class,
+    MetadataConfiguration.class,
+    AnalyticsEngineInput.class,
+    AnalyticsEngineControl.class,
+    AnalyticsEngine.class,
+    VideoOutputConfiguration.class
 })
 public class ConfigurationEntity {
 
@@ -55,12 +55,16 @@ public class ConfigurationEntity {
     this.name = value;
   }
 
-  /** Ruft den Wert der useCount-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der useCount-Eigenschaft ab.
+   */
   public int getUseCount() {
     return useCount;
   }
 
-  /** Legt den Wert der useCount-Eigenschaft fest. */
+  /**
+   * Legt den Wert der useCount-Eigenschaft fest.
+   */
   public void setUseCount(int value) {
     this.useCount = value;
   }

@@ -21,14 +21,14 @@ import org.oasis_open.docs.wsn.t_1.TopicSetType;
 @XmlType(
     name = "",
     propOrder = {
-      "topicNamespaceLocation",
-      "fixedTopicSet",
-      "topicSet",
-      "topicExpressionDialect",
-      "messageContentFilterDialect",
-      "producerPropertiesFilterDialect",
-      "messageContentSchemaLocation",
-      "any"
+        "topicNamespaceLocation",
+        "fixedTopicSet",
+        "topicSet",
+        "topicExpressionDialect",
+        "messageContentFilterDialect",
+        "producerPropertiesFilterDialect",
+        "messageContentSchemaLocation",
+        "any"
     })
 @XmlRootElement(name = "GetEventPropertiesResponse")
 public class GetEventPropertiesResponse {

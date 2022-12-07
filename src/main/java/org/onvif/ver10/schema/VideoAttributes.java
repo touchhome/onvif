@@ -81,22 +81,30 @@ public class VideoAttributes {
     this.bitrate = value;
   }
 
-  /** Ruft den Wert der width-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der width-Eigenschaft ab.
+   */
   public int getWidth() {
     return width;
   }
 
-  /** Legt den Wert der width-Eigenschaft fest. */
+  /**
+   * Legt den Wert der width-Eigenschaft fest.
+   */
   public void setWidth(int value) {
     this.width = value;
   }
 
-  /** Ruft den Wert der height-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der height-Eigenschaft ab.
+   */
   public int getHeight() {
     return height;
   }
 
-  /** Legt den Wert der height-Eigenschaft fest. */
+  /**
+   * Legt den Wert der height-Eigenschaft fest.
+   */
   public void setHeight(int value) {
     this.height = value;
   }
@@ -119,12 +127,16 @@ public class VideoAttributes {
     this.encoding = value;
   }
 
-  /** Ruft den Wert der framerate-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der framerate-Eigenschaft ab.
+   */
   public float getFramerate() {
     return framerate;
   }
 
-  /** Legt den Wert der framerate-Eigenschaft fest. */
+  /**
+   * Legt den Wert der framerate-Eigenschaft fest.
+   */
   public void setFramerate(float value) {
     this.framerate = value;
   }
@@ -133,8 +145,7 @@ public class VideoAttributes {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

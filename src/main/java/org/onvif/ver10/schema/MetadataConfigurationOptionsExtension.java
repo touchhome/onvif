@@ -42,8 +42,7 @@ public class MetadataConfigurationOptionsExtension {
    * Gets the value of the compressionType property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the compressionType property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the compressionType property.
    *
    * <p>For example, to add a new item, do as follows:
    *

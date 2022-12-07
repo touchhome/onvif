@@ -9,15 +9,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DeviceEntity")
 @XmlSeeAlso({
-  RelayOutput.class,
-  NetworkInterface.class,
-  VideoOutput.class,
-  AudioSource.class,
-  OSDConfiguration.class,
-  AudioOutput.class,
-  VideoSource.class,
-  DigitalInput.class,
-  PTZNode.class
+    RelayOutput.class,
+    NetworkInterface.class,
+    VideoOutput.class,
+    AudioSource.class,
+    OSDConfiguration.class,
+    AudioOutput.class,
+    VideoSource.class,
+    DigitalInput.class,
+    PTZNode.class
 })
 public class DeviceEntity {
 

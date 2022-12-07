@@ -63,8 +63,7 @@ public class NotificationProducerRP {
    * Gets the value of the topicExpression property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the topicExpression property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the topicExpression property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -103,8 +102,7 @@ public class NotificationProducerRP {
    * Gets the value of the topicExpressionDialect property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the topicExpressionDialect property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the topicExpressionDialect property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -55,12 +55,16 @@ public class MaximumNumberOfOSDs {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der total-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der total-Eigenschaft ab.
+   */
   public int getTotal() {
     return total;
   }
 
-  /** Legt den Wert der total-Eigenschaft fest. */
+  /**
+   * Legt den Wert der total-Eigenschaft fest.
+   */
   public void setTotal(int value) {
     this.total = value;
   }

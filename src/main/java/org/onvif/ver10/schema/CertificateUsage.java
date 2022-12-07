@@ -35,12 +35,16 @@ public class CertificateUsage {
     this.value = value;
   }
 
-  /** Ruft den Wert der critical-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der critical-Eigenschaft ab.
+   */
   public boolean isCritical() {
     return critical;
   }
 
-  /** Legt den Wert der critical-Eigenschaft fest. */
+  /**
+   * Legt den Wert der critical-Eigenschaft fest.
+   */
   public void setCritical(boolean value) {
     this.critical = value;
   }

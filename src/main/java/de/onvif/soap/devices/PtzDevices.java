@@ -144,8 +144,8 @@ public class PtzDevices {
   }
 
   /**
-   * @param x Pan-Position
-   * @param y Tilt-Position
+   * @param x    Pan-Position
+   * @param y    Tilt-Position
    * @param zoom Zoom
    * @return True if move successful
    */

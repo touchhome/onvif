@@ -91,12 +91,16 @@ public class RemoteUser {
     this.password = value;
   }
 
-  /** Ruft den Wert der useDerivedPassword-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der useDerivedPassword-Eigenschaft ab.
+   */
   public boolean isUseDerivedPassword() {
     return useDerivedPassword;
   }
 
-  /** Legt den Wert der useDerivedPassword-Eigenschaft fest. */
+  /**
+   * Legt den Wert der useDerivedPassword-Eigenschaft fest.
+   */
   public void setUseDerivedPassword(boolean value) {
     this.useDerivedPassword = value;
   }
@@ -105,8 +109,7 @@ public class RemoteUser {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

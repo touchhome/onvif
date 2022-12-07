@@ -36,12 +36,16 @@ public class RelativeFocus {
   @XmlElement(name = "Speed")
   protected Float speed;
 
-  /** Ruft den Wert der distance-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der distance-Eigenschaft ab.
+   */
   public float getDistance() {
     return distance;
   }
 
-  /** Legt den Wert der distance-Eigenschaft fest. */
+  /**
+   * Legt den Wert der distance-Eigenschaft fest.
+   */
   public void setDistance(float value) {
     this.distance = value;
   }

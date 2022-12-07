@@ -42,12 +42,16 @@ public class SetHostnameFromDHCPResponse {
   @XmlElement(name = "RebootNeeded")
   protected boolean rebootNeeded;
 
-  /** Ruft den Wert der rebootNeeded-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der rebootNeeded-Eigenschaft ab.
+   */
   public boolean isRebootNeeded() {
     return rebootNeeded;
   }
 
-  /** Legt den Wert der rebootNeeded-Eigenschaft fest. */
+  /**
+   * Legt den Wert der rebootNeeded-Eigenschaft fest.
+   */
   public void setRebootNeeded(boolean value) {
     this.rebootNeeded = value;
   }

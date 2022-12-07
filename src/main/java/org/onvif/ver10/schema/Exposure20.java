@@ -40,18 +40,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(
     name = "Exposure20",
     propOrder = {
-      "mode",
-      "priority",
-      "window",
-      "minExposureTime",
-      "maxExposureTime",
-      "minGain",
-      "maxGain",
-      "minIris",
-      "maxIris",
-      "exposureTime",
-      "gain",
-      "iris"
+        "mode",
+        "priority",
+        "window",
+        "minExposureTime",
+        "maxExposureTime",
+        "minGain",
+        "maxGain",
+        "minIris",
+        "maxIris",
+        "exposureTime",
+        "gain",
+        "iris"
     })
 public class Exposure20 {
 

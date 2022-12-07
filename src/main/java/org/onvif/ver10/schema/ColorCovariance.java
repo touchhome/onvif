@@ -32,32 +32,44 @@ public class ColorCovariance {
   @XmlSchemaType(name = "anyURI")
   protected String colorspace;
 
-  /** Ruft den Wert der xx-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der xx-Eigenschaft ab.
+   */
   public float getXX() {
     return xx;
   }
 
-  /** Legt den Wert der xx-Eigenschaft fest. */
+  /**
+   * Legt den Wert der xx-Eigenschaft fest.
+   */
   public void setXX(float value) {
     this.xx = value;
   }
 
-  /** Ruft den Wert der yy-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der yy-Eigenschaft ab.
+   */
   public float getYY() {
     return yy;
   }
 
-  /** Legt den Wert der yy-Eigenschaft fest. */
+  /**
+   * Legt den Wert der yy-Eigenschaft fest.
+   */
   public void setYY(float value) {
     this.yy = value;
   }
 
-  /** Ruft den Wert der zz-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der zz-Eigenschaft ab.
+   */
   public float getZZ() {
     return zz;
   }
 
-  /** Legt den Wert der zz-Eigenschaft fest. */
+  /**
+   * Legt den Wert der zz-Eigenschaft fest.
+   */
   public void setZZ(float value) {
     this.zz = value;
   }

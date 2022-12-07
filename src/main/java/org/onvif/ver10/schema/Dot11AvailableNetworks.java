@@ -17,13 +17,13 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "Dot11AvailableNetworks",
     propOrder = {
-      "ssid",
-      "bssid",
-      "authAndMangementSuite",
-      "pairCipher",
-      "groupCipher",
-      "signalStrength",
-      "extension"
+        "ssid",
+        "bssid",
+        "authAndMangementSuite",
+        "pairCipher",
+        "groupCipher",
+        "signalStrength",
+        "extension"
     })
 public class Dot11AvailableNetworks {
 
@@ -91,8 +91,7 @@ public class Dot11AvailableNetworks {
    * Gets the value of the authAndMangementSuite property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the authAndMangementSuite property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the authAndMangementSuite property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -113,8 +112,7 @@ public class Dot11AvailableNetworks {
    * Gets the value of the pairCipher property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the pairCipher property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the pairCipher property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -135,8 +133,7 @@ public class Dot11AvailableNetworks {
    * Gets the value of the groupCipher property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the groupCipher property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the groupCipher property.
    *
    * <p>For example, to add a new item, do as follows:
    *

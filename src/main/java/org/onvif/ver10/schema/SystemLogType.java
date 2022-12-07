@@ -25,11 +25,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SystemLogType {
 
-  /** Indicates that a system log is requested. */
+  /**
+   * Indicates that a system log is requested.
+   */
   @XmlEnumValue("System")
   SYSTEM("System"),
 
-  /** Indicates that a access log is requested. */
+  /**
+   * Indicates that a access log is requested.
+   */
   @XmlEnumValue("Access")
   ACCESS("Access");
   private final String value;

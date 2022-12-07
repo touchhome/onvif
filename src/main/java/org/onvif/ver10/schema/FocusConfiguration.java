@@ -77,32 +77,44 @@ public class FocusConfiguration {
     this.autoFocusMode = value;
   }
 
-  /** Ruft den Wert der defaultSpeed-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der defaultSpeed-Eigenschaft ab.
+   */
   public float getDefaultSpeed() {
     return defaultSpeed;
   }
 
-  /** Legt den Wert der defaultSpeed-Eigenschaft fest. */
+  /**
+   * Legt den Wert der defaultSpeed-Eigenschaft fest.
+   */
   public void setDefaultSpeed(float value) {
     this.defaultSpeed = value;
   }
 
-  /** Ruft den Wert der nearLimit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der nearLimit-Eigenschaft ab.
+   */
   public float getNearLimit() {
     return nearLimit;
   }
 
-  /** Legt den Wert der nearLimit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der nearLimit-Eigenschaft fest.
+   */
   public void setNearLimit(float value) {
     this.nearLimit = value;
   }
 
-  /** Ruft den Wert der farLimit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der farLimit-Eigenschaft ab.
+   */
   public float getFarLimit() {
     return farLimit;
   }
 
-  /** Legt den Wert der farLimit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der farLimit-Eigenschaft fest.
+   */
   public void setFarLimit(float value) {
     this.farLimit = value;
   }
@@ -111,8 +123,7 @@ public class FocusConfiguration {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -91,12 +91,16 @@ public class PTZPositionFilter {
     this.maxPosition = value;
   }
 
-  /** Ruft den Wert der enterOrExit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der enterOrExit-Eigenschaft ab.
+   */
   public boolean isEnterOrExit() {
     return enterOrExit;
   }
 
-  /** Legt den Wert der enterOrExit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der enterOrExit-Eigenschaft fest.
+   */
   public void setEnterOrExit(boolean value) {
     this.enterOrExit = value;
   }
@@ -105,8 +109,7 @@ public class PTZPositionFilter {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

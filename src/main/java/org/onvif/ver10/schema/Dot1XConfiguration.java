@@ -18,13 +18,13 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "Dot1XConfiguration",
     propOrder = {
-      "dot1XConfigurationToken",
-      "identity",
-      "anonymousID",
-      "eapMethod",
-      "caCertificateID",
-      "eapMethodConfiguration",
-      "extension"
+        "dot1XConfigurationToken",
+        "identity",
+        "anonymousID",
+        "eapMethod",
+        "caCertificateID",
+        "eapMethodConfiguration",
+        "extension"
     })
 public class Dot1XConfiguration {
 
@@ -107,12 +107,16 @@ public class Dot1XConfiguration {
     this.anonymousID = value;
   }
 
-  /** Ruft den Wert der eapMethod-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der eapMethod-Eigenschaft ab.
+   */
   public int getEAPMethod() {
     return eapMethod;
   }
 
-  /** Legt den Wert der eapMethod-Eigenschaft fest. */
+  /**
+   * Legt den Wert der eapMethod-Eigenschaft fest.
+   */
   public void setEAPMethod(int value) {
     this.eapMethod = value;
   }
@@ -121,8 +125,7 @@ public class Dot1XConfiguration {
    * Gets the value of the caCertificateID property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the caCertificateID property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the caCertificateID property.
    *
    * <p>For example, to add a new item, do as follows:
    *

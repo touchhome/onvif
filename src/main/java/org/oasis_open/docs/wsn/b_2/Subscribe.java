@@ -22,11 +22,11 @@ import org.w3._2005._08.addressing.EndpointReferenceType;
 @XmlType(
     name = "",
     propOrder = {
-      "consumerReference",
-      "filter",
-      "initialTerminationTime",
-      "subscriptionPolicy",
-      "any"
+        "consumerReference",
+        "filter",
+        "initialTerminationTime",
+        "subscriptionPolicy",
+        "any"
     })
 @XmlRootElement(name = "Subscribe")
 public class Subscribe {

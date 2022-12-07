@@ -53,12 +53,16 @@ public class CertificateStatus {
     this.certificateID = value;
   }
 
-  /** Ruft den Wert der status-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der status-Eigenschaft ab.
+   */
   public boolean isStatus() {
     return status;
   }
 
-  /** Legt den Wert der status-Eigenschaft fest. */
+  /**
+   * Legt den Wert der status-Eigenschaft fest.
+   */
   public void setStatus(boolean value) {
     this.status = value;
   }
@@ -67,8 +71,7 @@ public class CertificateStatus {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

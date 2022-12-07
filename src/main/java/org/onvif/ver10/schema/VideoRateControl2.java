@@ -56,22 +56,30 @@ public class VideoRateControl2 {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der frameRateLimit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der frameRateLimit-Eigenschaft ab.
+   */
   public float getFrameRateLimit() {
     return frameRateLimit;
   }
 
-  /** Legt den Wert der frameRateLimit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der frameRateLimit-Eigenschaft fest.
+   */
   public void setFrameRateLimit(float value) {
     this.frameRateLimit = value;
   }
 
-  /** Ruft den Wert der bitrateLimit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der bitrateLimit-Eigenschaft ab.
+   */
   public int getBitrateLimit() {
     return bitrateLimit;
   }
 
-  /** Legt den Wert der bitrateLimit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der bitrateLimit-Eigenschaft fest.
+   */
   public void setBitrateLimit(int value) {
     this.bitrateLimit = value;
   }
@@ -80,8 +88,7 @@ public class VideoRateControl2 {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

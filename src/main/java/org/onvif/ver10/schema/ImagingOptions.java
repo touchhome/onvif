@@ -46,17 +46,17 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "ImagingOptions",
     propOrder = {
-      "backlightCompensation",
-      "brightness",
-      "colorSaturation",
-      "contrast",
-      "exposure",
-      "focus",
-      "irCutFilterModes",
-      "sharpness",
-      "wideDynamicRange",
-      "whiteBalance",
-      "any"
+        "backlightCompensation",
+        "brightness",
+        "colorSaturation",
+        "contrast",
+        "exposure",
+        "focus",
+        "irCutFilterModes",
+        "sharpness",
+        "wideDynamicRange",
+        "whiteBalance",
+        "any"
     })
 public class ImagingOptions {
 
@@ -207,8 +207,7 @@ public class ImagingOptions {
    * Gets the value of the irCutFilterModes property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the irCutFilterModes property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the irCutFilterModes property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -283,8 +282,7 @@ public class ImagingOptions {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

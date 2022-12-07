@@ -47,12 +47,16 @@ public class NoiseReduction {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der level-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der level-Eigenschaft ab.
+   */
   public float getLevel() {
     return level;
   }
 
-  /** Legt den Wert der level-Eigenschaft fest. */
+  /**
+   * Legt den Wert der level-Eigenschaft fest.
+   */
   public void setLevel(float value) {
     this.level = value;
   }
@@ -61,8 +65,7 @@ public class NoiseReduction {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

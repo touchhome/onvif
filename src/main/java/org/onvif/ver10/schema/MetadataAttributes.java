@@ -60,32 +60,44 @@ public class MetadataAttributes {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der canContainPTZ-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der canContainPTZ-Eigenschaft ab.
+   */
   public boolean isCanContainPTZ() {
     return canContainPTZ;
   }
 
-  /** Legt den Wert der canContainPTZ-Eigenschaft fest. */
+  /**
+   * Legt den Wert der canContainPTZ-Eigenschaft fest.
+   */
   public void setCanContainPTZ(boolean value) {
     this.canContainPTZ = value;
   }
 
-  /** Ruft den Wert der canContainAnalytics-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der canContainAnalytics-Eigenschaft ab.
+   */
   public boolean isCanContainAnalytics() {
     return canContainAnalytics;
   }
 
-  /** Legt den Wert der canContainAnalytics-Eigenschaft fest. */
+  /**
+   * Legt den Wert der canContainAnalytics-Eigenschaft fest.
+   */
   public void setCanContainAnalytics(boolean value) {
     this.canContainAnalytics = value;
   }
 
-  /** Ruft den Wert der canContainNotifications-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der canContainNotifications-Eigenschaft ab.
+   */
   public boolean isCanContainNotifications() {
     return canContainNotifications;
   }
 
-  /** Legt den Wert der canContainNotifications-Eigenschaft fest. */
+  /**
+   * Legt den Wert der canContainNotifications-Eigenschaft fest.
+   */
   public void setCanContainNotifications(boolean value) {
     this.canContainNotifications = value;
   }
@@ -94,8 +106,7 @@ public class MetadataAttributes {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -117,8 +128,7 @@ public class MetadataAttributes {
    * Gets the value of the ptzSpaces property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the ptzSpaces property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the ptzSpaces property.
    *
    * <p>For example, to add a new item, do as follows:
    *

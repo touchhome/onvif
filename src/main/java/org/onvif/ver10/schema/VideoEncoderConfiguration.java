@@ -45,15 +45,15 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "VideoEncoderConfiguration",
     propOrder = {
-      "encoding",
-      "resolution",
-      "quality",
-      "rateControl",
-      "mpeg4",
-      "h264",
-      "multicast",
-      "sessionTimeout",
-      "any"
+        "encoding",
+        "resolution",
+        "quality",
+        "rateControl",
+        "mpeg4",
+        "h264",
+        "multicast",
+        "sessionTimeout",
+        "any"
     })
 public class VideoEncoderConfiguration extends ConfigurationEntity {
 
@@ -122,12 +122,16 @@ public class VideoEncoderConfiguration extends ConfigurationEntity {
     this.resolution = value;
   }
 
-  /** Ruft den Wert der quality-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der quality-Eigenschaft ab.
+   */
   public float getQuality() {
     return quality;
   }
 
-  /** Legt den Wert der quality-Eigenschaft fest. */
+  /**
+   * Legt den Wert der quality-Eigenschaft fest.
+   */
   public void setQuality(float value) {
     this.quality = value;
   }
@@ -226,8 +230,7 @@ public class VideoEncoderConfiguration extends ConfigurationEntity {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -6,8 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Range of a rectangle. The rectangle itself is defined by lower left corner position and size.
- * Units are pixel.
+ * Range of a rectangle. The rectangle itself is defined by lower left corner position and size. Units are pixel.
  *
  * <p>Java-Klasse f�r IntRectangleRange complex type.
  *

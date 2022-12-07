@@ -10,8 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * Type describing the ImagingSettings of a VideoSource. The supported options and ranges can be
- * obtained via the GetOptions command.
+ * Type describing the ImagingSettings of a VideoSource. The supported options and ranges can be obtained via the GetOptions command.
  *
  * <p>Java-Klasse f�r ImagingSettings20 complex type.
  *
@@ -45,17 +44,17 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "ImagingSettings20",
     propOrder = {
-      "backlightCompensation",
-      "brightness",
-      "colorSaturation",
-      "contrast",
-      "exposure",
-      "focus",
-      "irCutFilter",
-      "sharpness",
-      "wideDynamicRange",
-      "whiteBalance",
-      "extension"
+        "backlightCompensation",
+        "brightness",
+        "colorSaturation",
+        "contrast",
+        "exposure",
+        "focus",
+        "irCutFilter",
+        "sharpness",
+        "wideDynamicRange",
+        "whiteBalance",
+        "extension"
     })
 public class ImagingSettings20 {
 

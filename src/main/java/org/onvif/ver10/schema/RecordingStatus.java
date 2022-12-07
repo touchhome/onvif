@@ -39,7 +39,9 @@ public enum RecordingStatus {
   @XmlEnumValue("Removed")
   REMOVED("Removed"),
 
-  /** This case should never happen. */
+  /**
+   * This case should never happen.
+   */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;

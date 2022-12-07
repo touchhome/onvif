@@ -14,7 +14,7 @@ public class ObjectFactory {
       new QName("http://www.onvif.org/ver10/events/wsdl", "InitialTerminationTime");
 
   public CreatePullPointSubscription.SubscriptionPolicy
-      createCreatePullPointSubscriptionSubscriptionPolicy() {
+  createCreatePullPointSubscriptionSubscriptionPolicy() {
     return new CreatePullPointSubscription.SubscriptionPolicy();
   }
 

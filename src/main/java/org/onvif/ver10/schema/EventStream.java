@@ -35,11 +35,11 @@ import org.oasis_open.docs.wsn.b_2.NotificationMessageHolderType;
 public class EventStream {
 
   @XmlElements({
-    @XmlElement(
-        name = "NotificationMessage",
-        namespace = "http://docs.oasis-open.org/wsn/b-2",
-        type = NotificationMessageHolderType.class),
-    @XmlElement(name = "Extension", type = EventStreamExtension.class)
+      @XmlElement(
+          name = "NotificationMessage",
+          namespace = "http://docs.oasis-open.org/wsn/b-2",
+          type = NotificationMessageHolderType.class),
+      @XmlElement(name = "Extension", type = EventStreamExtension.class)
   })
   protected List<java.lang.Object> notificationMessageOrExtension;
 
@@ -47,8 +47,7 @@ public class EventStream {
    * Gets the value of the notificationMessageOrExtension property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the notificationMessageOrExtension property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the notificationMessageOrExtension property.
    *
    * <p>For example, to add a new item, do as follows:
    *

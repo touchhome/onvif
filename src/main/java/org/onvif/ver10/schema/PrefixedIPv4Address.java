@@ -57,12 +57,16 @@ public class PrefixedIPv4Address {
     this.address = value;
   }
 
-  /** Ruft den Wert der prefixLength-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der prefixLength-Eigenschaft ab.
+   */
   public int getPrefixLength() {
     return prefixLength;
   }
 
-  /** Legt den Wert der prefixLength-Eigenschaft fest. */
+  /**
+   * Legt den Wert der prefixLength-Eigenschaft fest.
+   */
   public void setPrefixLength(int value) {
     this.prefixLength = value;
   }

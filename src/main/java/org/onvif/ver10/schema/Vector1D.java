@@ -34,12 +34,16 @@ public class Vector1D {
   @XmlSchemaType(name = "anyURI")
   protected String space;
 
-  /** Ruft den Wert der x-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der x-Eigenschaft ab.
+   */
   public float getX() {
     return x;
   }
 
-  /** Legt den Wert der x-Eigenschaft fest. */
+  /**
+   * Legt den Wert der x-Eigenschaft fest.
+   */
   public void setX(float value) {
     this.x = value;
   }

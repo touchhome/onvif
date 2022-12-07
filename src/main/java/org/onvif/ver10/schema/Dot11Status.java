@@ -44,13 +44,13 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "Dot11Status",
     propOrder = {
-      "ssid",
-      "bssid",
-      "pairCipher",
-      "groupCipher",
-      "signalStrength",
-      "activeConfigAlias",
-      "any"
+        "ssid",
+        "bssid",
+        "pairCipher",
+        "groupCipher",
+        "signalStrength",
+        "activeConfigAlias",
+        "any"
     })
 public class Dot11Status {
 
@@ -190,8 +190,7 @@ public class Dot11Status {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

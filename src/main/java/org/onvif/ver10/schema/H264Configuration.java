@@ -36,12 +36,16 @@ public class H264Configuration {
   @XmlElement(name = "H264Profile", required = true)
   protected H264Profile h264Profile;
 
-  /** Ruft den Wert der govLength-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der govLength-Eigenschaft ab.
+   */
   public int getGovLength() {
     return govLength;
   }
 
-  /** Legt den Wert der govLength-Eigenschaft fest. */
+  /**
+   * Legt den Wert der govLength-Eigenschaft fest.
+   */
   public void setGovLength(int value) {
     this.govLength = value;
   }

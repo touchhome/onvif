@@ -213,8 +213,8 @@ public class InitialDevices {
 
   public List<String> getScope(String name) {
     return getScopes().stream()
-        .map(Scope::getScopeItem)
-        .filter(s -> s.startsWith(name))
-        .collect(Collectors.toList());
+                      .map(Scope::getScopeItem)
+                      .filter(s -> s.startsWith(name))
+                      .collect(Collectors.toList());
   }
 }

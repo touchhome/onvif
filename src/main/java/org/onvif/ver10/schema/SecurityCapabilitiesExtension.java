@@ -36,12 +36,16 @@ public class SecurityCapabilitiesExtension {
   @XmlElement(name = "Extension")
   protected SecurityCapabilitiesExtension2 extension;
 
-  /** Ruft den Wert der tls10-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der tls10-Eigenschaft ab.
+   */
   public boolean isTLS10() {
     return tls10;
   }
 
-  /** Legt den Wert der tls10-Eigenschaft fest. */
+  /**
+   * Legt den Wert der tls10-Eigenschaft fest.
+   */
   public void setTLS10(boolean value) {
     this.tls10 = value;
   }

@@ -42,12 +42,16 @@ public class SetHostnameFromDHCP {
   @XmlElement(name = "FromDHCP")
   protected boolean fromDHCP;
 
-  /** Ruft den Wert der fromDHCP-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der fromDHCP-Eigenschaft ab.
+   */
   public boolean isFromDHCP() {
     return fromDHCP;
   }
 
-  /** Legt den Wert der fromDHCP-Eigenschaft fest. */
+  /**
+   * Legt den Wert der fromDHCP-Eigenschaft fest.
+   */
   public void setFromDHCP(boolean value) {
     this.fromDHCP = value;
   }

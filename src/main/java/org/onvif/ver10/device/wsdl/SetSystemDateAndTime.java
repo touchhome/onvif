@@ -75,12 +75,16 @@ public class SetSystemDateAndTime {
     this.dateTimeType = value;
   }
 
-  /** Ruft den Wert der daylightSavings-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der daylightSavings-Eigenschaft ab.
+   */
   public boolean isDaylightSavings() {
     return daylightSavings;
   }
 
-  /** Legt den Wert der daylightSavings-Eigenschaft fest. */
+  /**
+   * Legt den Wert der daylightSavings-Eigenschaft fest.
+   */
   public void setDaylightSavings(boolean value) {
     this.daylightSavings = value;
   }

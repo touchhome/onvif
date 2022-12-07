@@ -45,18 +45,18 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "PTZConfiguration",
     propOrder = {
-      "nodeToken",
-      "defaultAbsolutePantTiltPositionSpace",
-      "defaultAbsoluteZoomPositionSpace",
-      "defaultRelativePanTiltTranslationSpace",
-      "defaultRelativeZoomTranslationSpace",
-      "defaultContinuousPanTiltVelocitySpace",
-      "defaultContinuousZoomVelocitySpace",
-      "defaultPTZSpeed",
-      "defaultPTZTimeout",
-      "panTiltLimits",
-      "zoomLimits",
-      "extension"
+        "nodeToken",
+        "defaultAbsolutePantTiltPositionSpace",
+        "defaultAbsoluteZoomPositionSpace",
+        "defaultRelativePanTiltTranslationSpace",
+        "defaultRelativeZoomTranslationSpace",
+        "defaultContinuousPanTiltVelocitySpace",
+        "defaultContinuousZoomVelocitySpace",
+        "defaultPTZSpeed",
+        "defaultPTZTimeout",
+        "panTiltLimits",
+        "zoomLimits",
+        "extension"
     })
 public class PTZConfiguration extends ConfigurationEntity {
 

@@ -43,13 +43,13 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "ReceiverCapabilities",
     propOrder = {
-      "xAddr",
-      "rtpMulticast",
-      "rtptcp",
-      "rtprtsptcp",
-      "supportedReceivers",
-      "maximumRTSPURILength",
-      "any"
+        "xAddr",
+        "rtpMulticast",
+        "rtptcp",
+        "rtprtsptcp",
+        "supportedReceivers",
+        "maximumRTSPURILength",
+        "any"
     })
 public class ReceiverCapabilities {
 
@@ -95,52 +95,72 @@ public class ReceiverCapabilities {
     this.xAddr = value;
   }
 
-  /** Ruft den Wert der rtpMulticast-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der rtpMulticast-Eigenschaft ab.
+   */
   public boolean isRTPMulticast() {
     return rtpMulticast;
   }
 
-  /** Legt den Wert der rtpMulticast-Eigenschaft fest. */
+  /**
+   * Legt den Wert der rtpMulticast-Eigenschaft fest.
+   */
   public void setRTPMulticast(boolean value) {
     this.rtpMulticast = value;
   }
 
-  /** Ruft den Wert der rtptcp-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der rtptcp-Eigenschaft ab.
+   */
   public boolean isRTPTCP() {
     return rtptcp;
   }
 
-  /** Legt den Wert der rtptcp-Eigenschaft fest. */
+  /**
+   * Legt den Wert der rtptcp-Eigenschaft fest.
+   */
   public void setRTPTCP(boolean value) {
     this.rtptcp = value;
   }
 
-  /** Ruft den Wert der rtprtsptcp-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der rtprtsptcp-Eigenschaft ab.
+   */
   public boolean isRTPRTSPTCP() {
     return rtprtsptcp;
   }
 
-  /** Legt den Wert der rtprtsptcp-Eigenschaft fest. */
+  /**
+   * Legt den Wert der rtprtsptcp-Eigenschaft fest.
+   */
   public void setRTPRTSPTCP(boolean value) {
     this.rtprtsptcp = value;
   }
 
-  /** Ruft den Wert der supportedReceivers-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der supportedReceivers-Eigenschaft ab.
+   */
   public int getSupportedReceivers() {
     return supportedReceivers;
   }
 
-  /** Legt den Wert der supportedReceivers-Eigenschaft fest. */
+  /**
+   * Legt den Wert der supportedReceivers-Eigenschaft fest.
+   */
   public void setSupportedReceivers(int value) {
     this.supportedReceivers = value;
   }
 
-  /** Ruft den Wert der maximumRTSPURILength-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der maximumRTSPURILength-Eigenschaft ab.
+   */
   public int getMaximumRTSPURILength() {
     return maximumRTSPURILength;
   }
 
-  /** Legt den Wert der maximumRTSPURILength-Eigenschaft fest. */
+  /**
+   * Legt den Wert der maximumRTSPURILength-Eigenschaft fest.
+   */
   public void setMaximumRTSPURILength(int value) {
     this.maximumRTSPURILength = value;
   }
@@ -149,8 +169,7 @@ public class ReceiverCapabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

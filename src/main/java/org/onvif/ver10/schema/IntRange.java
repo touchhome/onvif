@@ -38,22 +38,30 @@ public class IntRange {
   @XmlElement(name = "Max")
   protected int max;
 
-  /** Ruft den Wert der min-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der min-Eigenschaft ab.
+   */
   public int getMin() {
     return min;
   }
 
-  /** Legt den Wert der min-Eigenschaft fest. */
+  /**
+   * Legt den Wert der min-Eigenschaft fest.
+   */
   public void setMin(int value) {
     this.min = value;
   }
 
-  /** Ruft den Wert der max-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der max-Eigenschaft ab.
+   */
   public int getMax() {
     return max;
   }
 
-  /** Legt den Wert der max-Eigenschaft fest. */
+  /**
+   * Legt den Wert der max-Eigenschaft fest.
+   */
   public void setMax(int value) {
     this.max = value;
   }

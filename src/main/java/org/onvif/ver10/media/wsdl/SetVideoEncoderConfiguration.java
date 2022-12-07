@@ -65,12 +65,16 @@ public class SetVideoEncoderConfiguration {
     this.configuration = value;
   }
 
-  /** Ruft den Wert der forcePersistence-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der forcePersistence-Eigenschaft ab.
+   */
   public boolean isForcePersistence() {
     return forcePersistence;
   }
 
-  /** Legt den Wert der forcePersistence-Eigenschaft fest. */
+  /**
+   * Legt den Wert der forcePersistence-Eigenschaft fest.
+   */
   public void setForcePersistence(boolean value) {
     this.forcePersistence = value;
   }

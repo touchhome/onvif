@@ -39,10 +39,10 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "SearchScope",
     propOrder = {
-      "includedSources",
-      "includedRecordings",
-      "recordingInformationFilter",
-      "extension"
+        "includedSources",
+        "includedRecordings",
+        "recordingInformationFilter",
+        "extension"
     })
 public class SearchScope {
 
@@ -64,8 +64,7 @@ public class SearchScope {
    * Gets the value of the includedSources property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the includedSources property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the includedSources property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -86,8 +85,7 @@ public class SearchScope {
    * Gets the value of the includedRecordings property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the includedRecordings property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the includedRecordings property.
    *
    * <p>For example, to add a new item, do as follows:
    *

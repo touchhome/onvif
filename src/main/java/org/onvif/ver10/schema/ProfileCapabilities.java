@@ -47,12 +47,16 @@ public class ProfileCapabilities {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der maximumNumberOfProfiles-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der maximumNumberOfProfiles-Eigenschaft ab.
+   */
   public int getMaximumNumberOfProfiles() {
     return maximumNumberOfProfiles;
   }
 
-  /** Legt den Wert der maximumNumberOfProfiles-Eigenschaft fest. */
+  /**
+   * Legt den Wert der maximumNumberOfProfiles-Eigenschaft fest.
+   */
   public void setMaximumNumberOfProfiles(int value) {
     this.maximumNumberOfProfiles = value;
   }
@@ -61,8 +65,7 @@ public class ProfileCapabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

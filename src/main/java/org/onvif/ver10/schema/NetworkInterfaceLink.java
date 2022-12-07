@@ -76,12 +76,16 @@ public class NetworkInterfaceLink {
     this.operSettings = value;
   }
 
-  /** Ruft den Wert der interfaceType-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der interfaceType-Eigenschaft ab.
+   */
   public int getInterfaceType() {
     return interfaceType;
   }
 
-  /** Legt den Wert der interfaceType-Eigenschaft fest. */
+  /**
+   * Legt den Wert der interfaceType-Eigenschaft fest.
+   */
   public void setInterfaceType(int value) {
     this.interfaceType = value;
   }

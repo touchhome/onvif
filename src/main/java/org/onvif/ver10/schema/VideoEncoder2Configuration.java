@@ -144,12 +144,16 @@ public class VideoEncoder2Configuration extends ConfigurationEntity {
     this.multicast = value;
   }
 
-  /** Ruft den Wert der quality-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der quality-Eigenschaft ab.
+   */
   public float getQuality() {
     return quality;
   }
 
-  /** Legt den Wert der quality-Eigenschaft fest. */
+  /**
+   * Legt den Wert der quality-Eigenschaft fest.
+   */
   public void setQuality(float value) {
     this.quality = value;
   }
@@ -158,8 +162,7 @@ public class VideoEncoder2Configuration extends ConfigurationEntity {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

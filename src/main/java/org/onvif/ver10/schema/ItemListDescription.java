@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * Describes a list of items. Each item in the list shall have a unique name. The list is designed
- * as linear structure without optional or unbounded elements. Use ElementItems only when complex
+ * Describes a list of items. Each item in the list shall have a unique name. The list is designed as linear structure without optional or unbounded elements. Use ElementItems only when complex
  * structures are inevitable.
  *
  * <p>Java-Klasse f�r ItemListDescription complex type.
@@ -76,8 +75,7 @@ public class ItemListDescription {
    * Gets the value of the simpleItemDescription property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the simpleItemDescription property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the simpleItemDescription property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -99,8 +97,7 @@ public class ItemListDescription {
    * Gets the value of the elementItemDescription property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the elementItemDescription property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the elementItemDescription property.
    *
    * <p>For example, to add a new item, do as follows:
    *

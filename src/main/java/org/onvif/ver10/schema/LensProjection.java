@@ -55,22 +55,30 @@ public class LensProjection {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der angle-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der angle-Eigenschaft ab.
+   */
   public float getAngle() {
     return angle;
   }
 
-  /** Legt den Wert der angle-Eigenschaft fest. */
+  /**
+   * Legt den Wert der angle-Eigenschaft fest.
+   */
   public void setAngle(float value) {
     this.angle = value;
   }
 
-  /** Ruft den Wert der radius-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der radius-Eigenschaft ab.
+   */
   public float getRadius() {
     return radius;
   }
 
-  /** Legt den Wert der radius-Eigenschaft fest. */
+  /**
+   * Legt den Wert der radius-Eigenschaft fest.
+   */
   public void setRadius(float value) {
     this.radius = value;
   }
@@ -97,8 +105,7 @@ public class LensProjection {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

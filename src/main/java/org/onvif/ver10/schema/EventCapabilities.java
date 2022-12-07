@@ -41,11 +41,11 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "EventCapabilities",
     propOrder = {
-      "xAddr",
-      "wsSubscriptionPolicySupport",
-      "wsPullPointSupport",
-      "wsPausableSubscriptionManagerInterfaceSupport",
-      "any"
+        "xAddr",
+        "wsSubscriptionPolicySupport",
+        "wsPullPointSupport",
+        "wsPausableSubscriptionManagerInterfaceSupport",
+        "any"
     })
 public class EventCapabilities {
 
@@ -85,32 +85,44 @@ public class EventCapabilities {
     this.xAddr = value;
   }
 
-  /** Ruft den Wert der wsSubscriptionPolicySupport-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der wsSubscriptionPolicySupport-Eigenschaft ab.
+   */
   public boolean isWSSubscriptionPolicySupport() {
     return wsSubscriptionPolicySupport;
   }
 
-  /** Legt den Wert der wsSubscriptionPolicySupport-Eigenschaft fest. */
+  /**
+   * Legt den Wert der wsSubscriptionPolicySupport-Eigenschaft fest.
+   */
   public void setWSSubscriptionPolicySupport(boolean value) {
     this.wsSubscriptionPolicySupport = value;
   }
 
-  /** Ruft den Wert der wsPullPointSupport-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der wsPullPointSupport-Eigenschaft ab.
+   */
   public boolean isWSPullPointSupport() {
     return wsPullPointSupport;
   }
 
-  /** Legt den Wert der wsPullPointSupport-Eigenschaft fest. */
+  /**
+   * Legt den Wert der wsPullPointSupport-Eigenschaft fest.
+   */
   public void setWSPullPointSupport(boolean value) {
     this.wsPullPointSupport = value;
   }
 
-  /** Ruft den Wert der wsPausableSubscriptionManagerInterfaceSupport-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der wsPausableSubscriptionManagerInterfaceSupport-Eigenschaft ab.
+   */
   public boolean isWSPausableSubscriptionManagerInterfaceSupport() {
     return wsPausableSubscriptionManagerInterfaceSupport;
   }
 
-  /** Legt den Wert der wsPausableSubscriptionManagerInterfaceSupport-Eigenschaft fest. */
+  /**
+   * Legt den Wert der wsPausableSubscriptionManagerInterfaceSupport-Eigenschaft fest.
+   */
   public void setWSPausableSubscriptionManagerInterfaceSupport(boolean value) {
     this.wsPausableSubscriptionManagerInterfaceSupport = value;
   }
@@ -119,8 +131,7 @@ public class EventCapabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

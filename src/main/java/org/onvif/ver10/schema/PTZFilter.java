@@ -43,22 +43,30 @@ public class PTZFilter {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der status-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der status-Eigenschaft ab.
+   */
   public boolean isStatus() {
     return status;
   }
 
-  /** Legt den Wert der status-Eigenschaft fest. */
+  /**
+   * Legt den Wert der status-Eigenschaft fest.
+   */
   public void setStatus(boolean value) {
     this.status = value;
   }
 
-  /** Ruft den Wert der position-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der position-Eigenschaft ab.
+   */
   public boolean isPosition() {
     return position;
   }
 
-  /** Legt den Wert der position-Eigenschaft fest. */
+  /**
+   * Legt den Wert der position-Eigenschaft fest.
+   */
   public void setPosition(boolean value) {
     this.position = value;
   }

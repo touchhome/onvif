@@ -40,13 +40,13 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "IPv6Configuration",
     propOrder = {
-      "acceptRouterAdvert",
-      "dhcp",
-      "manual",
-      "linkLocal",
-      "fromDHCP",
-      "fromRA",
-      "extension"
+        "acceptRouterAdvert",
+        "dhcp",
+        "manual",
+        "linkLocal",
+        "fromDHCP",
+        "fromRA",
+        "extension"
     })
 public class IPv6Configuration {
 
@@ -113,8 +113,7 @@ public class IPv6Configuration {
    * Gets the value of the manual property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the manual property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the manual property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -135,8 +134,7 @@ public class IPv6Configuration {
    * Gets the value of the linkLocal property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the linkLocal property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the linkLocal property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -157,8 +155,7 @@ public class IPv6Configuration {
    * Gets the value of the fromDHCP property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the fromDHCP property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the fromDHCP property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -179,8 +176,7 @@ public class IPv6Configuration {
    * Gets the value of the fromRA property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the fromRA property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the fromRA property.
    *
    * <p>For example, to add a new item, do as follows:
    *

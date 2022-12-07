@@ -54,8 +54,7 @@ public class ConfigDescription {
    * Gets the value of the messages property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the messages property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the messages property.
    *
    * <p>For example, to add a new item, do as follows:
    *

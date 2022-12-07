@@ -54,12 +54,16 @@ public class GetGuaranteedNumberOfVideoEncoderInstancesResponse {
   @XmlElement(name = "MPEG4")
   protected Integer mpeg4;
 
-  /** Ruft den Wert der totalNumber-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der totalNumber-Eigenschaft ab.
+   */
   public int getTotalNumber() {
     return totalNumber;
   }
 
-  /** Legt den Wert der totalNumber-Eigenschaft fest. */
+  /**
+   * Legt den Wert der totalNumber-Eigenschaft fest.
+   */
   public void setTotalNumber(int value) {
     this.totalNumber = value;
   }

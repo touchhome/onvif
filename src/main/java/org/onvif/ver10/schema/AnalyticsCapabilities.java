@@ -53,22 +53,30 @@ public class AnalyticsCapabilities {
     this.xAddr = value;
   }
 
-  /** Ruft den Wert der ruleSupport-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der ruleSupport-Eigenschaft ab.
+   */
   public boolean isRuleSupport() {
     return ruleSupport;
   }
 
-  /** Legt den Wert der ruleSupport-Eigenschaft fest. */
+  /**
+   * Legt den Wert der ruleSupport-Eigenschaft fest.
+   */
   public void setRuleSupport(boolean value) {
     this.ruleSupport = value;
   }
 
-  /** Ruft den Wert der analyticsModuleSupport-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der analyticsModuleSupport-Eigenschaft ab.
+   */
   public boolean isAnalyticsModuleSupport() {
     return analyticsModuleSupport;
   }
 
-  /** Legt den Wert der analyticsModuleSupport-Eigenschaft fest. */
+  /**
+   * Legt den Wert der analyticsModuleSupport-Eigenschaft fest.
+   */
   public void setAnalyticsModuleSupport(boolean value) {
     this.analyticsModuleSupport = value;
   }
@@ -77,8 +85,7 @@ public class AnalyticsCapabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

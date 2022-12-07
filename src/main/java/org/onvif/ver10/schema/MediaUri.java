@@ -80,22 +80,30 @@ public class MediaUri {
     this.uri = value;
   }
 
-  /** Ruft den Wert der invalidAfterConnect-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der invalidAfterConnect-Eigenschaft ab.
+   */
   public boolean isInvalidAfterConnect() {
     return invalidAfterConnect;
   }
 
-  /** Legt den Wert der invalidAfterConnect-Eigenschaft fest. */
+  /**
+   * Legt den Wert der invalidAfterConnect-Eigenschaft fest.
+   */
   public void setInvalidAfterConnect(boolean value) {
     this.invalidAfterConnect = value;
   }
 
-  /** Ruft den Wert der invalidAfterReboot-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der invalidAfterReboot-Eigenschaft ab.
+   */
   public boolean isInvalidAfterReboot() {
     return invalidAfterReboot;
   }
 
-  /** Legt den Wert der invalidAfterReboot-Eigenschaft fest. */
+  /**
+   * Legt den Wert der invalidAfterReboot-Eigenschaft fest.
+   */
   public void setInvalidAfterReboot(boolean value) {
     this.invalidAfterReboot = value;
   }
@@ -122,8 +130,7 @@ public class MediaUri {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -61,8 +61,7 @@ public class ObjectTree {
    * Gets the value of the rename property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the rename property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the rename property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -83,8 +82,7 @@ public class ObjectTree {
    * Gets the value of the split property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the split property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the split property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -105,8 +103,7 @@ public class ObjectTree {
    * Gets the value of the merge property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the merge property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the merge property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -127,8 +124,7 @@ public class ObjectTree {
    * Gets the value of the delete property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the delete property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the delete property.
    *
    * <p>For example, to add a new item, do as follows:
    *

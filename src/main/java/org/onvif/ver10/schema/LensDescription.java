@@ -82,8 +82,7 @@ public class LensDescription {
    * Gets the value of the projection property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the projection property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the projection property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -100,12 +99,16 @@ public class LensDescription {
     return this.projection;
   }
 
-  /** Ruft den Wert der xFactor-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der xFactor-Eigenschaft ab.
+   */
   public float getXFactor() {
     return xFactor;
   }
 
-  /** Legt den Wert der xFactor-Eigenschaft fest. */
+  /**
+   * Legt den Wert der xFactor-Eigenschaft fest.
+   */
   public void setXFactor(float value) {
     this.xFactor = value;
   }
@@ -114,8 +117,7 @@ public class LensDescription {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

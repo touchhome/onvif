@@ -52,12 +52,12 @@ import org.onvif.ver10.schema.VideoResolution;
 @XmlType(
     name = "VideoSourceMode",
     propOrder = {
-      "maxFramerate",
-      "maxResolution",
-      "encodings",
-      "reboot",
-      "description",
-      "extension"
+        "maxFramerate",
+        "maxResolution",
+        "encodings",
+        "reboot",
+        "description",
+        "extension"
     })
 public class VideoSourceMode {
 
@@ -88,12 +88,16 @@ public class VideoSourceMode {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der maxFramerate-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der maxFramerate-Eigenschaft ab.
+   */
   public float getMaxFramerate() {
     return maxFramerate;
   }
 
-  /** Legt den Wert der maxFramerate-Eigenschaft fest. */
+  /**
+   * Legt den Wert der maxFramerate-Eigenschaft fest.
+   */
   public void setMaxFramerate(float value) {
     this.maxFramerate = value;
   }
@@ -120,8 +124,7 @@ public class VideoSourceMode {
    * Gets the value of the encodings property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the encodings property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the encodings property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -138,12 +141,16 @@ public class VideoSourceMode {
     return this.encodings;
   }
 
-  /** Ruft den Wert der reboot-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der reboot-Eigenschaft ab.
+   */
   public boolean isReboot() {
     return reboot;
   }
 
-  /** Legt den Wert der reboot-Eigenschaft fest. */
+  /**
+   * Legt den Wert der reboot-Eigenschaft fest.
+   */
   public void setReboot(boolean value) {
     this.reboot = value;
   }

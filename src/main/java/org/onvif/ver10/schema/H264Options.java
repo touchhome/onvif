@@ -34,11 +34,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(
     name = "H264Options",
     propOrder = {
-      "resolutionsAvailable",
-      "govLengthRange",
-      "frameRateRange",
-      "encodingIntervalRange",
-      "h264ProfilesSupported"
+        "resolutionsAvailable",
+        "govLengthRange",
+        "frameRateRange",
+        "encodingIntervalRange",
+        "h264ProfilesSupported"
     })
 @XmlSeeAlso({H264Options2.class})
 public class H264Options {
@@ -62,8 +62,7 @@ public class H264Options {
    * Gets the value of the resolutionsAvailable property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -138,8 +137,7 @@ public class H264Options {
    * Gets the value of the h264ProfilesSupported property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the h264ProfilesSupported property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the h264ProfilesSupported property.
    *
    * <p>For example, to add a new item, do as follows:
    *

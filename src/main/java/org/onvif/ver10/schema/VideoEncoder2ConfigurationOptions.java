@@ -92,8 +92,7 @@ public class VideoEncoder2ConfigurationOptions {
    * Gets the value of the resolutionsAvailable property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -132,8 +131,7 @@ public class VideoEncoder2ConfigurationOptions {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -155,8 +153,7 @@ public class VideoEncoder2ConfigurationOptions {
    * Gets the value of the govLengthRange property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the govLengthRange property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the govLengthRange property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -177,8 +174,7 @@ public class VideoEncoder2ConfigurationOptions {
    * Gets the value of the frameRatesSupported property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the frameRatesSupported property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the frameRatesSupported property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -199,8 +195,7 @@ public class VideoEncoder2ConfigurationOptions {
    * Gets the value of the profilesSupported property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the profilesSupported property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the profilesSupported property.
    *
    * <p>For example, to add a new item, do as follows:
    *

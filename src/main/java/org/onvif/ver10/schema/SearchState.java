@@ -27,19 +27,27 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SearchState {
 
-  /** The search is queued and not yet started. */
+  /**
+   * The search is queued and not yet started.
+   */
   @XmlEnumValue("Queued")
   QUEUED("Queued"),
 
-  /** The search is underway and not yet completed. */
+  /**
+   * The search is underway and not yet completed.
+   */
   @XmlEnumValue("Searching")
   SEARCHING("Searching"),
 
-  /** The search has been completed and no new results will be found. */
+  /**
+   * The search has been completed and no new results will be found.
+   */
   @XmlEnumValue("Completed")
   COMPLETED("Completed"),
 
-  /** The state of the search is unknown. (This is not a valid response from GetSearchState.) */
+  /**
+   * The state of the search is unknown. (This is not a valid response from GetSearchState.)
+   */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;

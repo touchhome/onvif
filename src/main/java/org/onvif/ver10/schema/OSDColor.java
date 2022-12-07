@@ -11,8 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * The value range of "Transparent" could be defined by vendors only should follow this rule: the
- * minimum value means non-transparent and the maximum value maens fully transparent.
+ * The value range of "Transparent" could be defined by vendors only should follow this rule: the minimum value means non-transparent and the maximum value maens fully transparent.
  *
  * <p>Java-Klasse f�r OSDColor complex type.
  *

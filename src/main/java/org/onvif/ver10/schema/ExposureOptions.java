@@ -39,17 +39,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(
     name = "ExposureOptions",
     propOrder = {
-      "mode",
-      "priority",
-      "minExposureTime",
-      "maxExposureTime",
-      "minGain",
-      "maxGain",
-      "minIris",
-      "maxIris",
-      "exposureTime",
-      "gain",
-      "iris"
+        "mode",
+        "priority",
+        "minExposureTime",
+        "maxExposureTime",
+        "minGain",
+        "maxGain",
+        "minIris",
+        "maxIris",
+        "exposureTime",
+        "gain",
+        "iris"
     })
 public class ExposureOptions {
 
@@ -90,8 +90,7 @@ public class ExposureOptions {
    * Gets the value of the mode property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the mode property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the mode property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -112,8 +111,7 @@ public class ExposureOptions {
    * Gets the value of the priority property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the priority property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the priority property.
    *
    * <p>For example, to add a new item, do as follows:
    *

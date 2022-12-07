@@ -39,12 +39,16 @@ public class DNSInformation {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der fromDHCP-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der fromDHCP-Eigenschaft ab.
+   */
   public boolean isFromDHCP() {
     return fromDHCP;
   }
 
-  /** Legt den Wert der fromDHCP-Eigenschaft fest. */
+  /**
+   * Legt den Wert der fromDHCP-Eigenschaft fest.
+   */
   public void setFromDHCP(boolean value) {
     this.fromDHCP = value;
   }
@@ -53,8 +57,7 @@ public class DNSInformation {
    * Gets the value of the searchDomain property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the searchDomain property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the searchDomain property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -75,8 +78,7 @@ public class DNSInformation {
    * Gets the value of the dnsFromDHCP property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the dnsFromDHCP property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the dnsFromDHCP property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -97,8 +99,7 @@ public class DNSInformation {
    * Gets the value of the dnsManual property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the dnsManual property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the dnsManual property.
    *
    * <p>For example, to add a new item, do as follows:
    *

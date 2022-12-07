@@ -41,14 +41,14 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "SystemCapabilities",
     propOrder = {
-      "discoveryResolve",
-      "discoveryBye",
-      "remoteDiscovery",
-      "systemBackup",
-      "systemLogging",
-      "firmwareUpgrade",
-      "supportedVersions",
-      "extension"
+        "discoveryResolve",
+        "discoveryBye",
+        "remoteDiscovery",
+        "systemBackup",
+        "systemLogging",
+        "firmwareUpgrade",
+        "supportedVersions",
+        "extension"
     })
 public class SystemCapabilities {
 
@@ -78,62 +78,86 @@ public class SystemCapabilities {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der discoveryResolve-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der discoveryResolve-Eigenschaft ab.
+   */
   public boolean isDiscoveryResolve() {
     return discoveryResolve;
   }
 
-  /** Legt den Wert der discoveryResolve-Eigenschaft fest. */
+  /**
+   * Legt den Wert der discoveryResolve-Eigenschaft fest.
+   */
   public void setDiscoveryResolve(boolean value) {
     this.discoveryResolve = value;
   }
 
-  /** Ruft den Wert der discoveryBye-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der discoveryBye-Eigenschaft ab.
+   */
   public boolean isDiscoveryBye() {
     return discoveryBye;
   }
 
-  /** Legt den Wert der discoveryBye-Eigenschaft fest. */
+  /**
+   * Legt den Wert der discoveryBye-Eigenschaft fest.
+   */
   public void setDiscoveryBye(boolean value) {
     this.discoveryBye = value;
   }
 
-  /** Ruft den Wert der remoteDiscovery-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der remoteDiscovery-Eigenschaft ab.
+   */
   public boolean isRemoteDiscovery() {
     return remoteDiscovery;
   }
 
-  /** Legt den Wert der remoteDiscovery-Eigenschaft fest. */
+  /**
+   * Legt den Wert der remoteDiscovery-Eigenschaft fest.
+   */
   public void setRemoteDiscovery(boolean value) {
     this.remoteDiscovery = value;
   }
 
-  /** Ruft den Wert der systemBackup-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der systemBackup-Eigenschaft ab.
+   */
   public boolean isSystemBackup() {
     return systemBackup;
   }
 
-  /** Legt den Wert der systemBackup-Eigenschaft fest. */
+  /**
+   * Legt den Wert der systemBackup-Eigenschaft fest.
+   */
   public void setSystemBackup(boolean value) {
     this.systemBackup = value;
   }
 
-  /** Ruft den Wert der systemLogging-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der systemLogging-Eigenschaft ab.
+   */
   public boolean isSystemLogging() {
     return systemLogging;
   }
 
-  /** Legt den Wert der systemLogging-Eigenschaft fest. */
+  /**
+   * Legt den Wert der systemLogging-Eigenschaft fest.
+   */
   public void setSystemLogging(boolean value) {
     this.systemLogging = value;
   }
 
-  /** Ruft den Wert der firmwareUpgrade-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der firmwareUpgrade-Eigenschaft ab.
+   */
   public boolean isFirmwareUpgrade() {
     return firmwareUpgrade;
   }
 
-  /** Legt den Wert der firmwareUpgrade-Eigenschaft fest. */
+  /**
+   * Legt den Wert der firmwareUpgrade-Eigenschaft fest.
+   */
   public void setFirmwareUpgrade(boolean value) {
     this.firmwareUpgrade = value;
   }
@@ -142,8 +166,7 @@ public class SystemCapabilities {
    * Gets the value of the supportedVersions property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the supportedVersions property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the supportedVersions property.
    *
    * <p>For example, to add a new item, do as follows:
    *

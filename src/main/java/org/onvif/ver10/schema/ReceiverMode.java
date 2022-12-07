@@ -27,19 +27,27 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ReceiverMode {
 
-  /** The receiver connects on demand, as required by consumers of the media streams. */
+  /**
+   * The receiver connects on demand, as required by consumers of the media streams.
+   */
   @XmlEnumValue("AutoConnect")
   AUTO_CONNECT("AutoConnect"),
 
-  /** The receiver attempts to maintain a persistent connection to the configured endpoint. */
+  /**
+   * The receiver attempts to maintain a persistent connection to the configured endpoint.
+   */
   @XmlEnumValue("AlwaysConnect")
   ALWAYS_CONNECT("AlwaysConnect"),
 
-  /** The receiver does not attempt to connect. */
+  /**
+   * The receiver does not attempt to connect.
+   */
   @XmlEnumValue("NeverConnect")
   NEVER_CONNECT("NeverConnect"),
 
-  /** This case should never happen. */
+  /**
+   * This case should never happen.
+   */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;

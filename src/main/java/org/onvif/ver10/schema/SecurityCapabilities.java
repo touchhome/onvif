@@ -45,16 +45,16 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "SecurityCapabilities",
     propOrder = {
-      "tls11",
-      "tls12",
-      "onboardKeyGeneration",
-      "accessPolicyConfig",
-      "x509Token",
-      "samlToken",
-      "kerberosToken",
-      "relToken",
-      "any",
-      "extension"
+        "tls11",
+        "tls12",
+        "onboardKeyGeneration",
+        "accessPolicyConfig",
+        "x509Token",
+        "samlToken",
+        "kerberosToken",
+        "relToken",
+        "any",
+        "extension"
     })
 public class SecurityCapabilities {
 
@@ -90,82 +90,114 @@ public class SecurityCapabilities {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der tls11-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der tls11-Eigenschaft ab.
+   */
   public boolean isTLS11() {
     return tls11;
   }
 
-  /** Legt den Wert der tls11-Eigenschaft fest. */
+  /**
+   * Legt den Wert der tls11-Eigenschaft fest.
+   */
   public void setTLS11(boolean value) {
     this.tls11 = value;
   }
 
-  /** Ruft den Wert der tls12-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der tls12-Eigenschaft ab.
+   */
   public boolean isTLS12() {
     return tls12;
   }
 
-  /** Legt den Wert der tls12-Eigenschaft fest. */
+  /**
+   * Legt den Wert der tls12-Eigenschaft fest.
+   */
   public void setTLS12(boolean value) {
     this.tls12 = value;
   }
 
-  /** Ruft den Wert der onboardKeyGeneration-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der onboardKeyGeneration-Eigenschaft ab.
+   */
   public boolean isOnboardKeyGeneration() {
     return onboardKeyGeneration;
   }
 
-  /** Legt den Wert der onboardKeyGeneration-Eigenschaft fest. */
+  /**
+   * Legt den Wert der onboardKeyGeneration-Eigenschaft fest.
+   */
   public void setOnboardKeyGeneration(boolean value) {
     this.onboardKeyGeneration = value;
   }
 
-  /** Ruft den Wert der accessPolicyConfig-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der accessPolicyConfig-Eigenschaft ab.
+   */
   public boolean isAccessPolicyConfig() {
     return accessPolicyConfig;
   }
 
-  /** Legt den Wert der accessPolicyConfig-Eigenschaft fest. */
+  /**
+   * Legt den Wert der accessPolicyConfig-Eigenschaft fest.
+   */
   public void setAccessPolicyConfig(boolean value) {
     this.accessPolicyConfig = value;
   }
 
-  /** Ruft den Wert der x509Token-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der x509Token-Eigenschaft ab.
+   */
   public boolean isX509Token() {
     return x509Token;
   }
 
-  /** Legt den Wert der x509Token-Eigenschaft fest. */
+  /**
+   * Legt den Wert der x509Token-Eigenschaft fest.
+   */
   public void setX509Token(boolean value) {
     this.x509Token = value;
   }
 
-  /** Ruft den Wert der samlToken-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der samlToken-Eigenschaft ab.
+   */
   public boolean isSAMLToken() {
     return samlToken;
   }
 
-  /** Legt den Wert der samlToken-Eigenschaft fest. */
+  /**
+   * Legt den Wert der samlToken-Eigenschaft fest.
+   */
   public void setSAMLToken(boolean value) {
     this.samlToken = value;
   }
 
-  /** Ruft den Wert der kerberosToken-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der kerberosToken-Eigenschaft ab.
+   */
   public boolean isKerberosToken() {
     return kerberosToken;
   }
 
-  /** Legt den Wert der kerberosToken-Eigenschaft fest. */
+  /**
+   * Legt den Wert der kerberosToken-Eigenschaft fest.
+   */
   public void setKerberosToken(boolean value) {
     this.kerberosToken = value;
   }
 
-  /** Ruft den Wert der relToken-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der relToken-Eigenschaft ab.
+   */
   public boolean isRELToken() {
     return relToken;
   }
 
-  /** Legt den Wert der relToken-Eigenschaft fest. */
+  /**
+   * Legt den Wert der relToken-Eigenschaft fest.
+   */
   public void setRELToken(boolean value) {
     this.relToken = value;
   }
@@ -174,8 +206,7 @@ public class SecurityCapabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

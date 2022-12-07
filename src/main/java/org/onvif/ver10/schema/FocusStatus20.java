@@ -51,12 +51,16 @@ public class FocusStatus20 {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der position-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der position-Eigenschaft ab.
+   */
   public float getPosition() {
     return position;
   }
 
-  /** Legt den Wert der position-Eigenschaft fest. */
+  /**
+   * Legt den Wert der position-Eigenschaft fest.
+   */
   public void setPosition(float value) {
     this.position = value;
   }

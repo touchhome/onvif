@@ -11,8 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * A media profile consists of a set of media configurations. Media profiles are used by a client to
- * configure properties of a media stream from an NVT.
+ * A media profile consists of a set of media configurations. Media profiles are used by a client to configure properties of a media stream from an NVT.
  *
  * <pre>
  * <?xml version="1.0" encoding="UTF-8"?&gt;<br xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tt="http://www.onvif.org/ver10/schema" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xop="http://www.w3.org/2004/08/xop/include" xmlns:xs="http://www.w3.org/2001/XMLSchema"/&gt;
@@ -26,9 +25,7 @@ import javax.xml.namespace.QName;
  * </pre>
  *
  * <p>A profile consists of a set of interconnected configuration entities. Configurations are
- * provided by the NVT and can be either static or created dynamically by the NVT. For example, the
- * dynamic configurations can be created by the NVT depending on current available encoding
- * resources.
+ * provided by the NVT and can be either static or created dynamically by the NVT. For example, the dynamic configurations can be created by the NVT depending on current available encoding resources.
  *
  * <p>Java-Klasse f�r Profile complex type.
  *
@@ -62,15 +59,15 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "Profile",
     propOrder = {
-      "name",
-      "videoSourceConfiguration",
-      "audioSourceConfiguration",
-      "videoEncoderConfiguration",
-      "audioEncoderConfiguration",
-      "videoAnalyticsConfiguration",
-      "ptzConfiguration",
-      "metadataConfiguration",
-      "extension"
+        "name",
+        "videoSourceConfiguration",
+        "audioSourceConfiguration",
+        "videoEncoderConfiguration",
+        "audioEncoderConfiguration",
+        "videoAnalyticsConfiguration",
+        "ptzConfiguration",
+        "metadataConfiguration",
+        "extension"
     })
 public class Profile {
 

@@ -59,12 +59,16 @@ public class NetworkInterface extends DeviceEntity {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der enabled-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der enabled-Eigenschaft ab.
+   */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /** Legt den Wert der enabled-Eigenschaft fest. */
+  /**
+   * Legt den Wert der enabled-Eigenschaft fest.
+   */
   public void setEnabled(boolean value) {
     this.enabled = value;
   }

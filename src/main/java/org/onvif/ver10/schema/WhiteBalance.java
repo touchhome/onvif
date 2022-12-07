@@ -73,22 +73,30 @@ public class WhiteBalance {
     this.mode = value;
   }
 
-  /** Ruft den Wert der crGain-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der crGain-Eigenschaft ab.
+   */
   public float getCrGain() {
     return crGain;
   }
 
-  /** Legt den Wert der crGain-Eigenschaft fest. */
+  /**
+   * Legt den Wert der crGain-Eigenschaft fest.
+   */
   public void setCrGain(float value) {
     this.crGain = value;
   }
 
-  /** Ruft den Wert der cbGain-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der cbGain-Eigenschaft ab.
+   */
   public float getCbGain() {
     return cbGain;
   }
 
-  /** Legt den Wert der cbGain-Eigenschaft fest. */
+  /**
+   * Legt den Wert der cbGain-Eigenschaft fest.
+   */
   public void setCbGain(float value) {
     this.cbGain = value;
   }
@@ -97,8 +105,7 @@ public class WhiteBalance {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

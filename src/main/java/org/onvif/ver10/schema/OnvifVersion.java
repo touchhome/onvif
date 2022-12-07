@@ -36,22 +36,30 @@ public class OnvifVersion {
   @XmlElement(name = "Minor")
   protected int minor;
 
-  /** Ruft den Wert der major-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der major-Eigenschaft ab.
+   */
   public int getMajor() {
     return major;
   }
 
-  /** Legt den Wert der major-Eigenschaft fest. */
+  /**
+   * Legt den Wert der major-Eigenschaft fest.
+   */
   public void setMajor(int value) {
     this.major = value;
   }
 
-  /** Ruft den Wert der minor-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der minor-Eigenschaft ab.
+   */
   public int getMinor() {
     return minor;
   }
 
-  /** Legt den Wert der minor-Eigenschaft fest. */
+  /**
+   * Legt den Wert der minor-Eigenschaft fest.
+   */
   public void setMinor(int value) {
     this.minor = value;
   }

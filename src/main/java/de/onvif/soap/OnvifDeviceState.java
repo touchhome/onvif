@@ -109,7 +109,9 @@ public class OnvifDeviceState {
     this.password = password;
   }
 
-  /** Internal function to check, if device is available and answers to ping requests. */
+  /**
+   * Internal function to check, if device is available and answers to ping requests.
+   */
   public boolean isOnline() {
     String port = HOST_IP.contains(":") ? HOST_IP.substring(HOST_IP.indexOf(':') + 1) : "80";
     String ip = HOST_IP.contains(":") ? HOST_IP.substring(0, HOST_IP.indexOf(':')) : HOST_IP;
@@ -134,8 +136,7 @@ public class OnvifDeviceState {
   }
 
   /**
-   * Initalizes the addresses used for SOAP messages and to get the internal IP, if given IP is a
-   * proxy.
+   * Initalizes the addresses used for SOAP messages and to get the internal IP, if given IP is a proxy.
    */
   @SneakyThrows
   private void init() {
@@ -192,12 +193,12 @@ public class OnvifDeviceState {
     this.resolutionProfiles =
         new TreeMap<>(
             this.profiles.stream()
-                .collect(
-                    Collectors.toMap(
-                        profile ->
-                            new VideoEncodeResolution(
-                                profile.getVideoEncoderConfiguration().getResolution()),
-                        Function.identity())));
+                         .collect(
+                             Collectors.toMap(
+                                 profile ->
+                                     new VideoEncodeResolution(
+                                         profile.getVideoEncoderConfiguration().getResolution()),
+                                 Function.identity())));
 
     int activeProfileIndex = onvifMediaProfile >= this.profiles.size() ? 0 : onvifMediaProfile;
     Profile profile =
@@ -243,7 +244,9 @@ public class OnvifDeviceState {
     return encryptPassword();
   }
 
-  /** Returns encrypted version of given password like algorithm like in WS-UsernameToken */
+  /**
+   * Returns encrypted version of given password like algorithm like in WS-UsernameToken
+   */
   public String encryptPassword() {
     String nonce = getNonce();
     String timestamp = getUTCTime();

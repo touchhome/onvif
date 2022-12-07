@@ -45,14 +45,14 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "RecordingInformation",
     propOrder = {
-      "recordingToken",
-      "source",
-      "earliestRecording",
-      "latestRecording",
-      "content",
-      "track",
-      "recordingStatus",
-      "any"
+        "recordingToken",
+        "source",
+        "earliestRecording",
+        "latestRecording",
+        "content",
+        "track",
+        "recordingStatus",
+        "any"
     })
 public class RecordingInformation {
 
@@ -178,8 +178,7 @@ public class RecordingInformation {
    * Gets the value of the track property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the track property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the track property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -218,8 +217,7 @@ public class RecordingInformation {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

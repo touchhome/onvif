@@ -39,12 +39,12 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "OSDConfigurationOptions",
     propOrder = {
-      "maximumNumberOfOSDs",
-      "type",
-      "positionOption",
-      "textOption",
-      "imageOption",
-      "extension"
+        "maximumNumberOfOSDs",
+        "type",
+        "positionOption",
+        "textOption",
+        "imageOption",
+        "extension"
     })
 public class OSDConfigurationOptions {
 
@@ -90,8 +90,7 @@ public class OSDConfigurationOptions {
    * Gets the value of the type property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the type property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the type property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -112,8 +111,7 @@ public class OSDConfigurationOptions {
    * Gets the value of the positionOption property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the positionOption property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the positionOption property.
    *
    * <p>For example, to add a new item, do as follows:
    *

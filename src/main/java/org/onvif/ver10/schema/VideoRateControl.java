@@ -40,32 +40,44 @@ public class VideoRateControl {
   @XmlElement(name = "BitrateLimit")
   protected int bitrateLimit;
 
-  /** Ruft den Wert der frameRateLimit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der frameRateLimit-Eigenschaft ab.
+   */
   public int getFrameRateLimit() {
     return frameRateLimit;
   }
 
-  /** Legt den Wert der frameRateLimit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der frameRateLimit-Eigenschaft fest.
+   */
   public void setFrameRateLimit(int value) {
     this.frameRateLimit = value;
   }
 
-  /** Ruft den Wert der encodingInterval-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der encodingInterval-Eigenschaft ab.
+   */
   public int getEncodingInterval() {
     return encodingInterval;
   }
 
-  /** Legt den Wert der encodingInterval-Eigenschaft fest. */
+  /**
+   * Legt den Wert der encodingInterval-Eigenschaft fest.
+   */
   public void setEncodingInterval(int value) {
     this.encodingInterval = value;
   }
 
-  /** Ruft den Wert der bitrateLimit-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der bitrateLimit-Eigenschaft ab.
+   */
   public int getBitrateLimit() {
     return bitrateLimit;
   }
 
-  /** Legt den Wert der bitrateLimit-Eigenschaft fest. */
+  /**
+   * Legt den Wert der bitrateLimit-Eigenschaft fest.
+   */
   public void setBitrateLimit(int value) {
     this.bitrateLimit = value;
   }

@@ -36,12 +36,16 @@ public class IPv4NetworkInterface {
   @XmlElement(name = "Config", required = true)
   protected IPv4Configuration config;
 
-  /** Ruft den Wert der enabled-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der enabled-Eigenschaft ab.
+   */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /** Legt den Wert der enabled-Eigenschaft fest. */
+  /**
+   * Legt den Wert der enabled-Eigenschaft fest.
+   */
   public void setEnabled(boolean value) {
     this.enabled = value;
   }

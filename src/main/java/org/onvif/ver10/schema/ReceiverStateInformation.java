@@ -71,12 +71,16 @@ public class ReceiverStateInformation {
     this.state = value;
   }
 
-  /** Ruft den Wert der autoCreated-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der autoCreated-Eigenschaft ab.
+   */
   public boolean isAutoCreated() {
     return autoCreated;
   }
 
-  /** Legt den Wert der autoCreated-Eigenschaft fest. */
+  /**
+   * Legt den Wert der autoCreated-Eigenschaft fest.
+   */
   public void setAutoCreated(boolean value) {
     this.autoCreated = value;
   }
@@ -85,8 +89,7 @@ public class ReceiverStateInformation {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

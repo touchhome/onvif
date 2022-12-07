@@ -44,17 +44,17 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "ImagingOptions20",
     propOrder = {
-      "backlightCompensation",
-      "brightness",
-      "colorSaturation",
-      "contrast",
-      "exposure",
-      "focus",
-      "irCutFilterModes",
-      "sharpness",
-      "wideDynamicRange",
-      "whiteBalance",
-      "extension"
+        "backlightCompensation",
+        "brightness",
+        "colorSaturation",
+        "contrast",
+        "exposure",
+        "focus",
+        "irCutFilterModes",
+        "sharpness",
+        "wideDynamicRange",
+        "whiteBalance",
+        "extension"
     })
 public class ImagingOptions20 {
 
@@ -205,8 +205,7 @@ public class ImagingOptions20 {
    * Gets the value of the irCutFilterModes property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the irCutFilterModes property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the irCutFilterModes property.
    *
    * <p>For example, to add a new item, do as follows:
    *

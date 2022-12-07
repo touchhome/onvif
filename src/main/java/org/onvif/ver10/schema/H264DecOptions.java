@@ -40,11 +40,11 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "H264DecOptions",
     propOrder = {
-      "resolutionsAvailable",
-      "supportedH264Profiles",
-      "supportedInputBitrate",
-      "supportedFrameRate",
-      "any"
+        "resolutionsAvailable",
+        "supportedH264Profiles",
+        "supportedInputBitrate",
+        "supportedFrameRate",
+        "any"
     })
 public class H264DecOptions {
 
@@ -69,8 +69,7 @@ public class H264DecOptions {
    * Gets the value of the resolutionsAvailable property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -91,8 +90,7 @@ public class H264DecOptions {
    * Gets the value of the supportedH264Profiles property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the supportedH264Profiles property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the supportedH264Profiles property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -149,8 +147,7 @@ public class H264DecOptions {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

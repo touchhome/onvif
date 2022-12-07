@@ -41,12 +41,12 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "PTZNode",
     propOrder = {
-      "name",
-      "supportedPTZSpaces",
-      "maximumNumberOfPresets",
-      "homeSupported",
-      "auxiliaryCommands",
-      "extension"
+        "name",
+        "supportedPTZSpaces",
+        "maximumNumberOfPresets",
+        "homeSupported",
+        "auxiliaryCommands",
+        "extension"
     })
 public class PTZNode extends DeviceEntity {
 
@@ -109,22 +109,30 @@ public class PTZNode extends DeviceEntity {
     this.supportedPTZSpaces = value;
   }
 
-  /** Ruft den Wert der maximumNumberOfPresets-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der maximumNumberOfPresets-Eigenschaft ab.
+   */
   public int getMaximumNumberOfPresets() {
     return maximumNumberOfPresets;
   }
 
-  /** Legt den Wert der maximumNumberOfPresets-Eigenschaft fest. */
+  /**
+   * Legt den Wert der maximumNumberOfPresets-Eigenschaft fest.
+   */
   public void setMaximumNumberOfPresets(int value) {
     this.maximumNumberOfPresets = value;
   }
 
-  /** Ruft den Wert der homeSupported-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der homeSupported-Eigenschaft ab.
+   */
   public boolean isHomeSupported() {
     return homeSupported;
   }
 
-  /** Legt den Wert der homeSupported-Eigenschaft fest. */
+  /**
+   * Legt den Wert der homeSupported-Eigenschaft fest.
+   */
   public void setHomeSupported(boolean value) {
     this.homeSupported = value;
   }
@@ -133,8 +141,7 @@ public class PTZNode extends DeviceEntity {
    * Gets the value of the auxiliaryCommands property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the auxiliaryCommands property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the auxiliaryCommands property.
    *
    * <p>For example, to add a new item, do as follows:
    *

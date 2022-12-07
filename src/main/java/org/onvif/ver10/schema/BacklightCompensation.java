@@ -35,12 +35,16 @@ public class BacklightCompensation {
     this.mode = value;
   }
 
-  /** Ruft den Wert der level-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der level-Eigenschaft ab.
+   */
   public float getLevel() {
     return level;
   }
 
-  /** Legt den Wert der level-Eigenschaft fest. */
+  /**
+   * Legt den Wert der level-Eigenschaft fest.
+   */
   public void setLevel(float value) {
     this.level = value;
   }

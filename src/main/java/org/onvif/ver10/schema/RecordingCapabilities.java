@@ -43,13 +43,13 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "RecordingCapabilities",
     propOrder = {
-      "xAddr",
-      "receiverSource",
-      "mediaProfileSource",
-      "dynamicRecordings",
-      "dynamicTracks",
-      "maxStringLength",
-      "any"
+        "xAddr",
+        "receiverSource",
+        "mediaProfileSource",
+        "dynamicRecordings",
+        "dynamicTracks",
+        "maxStringLength",
+        "any"
     })
 public class RecordingCapabilities {
 
@@ -95,52 +95,72 @@ public class RecordingCapabilities {
     this.xAddr = value;
   }
 
-  /** Ruft den Wert der receiverSource-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der receiverSource-Eigenschaft ab.
+   */
   public boolean isReceiverSource() {
     return receiverSource;
   }
 
-  /** Legt den Wert der receiverSource-Eigenschaft fest. */
+  /**
+   * Legt den Wert der receiverSource-Eigenschaft fest.
+   */
   public void setReceiverSource(boolean value) {
     this.receiverSource = value;
   }
 
-  /** Ruft den Wert der mediaProfileSource-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der mediaProfileSource-Eigenschaft ab.
+   */
   public boolean isMediaProfileSource() {
     return mediaProfileSource;
   }
 
-  /** Legt den Wert der mediaProfileSource-Eigenschaft fest. */
+  /**
+   * Legt den Wert der mediaProfileSource-Eigenschaft fest.
+   */
   public void setMediaProfileSource(boolean value) {
     this.mediaProfileSource = value;
   }
 
-  /** Ruft den Wert der dynamicRecordings-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der dynamicRecordings-Eigenschaft ab.
+   */
   public boolean isDynamicRecordings() {
     return dynamicRecordings;
   }
 
-  /** Legt den Wert der dynamicRecordings-Eigenschaft fest. */
+  /**
+   * Legt den Wert der dynamicRecordings-Eigenschaft fest.
+   */
   public void setDynamicRecordings(boolean value) {
     this.dynamicRecordings = value;
   }
 
-  /** Ruft den Wert der dynamicTracks-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der dynamicTracks-Eigenschaft ab.
+   */
   public boolean isDynamicTracks() {
     return dynamicTracks;
   }
 
-  /** Legt den Wert der dynamicTracks-Eigenschaft fest. */
+  /**
+   * Legt den Wert der dynamicTracks-Eigenschaft fest.
+   */
   public void setDynamicTracks(boolean value) {
     this.dynamicTracks = value;
   }
 
-  /** Ruft den Wert der maxStringLength-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der maxStringLength-Eigenschaft ab.
+   */
   public int getMaxStringLength() {
     return maxStringLength;
   }
 
-  /** Legt den Wert der maxStringLength-Eigenschaft fest. */
+  /**
+   * Legt den Wert der maxStringLength-Eigenschaft fest.
+   */
   public void setMaxStringLength(int value) {
     this.maxStringLength = value;
   }
@@ -149,8 +169,7 @@ public class RecordingCapabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

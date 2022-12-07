@@ -39,8 +39,7 @@ public class AudioOutputConfigurationOptions {
    * Gets the value of the outputTokensAvailable property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the outputTokensAvailable property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the outputTokensAvailable property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -61,8 +60,7 @@ public class AudioOutputConfigurationOptions {
    * Gets the value of the sendPrimacyOptions property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the sendPrimacyOptions property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the sendPrimacyOptions property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -101,8 +99,7 @@ public class AudioOutputConfigurationOptions {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

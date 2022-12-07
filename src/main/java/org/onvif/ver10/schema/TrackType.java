@@ -33,7 +33,9 @@ public enum TrackType {
   @XmlEnumValue("Metadata")
   METADATA("Metadata"),
 
-  /** Placeholder for future extension. */
+  /**
+   * Placeholder for future extension.
+   */
   @XmlEnumValue("Extended")
   EXTENDED("Extended");
   private final String value;

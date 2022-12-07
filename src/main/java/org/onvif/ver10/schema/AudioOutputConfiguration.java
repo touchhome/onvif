@@ -71,12 +71,16 @@ public class AudioOutputConfiguration extends ConfigurationEntity {
     this.sendPrimacy = value;
   }
 
-  /** Ruft den Wert der outputLevel-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der outputLevel-Eigenschaft ab.
+   */
   public int getOutputLevel() {
     return outputLevel;
   }
 
-  /** Legt den Wert der outputLevel-Eigenschaft fest. */
+  /**
+   * Legt den Wert der outputLevel-Eigenschaft fest.
+   */
   public void setOutputLevel(int value) {
     this.outputLevel = value;
   }
@@ -85,8 +89,7 @@ public class AudioOutputConfiguration extends ConfigurationEntity {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

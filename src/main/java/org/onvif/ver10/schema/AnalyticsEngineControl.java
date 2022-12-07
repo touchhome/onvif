@@ -17,14 +17,14 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "AnalyticsEngineControl",
     propOrder = {
-      "engineToken",
-      "engineConfigToken",
-      "inputToken",
-      "receiverToken",
-      "multicast",
-      "subscription",
-      "mode",
-      "any"
+        "engineToken",
+        "engineConfigToken",
+        "inputToken",
+        "receiverToken",
+        "multicast",
+        "subscription",
+        "mode",
+        "any"
     })
 public class AnalyticsEngineControl extends ConfigurationEntity {
 
@@ -94,8 +94,7 @@ public class AnalyticsEngineControl extends ConfigurationEntity {
    * Gets the value of the inputToken property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the inputToken property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the inputToken property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -116,8 +115,7 @@ public class AnalyticsEngineControl extends ConfigurationEntity {
    * Gets the value of the receiverToken property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the receiverToken property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the receiverToken property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -192,8 +190,7 @@ public class AnalyticsEngineControl extends ConfigurationEntity {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

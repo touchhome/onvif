@@ -139,12 +139,16 @@ public class FindEventResult {
     this.event = value;
   }
 
-  /** Ruft den Wert der startStateEvent-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der startStateEvent-Eigenschaft ab.
+   */
   public boolean isStartStateEvent() {
     return startStateEvent;
   }
 
-  /** Legt den Wert der startStateEvent-Eigenschaft fest. */
+  /**
+   * Legt den Wert der startStateEvent-Eigenschaft fest.
+   */
   public void setStartStateEvent(boolean value) {
     this.startStateEvent = value;
   }
@@ -153,8 +157,7 @@ public class FindEventResult {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

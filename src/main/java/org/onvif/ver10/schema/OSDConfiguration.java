@@ -37,12 +37,12 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "OSDConfiguration",
     propOrder = {
-      "videoSourceConfigurationToken",
-      "type",
-      "position",
-      "textString",
-      "image",
-      "extension"
+        "videoSourceConfigurationToken",
+        "type",
+        "position",
+        "textString",
+        "image",
+        "extension"
     })
 public class OSDConfiguration extends DeviceEntity {
 

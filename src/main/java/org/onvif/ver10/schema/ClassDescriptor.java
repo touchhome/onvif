@@ -23,8 +23,7 @@ public class ClassDescriptor {
    * Gets the value of the classCandidate property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the classCandidate property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the classCandidate property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -109,12 +108,16 @@ public class ClassDescriptor {
       this.type = value;
     }
 
-    /** Ruft den Wert der likelihood-Eigenschaft ab. */
+    /**
+     * Ruft den Wert der likelihood-Eigenschaft ab.
+     */
     public float getLikelihood() {
       return likelihood;
     }
 
-    /** Legt den Wert der likelihood-Eigenschaft fest. */
+    /**
+     * Legt den Wert der likelihood-Eigenschaft fest.
+     */
     public void setLikelihood(float value) {
       this.likelihood = value;
     }

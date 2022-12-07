@@ -16,17 +16,17 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "CertificateInformation",
     propOrder = {
-      "certificateID",
-      "issuerDN",
-      "subjectDN",
-      "keyUsage",
-      "extendedKeyUsage",
-      "keyLength",
-      "version",
-      "serialNum",
-      "signatureAlgorithm",
-      "validity",
-      "extension"
+        "certificateID",
+        "issuerDN",
+        "subjectDN",
+        "keyUsage",
+        "extendedKeyUsage",
+        "keyLength",
+        "version",
+        "serialNum",
+        "signatureAlgorithm",
+        "validity",
+        "extension"
     })
 public class CertificateInformation {
 

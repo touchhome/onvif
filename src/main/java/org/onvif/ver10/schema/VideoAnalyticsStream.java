@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.XmlType;
 public class VideoAnalyticsStream {
 
   @XmlElements({
-    @XmlElement(name = "Frame", type = Frame.class),
-    @XmlElement(name = "Extension", type = VideoAnalyticsStreamExtension.class)
+      @XmlElement(name = "Frame", type = Frame.class),
+      @XmlElement(name = "Extension", type = VideoAnalyticsStreamExtension.class)
   })
   protected List<java.lang.Object> frameOrExtension;
 
@@ -43,8 +43,7 @@ public class VideoAnalyticsStream {
    * Gets the value of the frameOrExtension property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the frameOrExtension property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the frameOrExtension property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -49,12 +49,16 @@ public class PTZPresetTourSupported {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der maximumNumberOfPresetTours-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der maximumNumberOfPresetTours-Eigenschaft ab.
+   */
   public int getMaximumNumberOfPresetTours() {
     return maximumNumberOfPresetTours;
   }
 
-  /** Legt den Wert der maximumNumberOfPresetTours-Eigenschaft fest. */
+  /**
+   * Legt den Wert der maximumNumberOfPresetTours-Eigenschaft fest.
+   */
   public void setMaximumNumberOfPresetTours(int value) {
     this.maximumNumberOfPresetTours = value;
   }
@@ -63,8 +67,7 @@ public class PTZPresetTourSupported {
    * Gets the value of the ptzPresetTourOperation property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the ptzPresetTourOperation property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the ptzPresetTourOperation property.
    *
    * <p>For example, to add a new item, do as follows:
    *

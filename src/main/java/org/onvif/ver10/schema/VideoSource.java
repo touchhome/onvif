@@ -53,12 +53,16 @@ public class VideoSource extends DeviceEntity {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der framerate-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der framerate-Eigenschaft ab.
+   */
   public float getFramerate() {
     return framerate;
   }
 
-  /** Legt den Wert der framerate-Eigenschaft fest. */
+  /**
+   * Legt den Wert der framerate-Eigenschaft fest.
+   */
   public void setFramerate(float value) {
     this.framerate = value;
   }

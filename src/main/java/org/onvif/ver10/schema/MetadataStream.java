@@ -43,10 +43,10 @@ import javax.xml.namespace.QName;
 public class MetadataStream {
 
   @XmlElements({
-    @XmlElement(name = "VideoAnalytics", type = VideoAnalyticsStream.class),
-    @XmlElement(name = "PTZ", type = PTZStream.class),
-    @XmlElement(name = "Event", type = EventStream.class),
-    @XmlElement(name = "Extension", type = MetadataStreamExtension.class)
+      @XmlElement(name = "VideoAnalytics", type = VideoAnalyticsStream.class),
+      @XmlElement(name = "PTZ", type = PTZStream.class),
+      @XmlElement(name = "Event", type = EventStream.class),
+      @XmlElement(name = "Extension", type = MetadataStreamExtension.class)
   })
   protected List<java.lang.Object> videoAnalyticsOrPTZOrEvent;
 
@@ -56,8 +56,7 @@ public class MetadataStream {
    * Gets the value of the videoAnalyticsOrPTZOrEvent property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the videoAnalyticsOrPTZOrEvent property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the videoAnalyticsOrPTZOrEvent property.
    *
    * <p>For example, to add a new item, do as follows:
    *

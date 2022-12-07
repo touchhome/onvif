@@ -60,8 +60,7 @@ public class FindMetadataResultList {
    * Gets the value of the result property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the result property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the result property.
    *
    * <p>For example, to add a new item, do as follows:
    *

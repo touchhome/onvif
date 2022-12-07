@@ -39,14 +39,14 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "OSDTextConfiguration",
     propOrder = {
-      "type",
-      "dateFormat",
-      "timeFormat",
-      "fontSize",
-      "fontColor",
-      "backgroundColor",
-      "plainText",
-      "extension"
+        "type",
+        "dateFormat",
+        "timeFormat",
+        "fontSize",
+        "fontColor",
+        "backgroundColor",
+        "plainText",
+        "extension"
     })
 public class OSDTextConfiguration {
 

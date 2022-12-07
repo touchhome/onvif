@@ -74,12 +74,16 @@ public class NetworkZeroConfiguration {
     this.interfaceToken = value;
   }
 
-  /** Ruft den Wert der enabled-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der enabled-Eigenschaft ab.
+   */
   public boolean isEnabled() {
     return enabled;
   }
 
-  /** Legt den Wert der enabled-Eigenschaft fest. */
+  /**
+   * Legt den Wert der enabled-Eigenschaft fest.
+   */
   public void setEnabled(boolean value) {
     this.enabled = value;
   }
@@ -88,8 +92,7 @@ public class NetworkZeroConfiguration {
    * Gets the value of the addresses property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the addresses property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the addresses property.
    *
    * <p>For example, to add a new item, do as follows:
    *

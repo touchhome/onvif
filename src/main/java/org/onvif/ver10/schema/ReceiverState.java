@@ -27,19 +27,27 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ReceiverState {
 
-  /** The receiver is not connected. */
+  /**
+   * The receiver is not connected.
+   */
   @XmlEnumValue("NotConnected")
   NOT_CONNECTED("NotConnected"),
 
-  /** The receiver is attempting to connect. */
+  /**
+   * The receiver is attempting to connect.
+   */
   @XmlEnumValue("Connecting")
   CONNECTING("Connecting"),
 
-  /** The receiver is connected. */
+  /**
+   * The receiver is connected.
+   */
   @XmlEnumValue("Connected")
   CONNECTED("Connected"),
 
-  /** This case should never happen. */
+  /**
+   * This case should never happen.
+   */
   @XmlEnumValue("Unknown")
   UNKNOWN("Unknown");
   private final String value;

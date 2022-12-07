@@ -41,12 +41,12 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "Dot11Capabilities",
     propOrder = {
-      "tkip",
-      "scanAvailableNetworks",
-      "multipleConfiguration",
-      "adHocStationMode",
-      "wep",
-      "any"
+        "tkip",
+        "scanAvailableNetworks",
+        "multipleConfiguration",
+        "adHocStationMode",
+        "wep",
+        "any"
     })
 public class Dot11Capabilities {
 
@@ -70,52 +70,72 @@ public class Dot11Capabilities {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der tkip-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der tkip-Eigenschaft ab.
+   */
   public boolean isTKIP() {
     return tkip;
   }
 
-  /** Legt den Wert der tkip-Eigenschaft fest. */
+  /**
+   * Legt den Wert der tkip-Eigenschaft fest.
+   */
   public void setTKIP(boolean value) {
     this.tkip = value;
   }
 
-  /** Ruft den Wert der scanAvailableNetworks-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der scanAvailableNetworks-Eigenschaft ab.
+   */
   public boolean isScanAvailableNetworks() {
     return scanAvailableNetworks;
   }
 
-  /** Legt den Wert der scanAvailableNetworks-Eigenschaft fest. */
+  /**
+   * Legt den Wert der scanAvailableNetworks-Eigenschaft fest.
+   */
   public void setScanAvailableNetworks(boolean value) {
     this.scanAvailableNetworks = value;
   }
 
-  /** Ruft den Wert der multipleConfiguration-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der multipleConfiguration-Eigenschaft ab.
+   */
   public boolean isMultipleConfiguration() {
     return multipleConfiguration;
   }
 
-  /** Legt den Wert der multipleConfiguration-Eigenschaft fest. */
+  /**
+   * Legt den Wert der multipleConfiguration-Eigenschaft fest.
+   */
   public void setMultipleConfiguration(boolean value) {
     this.multipleConfiguration = value;
   }
 
-  /** Ruft den Wert der adHocStationMode-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der adHocStationMode-Eigenschaft ab.
+   */
   public boolean isAdHocStationMode() {
     return adHocStationMode;
   }
 
-  /** Legt den Wert der adHocStationMode-Eigenschaft fest. */
+  /**
+   * Legt den Wert der adHocStationMode-Eigenschaft fest.
+   */
   public void setAdHocStationMode(boolean value) {
     this.adHocStationMode = value;
   }
 
-  /** Ruft den Wert der wep-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der wep-Eigenschaft ab.
+   */
   public boolean isWEP() {
     return wep;
   }
 
-  /** Legt den Wert der wep-Eigenschaft fest. */
+  /**
+   * Legt den Wert der wep-Eigenschaft fest.
+   */
   public void setWEP(boolean value) {
     this.wep = value;
   }
@@ -124,8 +144,7 @@ public class Dot11Capabilities {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -34,8 +34,8 @@ import javax.xml.bind.annotation.XmlType;
 public class PTZStream {
 
   @XmlElements({
-    @XmlElement(name = "PTZStatus", type = PTZStatus.class),
-    @XmlElement(name = "Extension", type = PTZStreamExtension.class)
+      @XmlElement(name = "PTZStatus", type = PTZStatus.class),
+      @XmlElement(name = "Extension", type = PTZStreamExtension.class)
   })
   protected List<java.lang.Object> ptzStatusOrExtension;
 
@@ -43,8 +43,7 @@ public class PTZStream {
    * Gets the value of the ptzStatusOrExtension property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the ptzStatusOrExtension property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the ptzStatusOrExtension property.
    *
    * <p>For example, to add a new item, do as follows:
    *

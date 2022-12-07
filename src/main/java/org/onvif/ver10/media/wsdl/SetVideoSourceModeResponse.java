@@ -42,12 +42,16 @@ public class SetVideoSourceModeResponse {
   @XmlElement(name = "Reboot")
   protected boolean reboot;
 
-  /** Ruft den Wert der reboot-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der reboot-Eigenschaft ab.
+   */
   public boolean isReboot() {
     return reboot;
   }
 
-  /** Legt den Wert der reboot-Eigenschaft fest. */
+  /**
+   * Legt den Wert der reboot-Eigenschaft fest.
+   */
   public void setReboot(boolean value) {
     this.reboot = value;
   }

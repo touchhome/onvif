@@ -34,11 +34,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(
     name = "Mpeg4Options",
     propOrder = {
-      "resolutionsAvailable",
-      "govLengthRange",
-      "frameRateRange",
-      "encodingIntervalRange",
-      "mpeg4ProfilesSupported"
+        "resolutionsAvailable",
+        "govLengthRange",
+        "frameRateRange",
+        "encodingIntervalRange",
+        "mpeg4ProfilesSupported"
     })
 @XmlSeeAlso({Mpeg4Options2.class})
 public class Mpeg4Options {
@@ -62,8 +62,7 @@ public class Mpeg4Options {
    * Gets the value of the resolutionsAvailable property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the resolutionsAvailable property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -138,8 +137,7 @@ public class Mpeg4Options {
    * Gets the value of the mpeg4ProfilesSupported property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the mpeg4ProfilesSupported property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the mpeg4ProfilesSupported property.
    *
    * <p>For example, to add a new item, do as follows:
    *

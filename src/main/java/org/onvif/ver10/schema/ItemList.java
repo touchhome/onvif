@@ -15,8 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
 /**
- * List of parameters according to the corresponding ItemListDescription. Each item in the list
- * shall have a unique name.
+ * List of parameters according to the corresponding ItemListDescription. Each item in the list shall have a unique name.
  *
  * <p>Java-Klasse f�r ItemList complex type.
  *
@@ -79,8 +78,7 @@ public class ItemList {
    * Gets the value of the simpleItem property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the simpleItem property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the simpleItem property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -101,8 +99,7 @@ public class ItemList {
    * Gets the value of the elementItem property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the elementItem property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the elementItem property.
    *
    * <p>For example, to add a new item, do as follows:
    *

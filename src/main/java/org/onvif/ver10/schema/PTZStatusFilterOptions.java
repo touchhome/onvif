@@ -41,12 +41,12 @@ import org.w3c.dom.Element;
 @XmlType(
     name = "PTZStatusFilterOptions",
     propOrder = {
-      "panTiltStatusSupported",
-      "zoomStatusSupported",
-      "any",
-      "panTiltPositionSupported",
-      "zoomPositionSupported",
-      "extension"
+        "panTiltStatusSupported",
+        "zoomStatusSupported",
+        "any",
+        "panTiltPositionSupported",
+        "zoomPositionSupported",
+        "extension"
     })
 public class PTZStatusFilterOptions {
 
@@ -70,22 +70,30 @@ public class PTZStatusFilterOptions {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der panTiltStatusSupported-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der panTiltStatusSupported-Eigenschaft ab.
+   */
   public boolean isPanTiltStatusSupported() {
     return panTiltStatusSupported;
   }
 
-  /** Legt den Wert der panTiltStatusSupported-Eigenschaft fest. */
+  /**
+   * Legt den Wert der panTiltStatusSupported-Eigenschaft fest.
+   */
   public void setPanTiltStatusSupported(boolean value) {
     this.panTiltStatusSupported = value;
   }
 
-  /** Ruft den Wert der zoomStatusSupported-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der zoomStatusSupported-Eigenschaft ab.
+   */
   public boolean isZoomStatusSupported() {
     return zoomStatusSupported;
   }
 
-  /** Legt den Wert der zoomStatusSupported-Eigenschaft fest. */
+  /**
+   * Legt den Wert der zoomStatusSupported-Eigenschaft fest.
+   */
   public void setZoomStatusSupported(boolean value) {
     this.zoomStatusSupported = value;
   }
@@ -94,8 +102,7 @@ public class PTZStatusFilterOptions {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

@@ -43,7 +43,9 @@ public class DeviceDiscovery {
   public static int WS_DISCOVERY_TIMEOUT = 4000;
   public static int WS_DISCOVERY_PORT = 3702;
   public static String WS_DISCOVERY_ADDRESS_IPv4 = "239.255.255.250";
-  /** Not supported yet. */
+  /**
+   * Not supported yet.
+   */
   public static String WS_DISCOVERY_ADDRESS_IPv6 = "[FF02::C]";
 
   public static String WS_DISCOVERY_PROBE_MESSAGE =
@@ -71,7 +73,7 @@ public class DeviceDiscovery {
    * Discover WS device on the local network with specified filter
    *
    * @param regexpProtocol url protocol matching regexp like "^http$", might be empty ""
-   * @param regexpPath url path matching regexp like "onvif", might be empty ""
+   * @param regexpPath     url path matching regexp like "onvif", might be empty ""
    * @return list of unique device urls filtered
    */
   public static Collection<URL> discoverWsDevicesAsUrls(String regexpProtocol, String regexpPath) {
@@ -140,8 +142,7 @@ public class DeviceDiscovery {
                         "<wsa:MessageID>urn:uuid:.*</wsa:MessageID>",
                         "<wsa:MessageID>urn:uuid:" + uuid + "</wsa:MessageID>");
                 final int port = random.nextInt(20000) + 40000;
-                @SuppressWarnings("SocketOpenedButNotSafelyClosed")
-                final DatagramSocket server = new DatagramSocket(port, address);
+                @SuppressWarnings("SocketOpenedButNotSafelyClosed") final DatagramSocket server = new DatagramSocket(port, address);
                 new Thread() {
                   public void run() {
                     try {

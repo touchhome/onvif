@@ -97,7 +97,7 @@ public class SOAP implements OnvifCodec.OnvifEventHandler {
     try {
       SOAPMessage soapResponse =
           MessageFactory.newInstance(SOAPConstants.SOAP_1_2_PROTOCOL)
-              .createMessage(null, new ByteArrayInputStream(message.getBytes()));
+                        .createMessage(null, new ByteArrayInputStream(message.getBytes()));
       Unmarshaller unmarshaller = JAXBContext.newInstance(responseClass).createUnmarshaller();
       return (T) unmarshaller.unmarshal(soapResponse.getSOAPBody().extractContentAsDocument());
     } catch (Exception e) {

@@ -36,11 +36,11 @@ import javax.xml.namespace.QName;
 @XmlType(
     name = "TrackAttributes",
     propOrder = {
-      "trackInformation",
-      "videoAttributes",
-      "audioAttributes",
-      "metadataAttributes",
-      "extension"
+        "trackInformation",
+        "videoAttributes",
+        "audioAttributes",
+        "metadataAttributes",
+        "extension"
     })
 public class TrackAttributes {
 

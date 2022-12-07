@@ -55,12 +55,16 @@ public class FocusStatus {
 
   @XmlAnyAttribute private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-  /** Ruft den Wert der position-Eigenschaft ab. */
+  /**
+   * Ruft den Wert der position-Eigenschaft ab.
+   */
   public float getPosition() {
     return position;
   }
 
-  /** Legt den Wert der position-Eigenschaft fest. */
+  /**
+   * Legt den Wert der position-Eigenschaft fest.
+   */
   public void setPosition(float value) {
     this.position = value;
   }
@@ -105,8 +109,7 @@ public class FocusStatus {
    * Gets the value of the any property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
-   * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the any property.
+   * modification you make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the any property.
    *
    * <p>For example, to add a new item, do as follows:
    *

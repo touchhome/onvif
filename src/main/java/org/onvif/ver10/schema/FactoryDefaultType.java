@@ -25,11 +25,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum FactoryDefaultType {
 
-  /** Indicates that a hard factory default is requested. */
+  /**
+   * Indicates that a hard factory default is requested.
+   */
   @XmlEnumValue("Hard")
   HARD("Hard"),
 
-  /** Indicates that a soft factory default is requested. */
+  /**
+   * Indicates that a soft factory default is requested.
+   */
   @XmlEnumValue("Soft")
   SOFT("Soft");
   private final String value;
